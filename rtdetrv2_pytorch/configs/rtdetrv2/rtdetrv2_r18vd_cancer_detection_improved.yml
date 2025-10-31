@@ -1,0 +1,85 @@
+__include__: [
+  '../dataset/cancer_detection.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer.yml',
+  './include/rtdetrv2_r50vd.yml',
+]
+
+output_dir: ./output/rtdetrv2_r18vd_cancer_detection_improved
+
+# 早停机制参数 - 优化设置
+early_stopping_patience: 15  # 从10增加到15，给更多轮次机会改善
+early_stopping_min_delta: 0.001  # 最小改善阈值
+
+# 模型配置
+PResNet:
+  depth: 18
+  freeze_at: -1  # 不冻结任何层，全量微调
+  freeze_norm: False
+  pretrained: True
+
+# 混合编码器配置 - 使用多层特征以提升小目标检测
+HybridEncoder:
+  in_channels: [128, 256, 512]
+  hidden_dim: 256
+  expansion: 0.5
+  use_encoder_idx: [1, 2]  # 从[2]改为[1,2]，使用多层特征提升多尺度能力
+
+# RT-DETR Transformer配置 - 增强配置
+RTDETRTransformerv2:
+  num_layers: 4  # 从3增加到4，增强上下文建模能力
+  num_queries: 500  # 从300增加到500，提高小目标召回率
+  num_denoising: 150  # 从100增加到150，增强去噪能力
+
+# 训练轮数 - 增加训练轮数以充分训练
+epoches: 150  # 从100增加到150
+
+# 优化器配置 - 优化学习率设置
+optimizer:
+  type: AdamW
+  params: 
+    - 
+      params: '^(?=.*backbone)(?!.*norm).*$'
+      lr: 0.00005  # 从0.00001提高到0.00005，提升特征提取训练
+      weight_decay: 0.0001
+    - 
+      params: '^(?=.*(?:encoder|decoder))(?=.*(?:norm|bn)).*$'
+      weight_decay: 0.0
+
+  lr: 0.0001
+  betas: [0.9, 0.999]
+  weight_decay: 0.0001
+
+# 学习率调度器 - 启用学习率衰减策略（之前被注释）
+lr_scheduler:
+  type: MultiStepLR
+  milestones: [60, 80, 100, 120]  # 在60、80、100、120轮时衰减学习率
+  gamma: 0.5  # 每次衰减50%
+
+# 学习率预热
+lr_warmup_scheduler:
+  type: LinearWarmup
+  warmup_duration: 1000  # 标准预热步数
+
+# 数据加载器配置 - 启用多尺度训练（之前被禁用）
+train_dataloader: 
+  dataset: 
+    transforms:
+      policy:
+        name: stop_epoch
+        epoch: 80  # 在80轮后停止部分数据增强
+        ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
+  collate_fn:
+    type: BatchImageCollateFuncion
+    scales: [480, 512, 544, 576, 608, 640, 672, 704, 736, 768, 800]  # 启用多尺度训练（之前为~）
+    stop_epoch: 80  # 在80轮后停止多尺度训练
+
+# 显存优化设置
+sync_bn: false  # 关闭同步BN以节省显存
+amp: true       # 启用自动混合精度训练
+
+# 评估配置
+eval_spatial_size: [640, 640]
+use_focal_loss: True
+

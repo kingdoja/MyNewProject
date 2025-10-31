@@ -1,0 +1,56 @@
+_base_: ../rtdetrv2/rtdetrv2_r18vd_6x_coco.yml
+
+task: detection
+
+evaluator:
+  type: CocoEvaluator
+  # 只保留bbox评估，因为segm评估需要实际的mask文件
+  iou_types: ['bbox']
+
+num_classes: 12
+remap_mscoco_category: False
+
+train_dataloader: 
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/train/images/
+    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/train/annotations/instances_train.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: 
+        - {type: RandomPhotometricDistort, p: 0.8}
+        - {type: RandomZoomOut, fill: 0}
+        - {type: RandomIoUCrop, p: 0.8}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: RandomHorizontalFlip}
+        - {type: Resize, size: [640, 640]}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}   
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+  shuffle: True
+  
+  num_workers: 4
+  drop_last: True 
+  collate_fn:
+    type: BatchImageCollateFuncion
+
+val_dataloader:
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/val/images/
+    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/val/annotations/instances_val.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: 
+        - {type: Resize, size: [640, 640]}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}   
+  shuffle: False
+  
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFuncion
