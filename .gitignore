@@ -170,3 +170,37 @@ rtdetr_pytorch/output/
 rtdetr_pytorch/dataset/
 rtdetrv2_pytorch/output/
 rtdetrv2_pytorch/dataset/
+
+# 大文件和数据目录（不上传）
+DataWSI/
+DataWSI1/
+DataPatches/
+DataPatchesKeep/
+DataPatchesTrash/
+DataPatchesInference/
+DataSliceTools/
+*.tar.gz
+*.zip
+
+# 模型文件
+DataSlice2Inference/models/*.pt
+DataSlice2Inference/models/*.onnx
+DataSlice2Inference/models/*.pth
+Z_export_model/
+Z_save_experiments/
+
+# 测试和验证输出
+test_visualization/
+validation_visualization_newdata/
+validation_visualization_ori/
+Z_single_predict/
+Z_记录/
+
+# 其他大文件
+DATA/
+*.ndpi
+*.jpeg
+*.jpg
+*.png
+!**/README*.png
+!**/docs/**/*.png

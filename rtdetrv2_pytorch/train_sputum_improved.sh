@@ -17,7 +17,7 @@ nvidia-smi
 python -c "import torch; torch.cuda.empty_cache() if torch.cuda.is_available() else None"
 
 # 训练参数配置
-CONFIG_FILE="configs/rtdetrv2/rtdetrv2_r18vd_sputum_cell_optimized.yml"
+CONFIG_FILE="/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r18vd_sputum_cell_optimized.yml"
 # PRETRAINED_MODEL="./premodel/rtdetr-l.pt"  # 请确保预训练模型存在
 OUTPUT_DIR="./output/sputum_cell_optimized_$(date +%Y%m%d_%H%M%S)"
 LOG_DIR="./logs/sputum_cell_optimized_$(date +%Y%m%d_%H%M%S)"
