@@ -146,6 +146,40 @@ du -sh .git
 git ls-files | xargs du -h | sort -rh | head -20
 ```
 
+### 问题 5: pack exceeds maximum allowed size (2.00 GiB)
+如果推送时遇到此错误，说明 Git 历史中包含大文件。需要从历史中移除：
+
+```bash
+# 方法 1: 使用 git-filter-repo（推荐，需要先安装）
+# Ubuntu/Debian: sudo apt install git-filter-repo
+
+# 移除特定目录/文件
+git filter-repo --path 大文件路径/ --invert-paths --force
+
+# 移除多个路径
+git filter-repo --path 路径1/ --path 路径2/ --invert-paths --force
+
+# 清理并压缩仓库
+git gc --aggressive --prune=now
+
+# 检查仓库大小（应该 < 2GB）
+du -sh .git
+
+# 强制推送到远程（历史已重写）
+git push origin master --force
+# 或
+git push origin master --force-with-lease  # 更安全的方式
+
+# 方法 2: 如果历史不重要，可以重新初始化
+# 警告：这会丢失所有 Git 历史！
+rm -rf .git
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin git@github.com:YOUR_USERNAME/REPO_NAME.git
+git push -u origin master --force
+```
+
 ## 后续更新
 
 ```bash
