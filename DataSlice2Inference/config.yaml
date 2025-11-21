@@ -1,0 +1,81 @@
+# RT-DETR 自动处理配置
+
+# 路径配置（支持环境变量）
+paths:
+  watch_dir: "${WATCH_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/DataWSI}"
+  output_dir: "${OUTPUT_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/DataPatchesInference}"
+  model_path: "${MODEL_PATH:/home/ubuntu/lsn/project_new/RT-DETR-main/DataSlice2Inference/models/rtdetr_torchscript_cuda.pt}"
+  log_dir: "${LOG_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/DataSlice2Inference/logs}"
+
+# 处理参数
+processing:
+  patch_size: 640
+  threshold: 0.5
+  file_wait_timeout: 30  # 等待文件完全写入的秒数
+  max_processing_time: 7200  # 单个文件最大处理时间（秒）
+  max_concurrent_tasks: 2  # 最大并发任务数
+  save_visualization: true  # 是否保存带框可视化图片
+  process_existing: false  # 启动时是否处理已存在的文件
+
+# 过滤参数
+filtering:
+  bg_rgb: [238, 235, 235]
+  tolerance: 30
+  bg_ratio: 0.9
+  std_thresh: 10.0
+  auto_bg: true
+  bg_analysis_limit: 5
+
+# 模型参数
+model:
+  device: "auto"  # auto/cpu/cuda/cuda:0
+  batch_size: 1
+  num_workers: 4
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG/INFO/WARNING/ERROR
+  console: true
+  file_max_bytes: 104857600  # 100MB
+  file_backup_count: 10
+
+# 重试配置
+retry:
+  max_attempts: 3
+  delay: 1.0
+  backoff: 2.0
+
+# 监控配置
+monitoring:
+  enabled: true
+  stats_interval: 300  # 统计信息输出间隔（秒）
+  health_check_port: 8080  # 健康检查端口（0表示不启动）
+  
+# 资源限制
+resources:
+  max_memory_gb: 16.0  # 最大内存使用（GB）
+  min_disk_space_gb: 10.0  # 最小磁盘空间（GB）
+  gpu_memory_limit_gb: null  # GPU内存限制（GB），null表示不限制
+
+# 通知配置（可选）
+notification:
+  enabled: false
+  email:
+    enabled: false
+    smtp_host: "smtp.example.com"
+    smtp_port: 587
+    from: "noreply@example.com"
+    to: []
+    username: ""
+    password: ""
+  webhook:
+    enabled: false
+    url: ""
+    timeout: 5
+
+# 安全配置
+security:
+  validate_file_types: true
+  validate_paths: true
+  allowed_image_types: ["image/jpeg", "image/png", "image/tiff", "image/tif"]
+

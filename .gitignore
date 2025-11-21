@@ -204,3 +204,6 @@ DATA/
 *.png
 !**/README*.png
 !**/docs/**/*.png
+
+# 临时文件
+=*
