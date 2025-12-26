@@ -172,6 +172,9 @@ rtdetrv2_pytorch/output/
 rtdetrv2_pytorch/dataset/
 
 # 大文件和数据目录（不上传）
+rtdetr_paddle/
+rtdetr_pytorch/
+rtdetrv2_paddle/
 DataWSI/
 DataWSI_copy/
 DataWSI_downscaled/
