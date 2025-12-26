@@ -173,7 +173,8 @@ rtdetrv2_pytorch/dataset/
 
 # 大文件和数据目录（不上传）
 DataWSI/
-DataWSI1/
+DataWSI_copy/
+DataWSI_downscaled/
 DataPatches/
 DataPatchesKeep/
 DataPatchesTrash/
