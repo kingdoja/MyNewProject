@@ -3,27 +3,27 @@ train_dataloader:
   dataset: 
     transforms:
       ops:
-        - {type: RandomPhotometricDistort, p: 0.5}
-        - {type: RandomZoomOut, fill: 0}
-        - {type: RandomIoUCrop, p: 0.8}
-        - {type: SanitizeBoundingBoxes, min_size: 1}
-        - {type: RandomHorizontalFlip}
-        - {type: Resize, size: [640, 640], }
-        - {type: SanitizeBoundingBoxes, min_size: 1}
-        - {type: ConvertPILImage, dtype: 'float32', scale: True}   
-        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+        - {type: RandomPhotometricDistort, p: 0.5}  # 随机光学畸变
+        - {type: RandomZoomOut, fill: 0} # 随机缩放
+        - {type: RandomIoUCrop, p: 0.8} # 随机裁剪
+        - {type: SanitizeBoundingBoxes, min_size: 1} # 边界框最小尺寸
+        - {type: RandomHorizontalFlip} # 随机水平翻转
+        - {type: Resize, size: [640, 640]} # 调整图像大小
+        - {type: SanitizeBoundingBoxes, min_size: 1} # 边界框最小尺寸
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}    # 转换为PIL图像
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True} # 转换为归一化坐标
       policy:
         name: stop_epoch
-        epoch: 71 # epoch in [71, ~) stop `ops`
+        epoch: 70 # keep heavy aug only for the first 70 epochs on split_dataset_aug
         ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
   
   collate_fn:
     type: BatchImageCollateFuncion
     scales: [480, 512, 544, 576, 608, 640, 640, 640, 672, 704, 736, 768, 800]
-    stop_epoch: 71 # epoch in [71, ~) stop `multiscales`
+    stop_epoch: 85 # align multi-scale stop with augmentation stop on split4_aug
 
   shuffle: True
-  total_batch_size: 8
+  total_batch_size: 16
   num_workers: 4 
 
 

@@ -1,0 +1,8 @@
+train_dataloader:
+  shuffle: False
+  sampler:
+    type: CocoImageWeightedRandomSampler
+    weights_file: DATA/SputumCell/split_dataset_aug/analysis/class_balance_image_weights.json
+    replacement: True
+    default_weight: 1.0
+

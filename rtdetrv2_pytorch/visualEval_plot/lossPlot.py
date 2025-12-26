@@ -428,7 +428,8 @@ def print_summary(results):
 
 def main():
     # 解析日志文件
-    log_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/log.txt"
+    # log_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/log.txt"
+    log_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection_p4_100_usePre/log.txt"
     
     if not os.path.exists(log_file):
         print(f"Log file not found: {log_file}")

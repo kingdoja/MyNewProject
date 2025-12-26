@@ -6,8 +6,11 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from torch.optim import Optimizer
 from torch.optim.lr_scheduler import LRScheduler
-from torch.cuda.amp.grad_scaler import GradScaler
 from torch.utils.tensorboard import SummaryWriter
+
+# 使用注册的 GradScaler 而不是直接导入旧 API，避免 FutureWarning
+# 运行时导入注册的版本（支持新 API，不会触发警告）
+from ..optim.amp import GradScaler
 
 from pathlib import Path 
 from typing import Callable, List, Dict
@@ -34,7 +37,7 @@ class BaseConfig(object):
         self._train_dataloader :DataLoader = None 
         self._val_dataloader :DataLoader = None 
         self._ema :nn.Module = None 
-        self._scaler :GradScaler = None 
+        self._scaler = None  # type: 'GradScaler' 
         self._train_dataset :Dataset = None 
         self._val_dataset :Dataset = None
         self._collate_fn :Callable = None
@@ -171,13 +174,13 @@ class BaseConfig(object):
         self._ema = obj
 
     @property
-    def scaler(self) -> GradScaler: 
+    def scaler(self) -> 'GradScaler': 
         if self._scaler is None and self.use_amp and torch.cuda.is_available():
             self._scaler = GradScaler()
         return self._scaler
     
     @scaler.setter
-    def scaler(self, obj: GradScaler):
+    def scaler(self, obj: 'GradScaler'):
         self._scaler = obj
 
     @property

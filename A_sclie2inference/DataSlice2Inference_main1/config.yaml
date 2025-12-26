@@ -1,0 +1,136 @@
+# RT-DETR 自动处理配置
+
+# 路径配置（支持环境变量）
+paths:
+  watch_dir: "${WATCH_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataWSI}"
+  output_dir: "${OUTPUT_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataPatchesInference}"
+  model_path: "${MODEL_PATH:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/models/best_torchscript_cuda_newAll.pt}"
+  log_dir: "${LOG_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/logs}"
+
+# 处理参数
+processing:
+  patch_size: 640
+  threshold: 0.5 # 阈值，0.5表示50%的置信度
+  file_wait_timeout: 15  # 等待文件完全写入的秒数
+  max_concurrent_tasks: 2  # 最大并发任务数（支持多文件并行处理）
+  save_visualization: true  # 是否保存带框可视化图片
+  process_existing: true  # 启动时是否处理已存在的文件
+  # max_processing_time: 7200  # TODO: 单个文件超时限制（未实现）
+
+# 图像自动缩放配置（处理超大图像）
+downscale:
+  enabled: true  # 是否启用自动缩放（默认：启用）
+  threshold: 50000  # 触发缩放的像素阈值（宽或高超过此值则自动缩放）
+  quality: 95  # 缩放后JPEG质量（1-100，默认95）
+  # 说明：
+  # - 当图像宽度或高度超过threshold时，自动缩小到50%
+  # - 缩小后的图像保存在 DataWSI_downscaled/ 目录
+  # - 输出的坐标会自动映射回原始图像坐标系（乘以2倍）
+
+
+# 过滤参数（空白patch过滤配置）
+# 注意：启用 auto_bg 后，以下参数会被自动分析结果覆盖
+filtering:
+  bg_rgb: [238, 235, 235]  # 背景色 RGB 值（当 auto_bg=false 时使用）
+  tolerance: 30  # 颜色容差
+  bg_ratio: 0.9  # 背景比例阈值（像素中背景色占比超过此值则认为是空白）
+  std_thresh: 10.0  # 灰度标准差阈值（低于此值则认为是空白）
+  auto_bg: true  # 是否自动分析背景参数（推荐开启）
+  bg_analysis_limit: 10  # 自动分析时采样的patch数量
+
+# 模型参数
+model:
+  device: "auto"  # auto/cpu/cuda/cuda:0
+  # 注意：以下参数在当前版本中未使用，保留用于未来扩展
+  # batch_size: 1  # TODO: 批量推理（未实现）
+  # num_workers: 4  # TODO: 多进程推理（未实现）
+
+# 批量推理配置（用于 predict_batch_torchscript.py）
+batch_inference:
+  # 模型配置
+  # model_path: "${MODEL_PATH:/path/to/model.pt}"  # 模型路径（可选，未设置时使用 paths.model_path 或默认值）
+  device: "auto"  # auto/cpu/cuda/cuda:0 等
+  use_fp16: false  # 是否启用FP16混合精度（仅GPU支持）- 关闭以避免类型不匹配错误
+  
+  # 推理参数
+  threshold: 0.5  # 置信度阈值
+  batch_size: null  # 批量大小，null表示自动根据GPU显存调整（8/16/32）
+  
+  # 输入输出配置
+  pattern: "*.png"  # 图像文件匹配模式（*.png, *.jpg, *.jpeg）
+  save_visualization: true  # 是否保存可视化图片（false表示只保存JSON）
+  
+  # 路径配置（可为空，通过命令行指定）
+  default_patch_dir: null  # 默认patch目录（null表示必须通过命令行指定）
+  default_output_dir: null  # 默认输出目录（null表示自动生成：patch_dir + '_inference'）
+  default_coordinates_csv: null  # 默认坐标CSV文件（null表示自动查找）
+  default_global_image_url: ""  # 默认大图URL（会写入JSON）
+
+# 日志配置
+logging:
+  level: "INFO"  # DEBUG/INFO/WARNING/ERROR
+  console: true
+  file_max_bytes: 524288000  # 单个日志文件最大大小（500MB，处理大文件时建议增大到1GB或更大）
+  file_backup_count: 20  # 保留的备份日志文件数量（建议根据磁盘空间调整）
+
+# 重试配置（未使用，保留用于未来扩展）
+# retry:
+#   max_attempts: 3
+#   delay: 1.0
+#   backoff: 2.0
+
+# 监控配置
+monitoring:
+  enabled: true
+  stats_interval: 300  # 统计信息输出间隔（秒）
+  health_check_port: 8081  # 健康检查端口（0表示不启动）
+  
+# MinIO 上传配置
+minio:
+  enabled: false  # 启用后自动上传JSON与全图
+  endpoint: "${MINIO_ENDPOINT:192.168.150.157:9000}"  # MinIO 服务地址 (ping不上？？？)
+  access_key: "${MINIO_ACCESS_KEY:minioadmin}"   # 访问密钥
+  secret_key: "${MINIO_SECRET_KEY:minioadmin}"   # 密钥
+  bucket: "${MINIO_BUCKET:heathycare}"           # 目标 bucket
+  secure: false                                  # HTTPS 请设为 true
+  base_path: "heathycare/source"                 # 上传前缀，可为空
+  region: ""                                     # 可选，留空自动
+  create_bucket_if_missing: true                 # 不存在时自动创建
+  upload_original_image: true                    # 上传监听目录中的原始全图
+  upload_json: true                              # 上传推理生成的 JSON
+  timeout: 60                                    # 上传超时秒数
+
+# endpoint：IP:端口（HTTP 用 9000/9001 常见）；若是 HTTPS，设 secure: true。
+# access_key / secret_key：MinIO 的账号密钥。
+# bucket：要存放结果的桶名称，若不存在可用 create_bucket_if_missing: true 自动创建。
+# base_path：桶内的前缀目录，可留空，示例 rtdetr/results。
+# upload_original_image / upload_json：是否上传原始全图和推理 JSON，按需开关。
+
+# 资源限制（未使用，保留用于未来扩展）
+# resources:
+#   max_memory_gb: 20.0  # 最大内存使用（GB）
+#   min_disk_space_gb: 10.0  # 最小磁盘空间（GB）
+#   gpu_memory_limit_gb: null  # GPU内存限制（GB），null表示不限制
+
+# 通知配置（未使用，保留用于未来扩展）
+# notification:
+#   enabled: false
+#   email:
+#     enabled: false
+#     smtp_host: "smtp.example.com"
+#     smtp_port: 587
+#     from: "noreply@example.com"
+#     to: []
+#     username: ""
+#     password: ""
+#   webhook:
+#     enabled: false
+#     url: ""
+#     timeout: 5
+
+# 安全配置（未使用，保留用于未来扩展）
+# security:
+#   validate_file_types: true
+#   validate_paths: true
+#   allowed_image_types: ["image/jpeg", "image/png", "image/tiff", "image/tif"]
+

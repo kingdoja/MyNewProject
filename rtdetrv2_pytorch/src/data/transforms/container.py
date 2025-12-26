@@ -10,7 +10,7 @@ import torchvision.transforms.v2 as T
 
 from typing import Any, Dict, List, Optional
 
-from ._transforms import EmptyTransform
+from ._transforms import EmptyTransform, RandomTransformWithP
 from ...core import register, GLOBAL_CONFIG
 
 
@@ -22,9 +22,21 @@ class Compose(T.Compose):
             for op in ops:
                 if isinstance(op, dict):
                     name = op.pop('type')
+                    # 检查是否有 p 参数，以及 transform 是否已经支持 p 参数
+                    p = op.pop('p', None)
+                    # 如果 transform 是 RandomIoUCrop 且指定了 p，需要将 p 参数传给它
+                    if name == 'RandomIoUCrop' and p is not None:
+                        op['p'] = p
+                    # 创建 transform 实例
                     transfom = getattr(GLOBAL_CONFIG[name]['_pymodule'], GLOBAL_CONFIG[name]['_name'])(**op)
+                    # 如果指定了 p 参数且 transform 不支持 p（不是 RandomIoUCrop），则用 RandomTransformWithP 包装
+                    if p is not None and name != 'RandomIoUCrop':
+                        transfom = RandomTransformWithP(transform=transfom, p=p)
                     transforms.append(transfom)
+                    # 恢复 op 字典（用于调试或保持原始配置）
                     op['type'] = name
+                    if p is not None:
+                        op['p'] = p
 
                 elif isinstance(op, nn.Module):
                     transforms.append(op)
@@ -38,12 +50,16 @@ class Compose(T.Compose):
 
         if policy is None:
             policy = {'name': 'default'}
+        elif isinstance(policy, dict) and 'name' not in policy:
+            # 如果 policy 是字典但没有 'name' 键，添加默认值
+            policy = {'name': 'default', **policy}
 
         self.policy = policy
         self.global_samples = 0
 
     def forward(self, *inputs: Any) -> Any:
-        return self.get_forward(self.policy['name'])(*inputs)
+        policy_name = self.policy.get('name', 'default')
+        return self.get_forward(policy_name)(*inputs)
 
     def get_forward(self, name):
         forwards = {

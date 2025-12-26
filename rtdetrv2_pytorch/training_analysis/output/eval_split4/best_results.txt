@@ -1,0 +1,60 @@
+Best Epoch: 20
+IoU metric: bbox
+
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.358
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.586
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.379
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.270
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.272
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.278
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.234
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.617
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.652
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.552
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.736
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.787
+
+
+============================================================
+Classification Metrics (IoU>=0.30)
+============================================================
+Overall Accuracy: 0.7394 (1464/1980)
+Mean Class Accuracy: 0.5597
+
+Class                Correct  Total    Accuracy  
+------------------------------------------------------------
+AD                   0        0        0.0000    
+BC                   0        0        0.0000    
+EC                   348      643      0.5412    
+L                    624      790      0.7899    
+LC                   0        0        0.0000    
+M                    0        0        0.0000    
+NT                   0        0        0.0000    
+SM                   0        0        0.0000    
+SQ                   0        0        0.0000    
+TC1                  492      542      0.9077    
+TC2                  0        5        0.0000    
+TC3                  0        0        0.0000    
+
+
+============================================================
+Classification Metrics (IoU>=0.30)
+============================================================
+Overall Accuracy: 0.7394 (1464/1980)
+Mean Class Accuracy: 0.5597
+
+Class                Correct  Total    Accuracy  
+------------------------------------------------------------
+AD                   0        0        0.0000    
+BC                   0        0        0.0000    
+EC                   348      643      0.5412    
+L                    624      790      0.7899    
+LC                   0        0        0.0000    
+M                    0        0        0.0000    
+NT                   0        0        0.0000    
+SM                   0        0        0.0000    
+SQ                   0        0        0.0000    
+TC1                  492      542      0.9077    
+TC2                  0        5        0.0000    
+TC3                  0        0        0.0000    
+

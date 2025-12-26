@@ -1,0 +1,5 @@
+SetCriterion:
+  class_weight_file: DATA/SputumCell/split_dataset_aug/analysis/class_balance_class_weights.json
+  class_weight_key: weight
+  class_weight_power: 1.0
+

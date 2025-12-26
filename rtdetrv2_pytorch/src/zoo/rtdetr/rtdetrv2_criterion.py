@@ -1,10 +1,15 @@
 """Copyright(c) 2023 lyuwenyu. All Rights Reserved.
 """
 
-import torch 
-import torch.nn as nn 
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+import torch
+import torch.nn as nn
 import torch.distributed
-import torch.nn.functional as F 
+import torch.nn.functional as F
 import torchvision
 
 import copy
@@ -25,14 +30,17 @@ class RTDETRCriterionv2(nn.Module):
     __inject__ = ['matcher', ]
 
     def __init__(self, \
-        matcher, 
-        weight_dict, 
-        losses, 
-        alpha=0.2, 
-        gamma=2.0, 
-        num_classes=80, 
+        matcher,
+        weight_dict,
+        losses,
+        alpha=0.2,
+        gamma=2.0,
+        num_classes=80,
         boxes_weight_format=None,
-        share_matched_indices=False):
+        share_matched_indices=False,
+        class_weight_file: str | None = None,
+        class_weight_key: str = "weight",
+        class_weight_power: float = 1.0):
         """Create the criterion.
         Parameters:
             matcher: module able to compute a matching between targets and proposals
@@ -51,6 +59,13 @@ class RTDETRCriterionv2(nn.Module):
         self.share_matched_indices = share_matched_indices
         self.alpha = alpha
         self.gamma = gamma
+        class_weight = torch.ones(self.num_classes)
+        if class_weight_file:
+            loaded = self._load_class_weights(class_weight_file, class_weight_key, class_weight_power)
+            for idx, value in loaded.items():
+                if 0 <= idx < self.num_classes:
+                    class_weight[idx] = value
+        self.register_buffer('class_weights', class_weight)
 
     def loss_labels_focal(self, outputs, targets, indices, num_boxes):
         assert 'pred_logits' in outputs
@@ -62,6 +77,7 @@ class RTDETRCriterionv2(nn.Module):
         target_classes[idx] = target_classes_o
         target = F.one_hot(target_classes, num_classes=self.num_classes+1)[..., :-1]
         loss = torchvision.ops.sigmoid_focal_loss(src_logits, target, self.alpha, self.gamma, reduction='none')
+        loss = loss * self.class_weights.view(1, 1, -1)
         loss = loss.mean(1).sum() * src_logits.shape[1] / num_boxes
 
         return {'loss_focal': loss}
@@ -92,6 +108,7 @@ class RTDETRCriterionv2(nn.Module):
         weight = self.alpha * pred_score.pow(self.gamma) * (1 - target) + target_score
         
         loss = F.binary_cross_entropy_with_logits(src_logits, target_score, weight=weight, reduction='none')
+        loss = loss * self.class_weights.view(1, 1, -1)
         loss = loss.mean(1).sum() * src_logits.shape[1] / num_boxes
         return {'loss_vfl': loss}
 
@@ -242,6 +259,21 @@ class RTDETRCriterionv2(nn.Module):
             meta = {}
 
         return meta
+
+    def _load_class_weights(self, weight_path: str, key: str, power: float):
+        path = Path(weight_path)
+        if not path.exists():
+            raise FileNotFoundError(f"class_weight_file {path} not found")
+        with path.open('r', encoding='utf-8') as f:
+            payload = json.load(f)
+        raw_weights = payload.get('weights', {})
+        weights: dict[int, float] = {}
+        for cat_id, info in raw_weights.items():
+            value = float(info.get(key, 1.0))
+            if power != 1.0:
+                value = value ** power
+            weights[int(cat_id)] = value
+        return weights
 
     @staticmethod
     def get_cdn_matched_indices(dn_meta, targets):

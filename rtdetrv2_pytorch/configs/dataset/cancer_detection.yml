@@ -14,34 +14,45 @@ train_dataloader:
   type: DataLoader
   dataset: 
     type: CocoDetection
-    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/train/images/
-    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/train/annotations/instances_train.json
+    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split4_aug/train/images
+    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split4_aug/train/annotations/instances_train.json
     return_masks: False
     transforms:
       type: Compose
       ops: 
-        - {type: RandomPhotometricDistort, p: 0.8}
+        - {type: RandomPhotometricDistort, p: 0.5} # 随机光学畸变，概率 0.5
         - {type: RandomZoomOut, fill: 0}
-        - {type: RandomIoUCrop, p: 0.8}
+        - {type: RandomIoUCrop, p: 0.8, min_scale: 0.5, max_scale: 1.0, min_aspect_ratio: 0.7, max_aspect_ratio: 1.4} # 随机裁剪，裁剪比例范围 [0.5, 1.0]，长宽比范围 [0.7, 1.4]
         - {type: SanitizeBoundingBoxes, min_size: 1}
         - {type: RandomHorizontalFlip}
         - {type: Resize, size: [640, 640]}
         - {type: SanitizeBoundingBoxes, min_size: 1}
         - {type: ConvertPILImage, dtype: 'float32', scale: True}   
         - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+      policy:
+        name: stop_epoch
+        epoch: 85  # 从70调整到85，让数据增强持续更长时间，提升模型泛化能力
+        ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
+  # sampler:
+  #   type: CocoImageWeightedRandomSampler
+  #   weights_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_image_weights.json
+  #   replacement: True
+  #   default_weight: 1.0
   shuffle: True
-  
+  total_batch_size: 16
   num_workers: 4
   drop_last: True 
   collate_fn:
     type: BatchImageCollateFuncion
+    scales: [480, 512, 544, 576, 608, 640, 640, 640, 672, 704, 736, 768, 800]
+    stop_epoch: 85  # 与数据增强停止epoch保持一致
 
 val_dataloader:
   type: DataLoader
   dataset: 
     type: CocoDetection
-    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/val/images/
-    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/val/annotations/instances_val.json
+    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split4_aug/val/images
+    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split4_aug/val/annotations/instances_val.json
     return_masks: False
     transforms:
       type: Compose
@@ -49,7 +60,7 @@ val_dataloader:
         - {type: Resize, size: [640, 640]}
         - {type: ConvertPILImage, dtype: 'float32', scale: True}   
   shuffle: False
-  
+  total_batch_size: 16  # 验证批次大小
   num_workers: 4
   drop_last: False
   collate_fn:

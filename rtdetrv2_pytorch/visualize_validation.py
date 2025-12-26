@@ -115,7 +115,7 @@ class BatchVisualizer:
         """
         # 加载和预处理图片
         image_pil = Image.open(image_path).convert('RGB')
-        original_size = image_pil.size
+        original_width, original_height = image_pil.size  # PIL: (width, height)
         
         # 图片预处理
         transforms = T.Compose([
@@ -124,7 +124,12 @@ class BatchVisualizer:
         ])
         
         image_tensor = transforms(image_pil).unsqueeze(0).to(self.device)
-        orig_size_tensor = torch.tensor([[original_size[0], original_size[1]]], dtype=torch.int64, device=self.device)
+        # RT-DETR 的 postprocessor 期望 (height, width)
+        orig_size_tensor = torch.tensor(
+            [[original_height, original_width]],
+            dtype=torch.int64,
+            device=self.device,
+        )
         
         # 执行推理
         with torch.no_grad():
@@ -582,10 +587,10 @@ def main():
     # 配置参数
     config_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r18vd_cancer_detection.yml"  # 修改为您的配置文件
     # model_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/premodel/best.pth" # 您的模型文件
-    model_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/best.pth"
-    data_root = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/"  # 数据集根目录
+    model_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection_split212_aug/best.pth"
+    data_root = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split212_aug/"  # 数据集根目录
     # data_root = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/CancerDetection"  # 数据集根目录
-    output_dir = "validation_visualization_newdata"  # 输出目录
+    output_dir = "validation_visualization_newdata_split212"  # 输出目录
     device = "cuda" if torch.cuda.is_available() else "cpu"  # 自动检测设备
     confidence_threshold = 0.5  # 置信度阈值
     

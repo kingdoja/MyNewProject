@@ -2,9 +2,12 @@
 """
 
 import importlib.metadata
+from packaging.version import Version
 from torch import Tensor 
 
-if importlib.metadata.version('torchvision') == '0.15.2':
+_tv_version = Version(importlib.metadata.version('torchvision'))
+
+if _tv_version == Version('0.15.2'):
     import torchvision
     torchvision.disable_beta_transforms_warning()
 
@@ -13,7 +16,7 @@ if importlib.metadata.version('torchvision') == '0.15.2':
     from torchvision.transforms.v2 import SanitizeBoundingBox as SanitizeBoundingBoxes
     _boxes_keys = ['format', 'spatial_size']
 
-elif '0.17' > importlib.metadata.version('torchvision') >= '0.16':
+elif Version('0.16') <= _tv_version < Version('0.17'):
     import torchvision
     torchvision.disable_beta_transforms_warning()
 
@@ -22,7 +25,7 @@ elif '0.17' > importlib.metadata.version('torchvision') >= '0.16':
         BoundingBoxes, BoundingBoxFormat, Mask, Image, Video)
     _boxes_keys = ['format', 'canvas_size']
 
-elif importlib.metadata.version('torchvision') >= '0.17':
+elif _tv_version >= Version('0.17'):
     import torchvision
     from torchvision.transforms.v2 import SanitizeBoundingBoxes
     from torchvision.tv_tensors import (

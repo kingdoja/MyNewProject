@@ -25,13 +25,16 @@ from ...core import register
 RandomPhotometricDistort = register()(T.RandomPhotometricDistort)
 RandomZoomOut = register()(T.RandomZoomOut)
 RandomHorizontalFlip = register()(T.RandomHorizontalFlip)
-Resize = register()(T.Resize)
-# ToImageTensor = register()(T.ToImageTensor)
-# ConvertDtype = register()(T.ConvertDtype)
-# PILToTensor = register()(T.PILToTensor)
-SanitizeBoundingBoxes = register(name='SanitizeBoundingBoxes')(SanitizeBoundingBoxes)
-RandomCrop = register()(T.RandomCrop)
-Normalize = register()(T.Normalize)
+RandomVerticalFlip = register()(T.RandomVerticalFlip) # 随机垂直翻转
+Resize = register()(T.Resize) # 调整图像大小
+SanitizeBoundingBoxes = register(name='SanitizeBoundingBoxes')(SanitizeBoundingBoxes) # 边界框最小尺寸
+RandomCrop = register()(T.RandomCrop) # 随机裁剪
+Normalize = register()(T.Normalize) # 归一化
+ColorJitter = register()(T.ColorJitter) # 颜色抖动
+GaussianBlur = register()(T.GaussianBlur) # 高斯模糊
+RandomErasing = register()(T.RandomErasing) # 随机擦除
+RandomAffine = register()(T.RandomAffine) # 随机仿射变换
+RandomPerspective = register()(T.RandomPerspective) # 随机透视变换
 
 
 @register()
@@ -88,6 +91,20 @@ class RandomIoUCrop(T.RandomIoUCrop):
             return inputs if len(inputs) > 1 else inputs[0]
 
         return super().forward(*inputs)
+
+
+@register()
+class RandomTransformWithP(T.Transform):
+    """通用包装器，为任何变换添加 p 参数支持"""
+    def __init__(self, transform: T.Transform, p: float = 1.0) -> None:
+        super().__init__()
+        self.transform = transform
+        self.p = p
+
+    def __call__(self, *inputs: Any) -> Any:
+        if torch.rand(1) >= self.p:
+            return inputs if len(inputs) > 1 else inputs[0]
+        return self.transform(*inputs)
 
 
 @register()

@@ -1,12 +1,12 @@
 __include__: [
-  '../dataset/cancer_detection.yml',
+  '../dataset/cancer_detection.yml',  # 包含数据集配置和增强的数据增强策略
   '../runtime.yml',
   './include/dataloader.yml',
   './include/optimizer.yml',
   './include/rtdetrv2_r50vd.yml',
 ]
 
-output_dir: ./output/rtdetrv2_r18vd_cancer_detection
+output_dir: ./output/rtdetrv2_r18vd_cancer_detection_split212_aug
 
 # 早停机制参数
 early_stopping_patience: 10  # 容忍5个epoch没有改善
@@ -50,15 +50,9 @@ optimizer:
 
 lr_warmup_scheduler:
   type: LinearWarmup
-  warmup_duration: 1000
+  warmup_duration: 2000  # 增加warmup步数，让模型在数据增强变化下更稳定地学习
 
-train_dataloader: 
-  dataset: 
-    transforms:
-      policy:
-        epoch: 159
-  collate_fn:
-    scales: ~
+# train_dataloader配置已在cancer_detection.yml中完整定义，此处不需要重复配置
 
 # 添加显存优化设置
 sync_bn: false  # 关闭同步BN以节省显存

@@ -31,8 +31,21 @@ class CocoDetection(FasterCocoDetection, DetDataset):
         self.prepare = ConvertCocoPolysToMask(return_masks)
         self.img_folder = img_folder
         self.ann_file = ann_file
-        self.return_masks = return_masks
         self.remap_mscoco_category = remap_mscoco_category
+        # Explicitly expose ids for sampler compatibility
+        # Parent FasterCocoDetection sets self.ids in its __init__, 
+        # but we need to ensure it's accessible for hasattr() checks
+        # After parent __init__, ids should be available - verify and expose
+        if not hasattr(self, 'ids'):
+            # If somehow ids wasn't set, try to get it from parent
+            try:
+                self.ids = getattr(super(FasterCocoDetection, self), 'ids')
+            except AttributeError:
+                # This shouldn't happen, but if it does, raise a clear error
+                raise AttributeError(
+                    "Failed to access 'ids' from parent FasterCocoDetection. "
+                    "This may indicate an issue with the dataset initialization."
+                )
 
     def __getitem__(self, idx):
         img, target = self.load_item(idx)
@@ -97,6 +110,57 @@ class CocoDetection(FasterCocoDetection, DetDataset):
     @property
     def label2category(self, ):
         return {i: cat['id'] for i, cat in enumerate(self.categories)}
+
+
+def compute_bbox_from_polygon(segmentation):
+    """从多边形segmentation计算边界框(bbox)。
+    
+    支持格式：
+    - 单个多边形：list[float]，格式为 [x1, y1, x2, y2, ...]
+    - 多个多边形：list[list[float]]
+    - RLE格式：dict，包含 'counts'，返回None（需要从mask计算）
+    
+    返回：
+    - bbox: [x_min, y_min, width, height] 格式，如果无法计算则返回None
+    """
+    if segmentation is None or (isinstance(segmentation, list) and len(segmentation) == 0):
+        return None
+    
+    # RLE格式，无法直接计算bbox
+    if isinstance(segmentation, dict) and 'counts' in segmentation:
+        return None
+    
+    # 多边形格式
+    if isinstance(segmentation, list):
+        all_points = []
+        
+        # 检查是否是多个多边形的列表
+        if len(segmentation) > 0 and isinstance(segmentation[0], list):
+            # 多个多边形情况
+            for poly in segmentation:
+                if isinstance(poly, (list, tuple)) and len(poly) >= 6:  # 至少3个点
+                    # 提取所有点坐标 [x1, y1, x2, y2, ...]
+                    for i in range(0, len(poly), 2):
+                        if i + 1 < len(poly):
+                            all_points.append((poly[i], poly[i+1]))
+        else:
+            # 单个多边形情况 [x1, y1, x2, y2, ...]
+            if len(segmentation) >= 6:  # 至少3个点
+                for i in range(0, len(segmentation), 2):
+                    if i + 1 < len(segmentation):
+                        all_points.append((segmentation[i], segmentation[i+1]))
+        
+        if len(all_points) > 0:
+            xs = [p[0] for p in all_points]
+            ys = [p[1] for p in all_points]
+            x_min, x_max = min(xs), max(xs)
+            y_min, y_max = min(ys), max(ys)
+            width = x_max - x_min
+            height = y_max - y_min
+            # 返回COCO格式的bbox: [x_min, y_min, width, height]
+            return [x_min, y_min, width, height]
+    
+    return None
 
 
 def convert_coco_poly_to_mask(segmentations, height, width):
@@ -164,7 +228,33 @@ class ConvertCocoPolysToMask(object):
 
         anno = [obj for obj in anno if 'iscrowd' not in obj or obj['iscrowd'] == 0]
 
-        boxes = [obj["bbox"] for obj in anno]
+        # 处理bbox：如果标注有segmentation但没有bbox，则从segmentation计算bbox
+        # 同时过滤掉无法获取bbox的标注，确保anno和boxes保持同步
+        boxes = []
+        valid_anno = []
+        for obj in anno:
+            bbox = None
+            if "bbox" in obj and obj["bbox"] is not None:
+                # 如果已有bbox，直接使用
+                bbox = obj["bbox"]
+            elif "segmentation" in obj and obj["segmentation"] is not None:
+                # 如果只有segmentation，从多边形计算bbox
+                computed_bbox = compute_bbox_from_polygon(obj["segmentation"])
+                if computed_bbox is not None:
+                    bbox = computed_bbox
+                    # 同时更新原对象中的bbox字段，以便后续使用
+                    obj["bbox"] = computed_bbox
+                    # 如果没有area字段，也计算一下
+                    if "area" not in obj or obj["area"] is None:
+                        obj["area"] = computed_bbox[2] * computed_bbox[3]
+            
+            # 只有成功获取到bbox的标注才保留
+            if bbox is not None:
+                boxes.append(bbox)
+                valid_anno.append(obj)
+        
+        # 使用过滤后的anno列表
+        anno = valid_anno
         # guard against no boxes via resizing
         boxes = torch.as_tensor(boxes, dtype=torch.float32).reshape(-1, 4)
         boxes[:, 2:] += boxes[:, :2]

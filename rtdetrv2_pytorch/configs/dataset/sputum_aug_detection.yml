@@ -1,0 +1,65 @@
+task: detection
+
+evaluator:
+  type: CocoEvaluator
+  iou_types: ['bbox']
+
+num_classes: 12
+remap_mscoco_category: False
+
+train_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: DATA/SputumCell/split_dataset_aug/train/images
+    ann_file: DATA/SputumCell/split_dataset_aug/train/annotations/instances_train.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops:
+        - {type: RandomPhotometricDistort, p: 0.5}
+        - {type: RandomZoomOut, fill: 0}
+        - {type: RandomIoUCrop, p: 0.8, min_scale: 0.5, max_scale: 1.0, min_aspect_ratio: 0.7, max_aspect_ratio: 1.4}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: RandomHorizontalFlip}
+        - {type: Resize, size: [640, 640]}
+        - {type: SanitizeBoundingBoxes, min_size: 1}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+      policy:
+        name: stop_epoch
+        epoch: 70
+        ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
+  shuffle: False
+  sampler:
+    type: CocoImageWeightedRandomSampler
+    weights_file: DATA/SputumCell/split_dataset_aug/analysis/class_balance_image_weights.json
+    replacement: True
+    default_weight: 1.0
+  total_batch_size: 8
+  num_workers: 4
+  drop_last: True
+  collate_fn:
+    type: BatchImageCollateFuncion
+    scales: [480, 512, 544, 576, 608, 640, 640, 640, 672, 704, 736, 768, 800]
+    stop_epoch: 70
+
+val_dataloader:
+  type: DataLoader
+  dataset:
+    type: CocoDetection
+    img_folder: DATA/SputumCell/split_dataset_aug/val/images
+    ann_file: DATA/SputumCell/split_dataset_aug/val/annotations/instances_val.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops:
+        - {type: Resize, size: [640, 640]}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}
+  shuffle: False
+  total_batch_size: 16
+  num_workers: 4
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFuncion
+

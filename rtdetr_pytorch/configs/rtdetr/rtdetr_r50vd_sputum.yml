@@ -1,0 +1,12 @@
+__include__: [
+  '../dataset/sputum_detection.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/dataloader_sampler.yml',
+  './include/optimizer.yml',
+  './include/rtdetr_r50vd.yml',
+  './include/criterion_sputum_weights.yml',
+]
+
+output_dir: ./output/rtdetr_r50vd_sputum
+

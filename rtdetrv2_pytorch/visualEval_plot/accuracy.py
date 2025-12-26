@@ -243,8 +243,8 @@ def print_classification_report(metrics):
 # 示例使用方法
 if __name__ == "__main__":
     # 请根据您的实际文件路径修改以下路径
-    ground_truth_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset/val/annotations/instances_val.json"
-    predictions_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/validation_visualization_newdata/val_detections.json"
+    ground_truth_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/val/annotations/instances_val.json"
+    predictions_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/training_analysis/output/validation_visualization_split_dataset_aug/val_detections.json"
     
     # 计算分类指标
     metrics = calculate_classification_metrics(predictions_file, ground_truth_file, iou_threshold=0.5)

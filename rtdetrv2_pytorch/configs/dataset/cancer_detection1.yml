@@ -1,0 +1,69 @@
+_base_: ../rtdetrv2/rtdetrv2_r18vd_6x_coco.yml
+
+task: detection
+
+evaluator:
+  type: CocoEvaluator
+  # 只保留bbox评估，因为segm评估需要实际的mask文件
+  iou_types: ['bbox']
+
+num_classes: 12
+remap_mscoco_category: False
+
+train_dataloader: 
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/train/images
+    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/train/annotations/instances_train.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: 
+        - {type: RandomPhotometricDistort, p: 0.15} # 降低光学畸变概率，避免过度增强
+        - {type: RandomZoomOut, fill: 0, p: 0.05} # 进一步降低zoom out概率，避免小目标丢失
+        - {type: RandomIoUCrop, p: 0.2, min_scale: 0.85, max_scale: 1.0, min_aspect_ratio: 0.95, max_aspect_ratio: 1.05} # 更温和的裁剪，避免破坏小目标
+        - {type: SanitizeBoundingBoxes, min_size: 2} # 提高最小尺寸阈值，过滤极小框
+        - {type: RandomHorizontalFlip, p: 0.5} # 保持水平翻转
+        - {type: RandomVerticalFlip, p: 0.3} # 垂直翻转，适用于细胞数据
+        - {type: RandomRotate90, p: 0.1} # 90度旋转
+        - {type: Resize, size: [640, 640]}
+        - {type: SanitizeBoundingBoxes, min_size: 2} # 再次清理无效框
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}   
+        - {type: ConvertBoxes, fmt: 'cxcywh', normalize: True}
+      policy:
+        name: stop_epoch
+        epoch: 70
+        ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
+  # sampler:
+  #   type: CocoImageWeightedRandomSampler
+  #   weights_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_image_weights.json
+  #   replacement: True
+  #   default_weight: 1.0
+  shuffle: True
+  total_batch_size: 8  # 降低批次大小至8，避免显存不足（OOM）
+  num_workers: 4  # 增加数据加载线程数以提高效率
+  drop_last: True 
+  collate_fn:
+    type: BatchImageCollateFuncion
+    scales: [512, 544, 576, 608, 640, 640, 640, 672, 704, 736]  # 减少多尺度范围，节省显存
+    stop_epoch: 70
+
+val_dataloader:
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/val/images
+    ann_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/val/annotations/instances_val.json
+    return_masks: False
+    transforms:
+      type: Compose
+      ops: 
+        - {type: Resize, size: [640, 640]}
+        - {type: ConvertPILImage, dtype: 'float32', scale: True}   
+  shuffle: False
+  total_batch_size: 8  # 与训练批次大小保持一致
+  num_workers: 4  # 增加数据加载线程数
+  drop_last: False
+  collate_fn:
+    type: BatchImageCollateFuncion

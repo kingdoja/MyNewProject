@@ -7,7 +7,8 @@ import matplotlib.pyplot as plt
 import json, re, os
 
 # 1. 解析 log.txt
-log_file = '/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/log.txt'
+# log_file = '/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/log.txt'
+log_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection_p4_100_usePre/log.txt"
 epochs, map50, map5095 = [], [], []
 loss_total, loss_vfl, loss_bbox, loss_giou = [], [], [], []
 

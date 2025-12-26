@@ -1,11 +1,14 @@
 #评估结果可视化
+from re import L
+from syslog import LOG_ALERT
 import matplotlib.pyplot as plt
 import json
 import os
 import numpy as np
 
 # 直接在代码中指定固定路径
-LOG_FILE_PATH = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/log.txt"
+# LOG_FILE_PATH = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection/log.txt"
+LOG_FILE_PATH = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r18vd_cancer_detection_p4_100_usePre/log.txt"
 OUTPUT_DIR = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/plot"
 
 # 读取日志内容

@@ -74,7 +74,10 @@ def export_torchscript(cfg, checkpoint, output_file, input_size=640, device=None
     导出TorchScript格式模型
     这种格式可以在C++等环境中使用，适合生产部署
     
-    注意：为了支持CUDA推理，必须在CUDA设备上进行trace
+    支持设备：
+    - cuda: 适合 GPU 推理 / TensorRT 等部署
+    - cpu: 适合通用 CPU 推理或作为中间格式
+    - npu: 适合 Ascend 910B 等 NPU 环境上的 torch_npu 推理 / npc 编译
     """
     if 'ema' in checkpoint:
         state = checkpoint['ema']['module']
@@ -83,15 +86,57 @@ def export_torchscript(cfg, checkpoint, output_file, input_size=640, device=None
         state = checkpoint['model']
         print('使用标准模型权重')
     
-    # 确定使用的设备（优先使用CUDA以支持CUDA推理）
+    # 确定使用的设备（优先使用 CUDA / 其次 NPU，最后 CPU）
     if device is None:
+        # 1. 优先使用 CUDA
         if torch.cuda.is_available():
             device = torch.device('cuda')
-            print(f'✅ 检测到CUDA，将在CUDA设备上导出模型（支持CUDA推理）')
+            print('✅ 检测到 CUDA，将在 CUDA 设备上导出模型（支持 CUDA 推理）')
+        # 2. 其次尝试 NPU（Ascend / torch_npu）
+        elif hasattr(torch, 'npu') and hasattr(torch.npu, 'is_available') and torch.npu.is_available():
+            try:
+                import torch_npu  # noqa: F401  # 确保注册 NPU 设备
+            except ImportError:
+                print('⚠️ 检测到 torch.npu 可用，但无法导入 torch_npu，回退到 CPU 导出')
+                device = torch.device('cpu')
+                print('⚠️ 将在 CPU 上导出模型（仅支持 CPU 推理）')
+            else:
+                device = torch.device('npu')
+                print('✅ 检测到 NPU，将在 NPU 设备上导出模型（支持 Ascend / torch_npu 推理）')
+        # 3. 最后回退到 CPU
         else:
             device = torch.device('cpu')
-            print('⚠️  CUDA不可用，将在CPU上导出模型（仅支持CPU推理）')
+            print('⚠️ CUDA / NPU 均不可用，将在 CPU 上导出模型（仅支持 CPU 推理）')
     else:
+        # 显式指定设备
+        if isinstance(device, str) and device.startswith('npu'):
+            # Ascend NPU 场景，需要先导入 torch_npu 才能注册 npu 设备
+            try:
+                import torch_npu  # noqa: F401
+            except ImportError as e:
+                error_msg = str(e)
+                if 'libascend_hal.so' in error_msg or 'cannot open shared object file' in error_msg:
+                    raise RuntimeError(
+                        '❌ NPU 环境配置不完整！\n'
+                        '错误详情: ' + error_msg + '\n\n'
+                        '解决方案：\n'
+                        '1. 检查 Ascend 驱动是否已安装：\n'
+                        '   - 确认 /usr/local/Ascend 目录存在\n'
+                        '   - 检查环境变量：echo $LD_LIBRARY_PATH\n'
+                        '   - 应该包含：/usr/local/Ascend/driver/lib64 等路径\n\n'
+                        '2. 设置环境变量（在 ~/.bashrc 或运行前执行）：\n'
+                        '   export LD_LIBRARY_PATH=/usr/local/Ascend/driver/lib64:$LD_LIBRARY_PATH\n'
+                        '   export LD_LIBRARY_PATH=/usr/local/Ascend/add-ons:$LD_LIBRARY_PATH\n\n'
+                        '3. 如果是在容器中，确保正确挂载了 Ascend 设备\n\n'
+                        '4. 临时解决方案：在 CPU 上导出模型，然后在 NPU 上加载使用\n'
+                        '   命令：将 --device npu 改为 --device cpu'
+                    ) from e
+                else:
+                    raise RuntimeError(
+                        '指定 device=\"npu\"，但当前环境未安装 torch_npu，'
+                        '请在 Ascend 910B 环境中安装 torch_npu 后再导出模型\n'
+                        '错误详情: ' + error_msg
+                    ) from e
         device = torch.device(device)
         print(f'使用指定设备: {device}')
     
@@ -295,8 +340,11 @@ if __name__ == '__main__':
                         help='输入图像尺寸 (仅用于torchscript模式, 默认: 640)')
     
     parser.add_argument('--device', type=str, default=None,
-                        choices=['cuda', 'cpu', None],
-                        help='导出设备 (torchscript模式: 推荐使用cuda以支持CUDA推理, 默认: 自动检测)')
+                        choices=['cuda', 'cpu', 'npu', None],
+                        help='导出设备 (仅对 torchscript 模式生效, 默认: 自动检测)\n'
+                             '  - cuda: 在 GPU 上导出，适合 GPU/TensorRT 部署\n'
+                             '  - cpu: 在 CPU 上导出，适合作为中间格式\n'
+                             '  - npu: 在 Ascend 910B 等 NPU 上导出，适合 torch_npu/npc 部署')
     
     args = parser.parse_args()
     

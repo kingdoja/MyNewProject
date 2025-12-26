@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 """
 reference: 
 https://github.com/facebookresearch/detr/blob/main/models/detr.py
@@ -6,9 +8,12 @@ by lyuwenyu
 """
 
 
-import torch 
-import torch.nn as nn 
-import torch.nn.functional as F 
+import json
+from pathlib import Path
+
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 import torchvision
 
 # from torchvision.ops import box_convert, generalized_box_iou
@@ -29,7 +34,19 @@ class SetCriterion(nn.Module):
     __share__ = ['num_classes', ]
     __inject__ = ['matcher', ]
 
-    def __init__(self, matcher, weight_dict, losses, alpha=0.2, gamma=2.0, eos_coef=1e-4, num_classes=80):
+    def __init__(
+        self,
+        matcher,
+        weight_dict,
+        losses,
+        alpha=0.2,
+        gamma=2.0,
+        eos_coef=1e-4,
+        num_classes=80,
+        class_weight_file: str | None = None,
+        class_weight_key: str = "weight",
+        class_weight_power: float = 1.0,
+    ):
         """ Create the criterion.
         Parameters:
             num_classes: number of object categories, omitting the special no-object category
@@ -46,8 +63,15 @@ class SetCriterion(nn.Module):
 
         empty_weight = torch.ones(self.num_classes + 1)
         empty_weight[-1] = eos_coef
+        class_weight = torch.ones(self.num_classes)
+        if class_weight_file:
+            loaded = self._load_class_weights(class_weight_file, class_weight_key, class_weight_power)
+            for idx, value in loaded.items():
+                if 0 <= idx < self.num_classes:
+                    class_weight[idx] = value
+                    empty_weight[idx] = value
         self.register_buffer('empty_weight', empty_weight)
-
+        self.register_buffer('pos_class_weight', class_weight)
         self.alpha = alpha
         self.gamma = gamma
 
@@ -104,6 +128,8 @@ class SetCriterion(nn.Module):
         # loss = alpha_t * ce_loss * ((1 - p_t) ** self.gamma)
         # loss = loss.mean(1).sum() * src_logits.shape[1] / num_boxes
         loss = torchvision.ops.sigmoid_focal_loss(src_logits, target, self.alpha, self.gamma, reduction='none')
+        if self.pos_class_weight is not None:
+            loss = loss * self.pos_class_weight.view(1, 1, -1)
         loss = loss.mean(1).sum() * src_logits.shape[1] / num_boxes
 
         return {'loss_focal': loss}
@@ -130,6 +156,8 @@ class SetCriterion(nn.Module):
 
         pred_score = F.sigmoid(src_logits).detach()
         weight = self.alpha * pred_score.pow(self.gamma) * (1 - target) + target_score
+        if self.pos_class_weight is not None:
+            weight = weight * self.pos_class_weight.view(1, 1, -1)
         
         loss = F.binary_cross_entropy_with_logits(src_logits, target_score, weight=weight, reduction='none')
         loss = loss.mean(1).sum() * src_logits.shape[1] / num_boxes
@@ -170,6 +198,21 @@ class SetCriterion(nn.Module):
         losses['loss_giou'] = loss_giou.sum() / num_boxes
         return losses
 
+    def _load_class_weights(self, weight_path: str, key: str, power: float):
+        path = Path(weight_path)
+        if not path.exists():
+            raise FileNotFoundError(f"class_weight_file {path} not found")
+        with path.open('r', encoding='utf-8') as f:
+            payload = json.load(f)
+        raw_weights = payload.get('weights', {})
+        weights: dict[int, float] = {}
+        for cat_id, info in raw_weights.items():
+            value = float(info.get(key, 1.0))
+            if power != 1.0:
+                value = value ** power
+            weights[int(cat_id)] = value
+        return weights
+
     def loss_masks(self, outputs, targets, indices, num_boxes):
         """Compute the losses related to the masks: the focal loss and the dice loss.
            targets dicts must contain the key "masks" containing a tensor of dim [nb_target_boxes, h, w]
@@ -182,13 +225,13 @@ class SetCriterion(nn.Module):
         src_masks = src_masks[src_idx]
         masks = [t["masks"] for t in targets]
         # TODO use valid to mask invalid areas due to padding in loss
-        target_masks, valid = nested_tensor_from_tensor_list(masks).decompose()
+        target_masks, _ = nested_tensor_from_tensor_list(masks).decompose()
         target_masks = target_masks.to(src_masks)
         target_masks = target_masks[tgt_idx]
 
         # upsample predictions to the target size
-        src_masks = interpolate(src_masks[:, None], size=target_masks.shape[-2:],
-                                mode="bilinear", align_corners=False)
+        src_masks = F.interpolate(src_masks[:, None], size=target_masks.shape[-2:],
+                                  mode="bilinear", align_corners=False)
         src_masks = src_masks[:, 0].flatten(1)
 
         target_masks = target_masks.flatten(1)
@@ -336,6 +379,69 @@ def accuracy(output, target, topk=(1,)):
         res.append(correct_k.mul_(100.0 / batch_size))
     return res
 
+
+class NestedTensor:
+    def __init__(self, tensors: torch.Tensor, mask: torch.Tensor):
+        self.tensors = tensors
+        self.mask = mask
+
+    def to(self, device):
+        return NestedTensor(self.tensors.to(device), self.mask.to(device))
+
+    def decompose(self):
+        return self.tensors, self.mask
+
+
+def _max_by_axis(shape_list):
+    maxes = list(shape_list[0])
+    for shape in shape_list[1:]:
+        for i, item in enumerate(shape):
+            maxes[i] = max(maxes[i], item)
+    return maxes
+
+
+def nested_tensor_from_tensor_list(tensor_list):
+    if len(tensor_list) == 0:
+        raise ValueError("tensor_list must be non-empty")
+    if tensor_list[0].ndim not in (2, 3):
+        raise ValueError(f"Unsupported tensor dim {tensor_list[0].ndim}")
+
+    max_size = _max_by_axis([list(tensor.shape) for tensor in tensor_list])
+    batch_shape = [len(tensor_list)] + max_size
+    dtype = tensor_list[0].dtype
+    device = tensor_list[0].device
+    tensor = torch.zeros(batch_shape, dtype=dtype, device=device)
+
+    if tensor_list[0].ndim == 3:
+        mask = torch.ones((batch_shape[0], batch_shape[2], batch_shape[3]), dtype=torch.bool, device=device)
+        for img, pad_img, m in zip(tensor_list, tensor, mask):
+            c, h, w = img.shape
+            pad_img[:c, :h, :w].copy_(img)
+            m[:h, :w] = False
+    else:
+        mask = torch.ones((batch_shape[0], batch_shape[1], batch_shape[2]), dtype=torch.bool, device=device)
+        for img, pad_img, m in zip(tensor_list, tensor, mask):
+            h, w = img.shape
+            pad_img[:h, :w].copy_(img)
+            m[:h, :w] = False
+
+    return NestedTensor(tensor, mask)
+
+
+def dice_loss(inputs, targets, num_boxes):
+    inputs = inputs.sigmoid()
+    numerator = 2 * (inputs * targets).sum(1)
+    denominator = inputs.sum(1) + targets.sum(1)
+    loss = 1 - (numerator + 1) / (denominator + 1)
+    return loss.sum() / num_boxes
+
+
+def sigmoid_focal_loss(inputs, targets, num_boxes):
+    prob = inputs.sigmoid()
+    ce_loss = F.binary_cross_entropy_with_logits(inputs, targets, reduction="none")
+    p_t = prob * targets + (1 - prob) * (1 - targets)
+    loss = ce_loss * ((1 - p_t) ** 2)
+    return loss.mean(1).sum() / num_boxes
 
 
 

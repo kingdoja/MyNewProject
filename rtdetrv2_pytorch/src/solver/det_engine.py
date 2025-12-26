@@ -12,7 +12,9 @@ from typing import Iterable
 import torch
 import torch.amp 
 from torch.utils.tensorboard import SummaryWriter
-from torch.cuda.amp.grad_scaler import GradScaler
+# 使用注册的 GradScaler 而不是直接导入旧 API，避免 FutureWarning
+# 运行时导入注册的版本（支持新 API，不会触发警告）
+from ..optim.amp import GradScaler
 
 from ..optim import ModelEMA, Warmup
 from ..data import CocoEvaluator
