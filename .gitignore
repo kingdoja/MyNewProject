@@ -183,12 +183,27 @@ DataSliceTools/
 *.tar.gz
 *.zip
 
-# 模型文件
+# 模型文件（所有路径）
+*.pt
+*.pth
+*.onnx
+*.pdparams
+**/exported_models/
+**/models/*.pt
+**/models/*.pth
+**/models/*.onnx
 DataSlice2Inference/models/*.pt
 DataSlice2Inference/models/*.onnx
 DataSlice2Inference/models/*.pth
 Z_export_model/
 Z_save_experiments/
+
+# TensorBoard 日志文件
+**/logs/
+**/tensorboard*/
+**/*.tfevents.*
+events.out.*
+*.tfevents.*
 
 # 测试和验证输出
 test_visualization/
