@@ -633,9 +633,9 @@ def main():
     # config_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r50vd_cancer_detection2.yml"
     # model_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection_split4_aug/best.pth"
     config_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r50vd_cancer_detection1.yml"
-    model_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection_split_dataset_aug/best.pth"
+    model_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection_split_dataset_0107/best.pth"
     data_root = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug"  # 数据集根目录
-    output_dir = "validation_visualization_split_dataset_aug_r50_1217"  # 输出目录
+    output_dir = "validation_visualization_split_dataset_aug_r50_0108"  # 输出目录
     device = "cuda" if torch.cuda.is_available() else "cpu"  # 自动检测设备
     confidence_threshold = 0.5  # 置信度阈值
     

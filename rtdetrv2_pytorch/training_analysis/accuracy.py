@@ -280,7 +280,7 @@ def append_metrics_to_best_results(metrics, output_file, iou_threshold):
 if __name__ == "__main__":
     # 针对 rtdetrv2_r50vd_cancer_detection_split_dataset_aug 模型的默认路径
     ground_truth_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/val/annotations/instances_val.json"
-    predictions_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/training_analysis/output/validation_visualization_split_dataset_aug_r50_1217/val_detections.json"
+    predictions_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/training_analysis/output/validation_visualization_split_dataset_aug_r50_0108/val_detections.json"
     best_results_file = "/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/training_analysis/output/best_results.txt"
     iou_threshold = 0.3
     

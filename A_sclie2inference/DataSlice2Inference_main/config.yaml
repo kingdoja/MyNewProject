@@ -87,13 +87,13 @@ monitoring:
   
 # MinIO 上传配置
 minio:
-  enabled: false  # 启用后自动上传JSON与全图
+  enabled: true  # 启用后自动上传JSON与全图
   endpoint: "${MINIO_ENDPOINT:192.168.150.157:9000}"  # MinIO 服务地址 (ping不上？？？)
   access_key: "${MINIO_ACCESS_KEY:minioadmin}"   # 访问密钥
   secret_key: "${MINIO_SECRET_KEY:minioadmin}"   # 密钥
   bucket: "${MINIO_BUCKET:heathycare}"           # 目标 bucket
   secure: false                                  # HTTPS 请设为 true
-  base_path: "heathycare/source"                 # 上传前缀，可为空
+  base_path: "source"                 # 上传前缀，可为空
   region: ""                                     # 可选，留空自动
   create_bucket_if_missing: true                 # 不存在时自动创建
   upload_original_image: true                    # 上传监听目录中的原始全图

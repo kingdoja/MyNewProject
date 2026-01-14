@@ -205,7 +205,7 @@ def main():
     parser.add_argument(
         "--pred",
         type=str,
-        default="/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/training_analysis/output/validation_visualization_split_dataset_aug_r50_1217/val_detections.json",
+        default="/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/training_analysis/output/validation_visualization_split_dataset_aug_r50_0107/val_detections.json",
         help="模型预测结果（COCO 格式）路径",
     )
     parser.add_argument(

@@ -1,0 +1,53 @@
+[
+    {
+        "box": "[21905.254, 13596.98, 21967.307, 13656.157]",
+        "boxList": [
+            21905.254,
+            13596.98,
+            21967.307,
+            13656.157
+        ],
+        "cellType": "TC1",
+        "coordinatesId": 146363,
+        "cropImageName": "cj_1.jpg",
+        "cropPreviewUrl": "http://192.168.150.157:8088/minio/heathycare/crop/cj/cj_1.jpg",
+        "imageType": "1",
+        "params": {},
+        "sampleId": 36,
+        "score": 0.0
+    },
+    {
+        "box": "[21898.686, 13833.637, 21961.047, 13875.425]",
+        "boxList": [
+            21898.686,
+            13833.637,
+            21961.047,
+            13875.425
+        ],
+        "cellType": "TC1",
+        "coordinatesId": 146364,
+        "cropImageName": "cj_2.jpg",
+        "cropPreviewUrl": "http://192.168.150.157:8088/minio/heathycare/crop/cj/cj_2.jpg",
+        "imageType": "1",
+        "params": {},
+        "sampleId": 36,
+        "score": 0.0
+    },
+    {
+        "box": "[21954.61, 13695.653, 22006.67, 13743.892]",
+        "boxList": [
+            21954.61,
+            13695.653,
+            22006.67,
+            13743.892
+        ],
+        "cellType": "TC1",
+        "coordinatesId": 146365,
+        "cropImageName": "cj_3.jpg",
+        "cropPreviewUrl": "http://192.168.150.157:8088/minio/heathycare/crop/cj/cj_3.jpg",
+        "imageType": "1",
+        "params": {},
+        "sampleId": 36,
+        "score": 0.0
+    }
+]

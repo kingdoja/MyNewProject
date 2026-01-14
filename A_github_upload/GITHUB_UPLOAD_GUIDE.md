@@ -185,7 +185,7 @@ git push -u origin master --force
 ```bash
 # 日常更新代码到 GitHub
 git add .
-git commit -m "描述你的更改"
+git commit -m "项目更新：清理旧文件，添加NPU支持"
 git push
 ```
 

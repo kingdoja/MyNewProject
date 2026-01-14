@@ -1,0 +1,38 @@
+Best Epoch: 5
+IoU metric: bbox
+
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.296
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.450
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.336
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.175
+Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.314
+Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.261
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.204
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.517
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.606
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.531
+Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.656
+Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.597
+
+
+============================================================
+Classification Metrics (IoU>=0.30)
+============================================================
+Overall Accuracy: 0.8090 (8694/10747)
+Mean Class Accuracy: 0.4933
+
+Class                Correct  Total    Accuracy  
+------------------------------------------------------------
+AD                   0        0        0.0000    
+BC                   18       112      0.1607    
+EC                   1242     1484     0.8369    
+L                    2582     3319     0.7779    
+LC                   286      599      0.4775    
+M                    959      1205     0.7959    
+NT                   0        0        0.0000    
+SM                   0        2        0.0000    
+SQ                   0        0        0.0000    
+TC1                  3607     4020     0.8973    
+TC2                  0        6        0.0000    
+TC3                  0        0        0.0000    
+

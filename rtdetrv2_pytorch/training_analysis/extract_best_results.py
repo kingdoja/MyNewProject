@@ -136,7 +136,7 @@ def main():
         "--log",
         type=str,
         # 针对 rtdetrv2_r50vd_cancer_detection_split_dataset_aug 模型
-        default="/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection_split_dataset_aug/log.txt",
+        default="/home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection_split_dataset_0105/log.txt",
         help="Path to training log file"
     )
     parser.add_argument(

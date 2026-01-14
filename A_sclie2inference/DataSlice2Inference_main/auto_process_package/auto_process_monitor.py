@@ -995,16 +995,17 @@ class ImageProcessHandler(FileSystemEventHandler):
             return
 
         uploads = []
-        prefix = output_dir.name
+        # 直接上传到 base_path，不使用时间戳文件夹
+        # prefix = output_dir.name  # 已移除，不再使用时间戳文件夹
 
         if self.minio_upload_json and json_path.exists():
-            obj = f"{prefix}/{json_path.name}"
+            obj = json_path.name  # 直接使用文件名，上传到 heathycare/source/
             uploads.append(("json", json_path, obj))
         elif self.minio_upload_json:
             self._log(f"⚠️ JSON 文件不存在，无法上传: {json_path}", "warning")
 
         if self.minio_upload_original and global_image_path.exists():
-            obj = f"{prefix}/{global_image_path.name}"
+            obj = global_image_path.name  # 直接使用文件名，上传到 heathycare/source/
             uploads.append(("image", global_image_path, obj))
         elif self.minio_upload_original:
             self._log(f"⚠️ 原始全图不存在，无法上传: {global_image_path}", "warning")
@@ -1083,6 +1084,7 @@ def main():
     )
     parser.add_argument(
         "--threshold",
+        
         type=float,
         default=0.5,
         help="预测置信度阈值（默认: 0.5）",

@@ -1,0 +1,26 @@
+\begin{table}[h]
+\centering
+\caption{组件贡献分析}
+\label{tab:ablation}
+\begin{tabular}{c|c|c|c|c|c|c}
+\hline
+Model & Mamba & HIFM & DSCA & AP & AP$_{50}$ & ΔAP \\
+\hline
+RT-DETR (Baseline) & ✗ & ✗ & ✗ & 0.185 & 0.302 & +0.000 \\
+\hline
+RT-DETR + Mamba & ✓ & ✗ & ✗ & 0.188 & 0.305 & +0.003 \\
+\hline
+RT-DETR + HIFM & ✗ & ✓ & ✗ & 0.200 & 0.354 & +0.015 \\
+\hline
+RT-DETR + DSCA & ✗ & ✗ & ✓ & 0.296 & 0.450 & +0.111 \\
+\hline
+RT-DETR + Mamba + HIFM & ✓ & ✓ & ✗ & 0.320 & 0.481 & +0.135 \\
+\hline
+RT-DETR + Mamba + DSCA & ✓ & ✗ & ✓ & 0.320 & 0.481 & +0.135 \\
+\hline
+RT-DETR + HIFM + DSCA & ✗ & ✓ & ✓ & 0.320 & 0.481 & +0.135 \\
+\hline
+RT-DETR + Mamba + HIFM + DSCA & ✓ & ✓ & ✓ & 0.323 & 0.489 & +0.138 \\
+\hline
+\end{tabular}
+\end{table}

@@ -7,7 +7,7 @@ __include__: [
 ]
 
 # 输出目录
-output_dir:  ./output/rtdetrv2_r50vd_cancer_detection_split_dataset_1224
+output_dir:  ./output/rtdetrv2_r50vd_cancer_detection_split_dataset_justnew_0109
 
 # 早停配置
 early_stopping_patience: 10

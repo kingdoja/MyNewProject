@@ -1,0 +1,26 @@
+\begin{table}[h]
+\centering
+\caption{分类准确率结果}
+\label{tab:ablation}
+\begin{tabular}{c|c|c}
+\hline
+Model & Overall Accuracy & Mean Class Accuracy \\
+\hline
+RT-DETR (Baseline) & 0.7024 & 0.4600 \\
+\hline
+RT-DETR + Mamba & 0.7024 & 0.4600 \\
+\hline
+RT-DETR + HIFM & 0.7024 & 0.4600 \\
+\hline
+RT-DETR + DSCA & 0.7024 & 0.4600 \\
+\hline
+RT-DETR + Mamba + HIFM & 0.7480 & 0.4469 \\
+\hline
+RT-DETR + Mamba + DSCA & 0.7480 & 0.4469 \\
+\hline
+RT-DETR + HIFM + DSCA & 0.7480 & 0.4469 \\
+\hline
+RT-DETR + Mamba + HIFM + DSCA & 0.7024 & 0.4600 \\
+\hline
+\end{tabular}
+\end{table}
