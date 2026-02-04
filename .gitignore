@@ -217,6 +217,13 @@ Z_记录/
 
 # 其他大文件
 DATA/
+# 例外：允许特定的脚本文件被跟踪
+!DATA/SputumCell/1merge_datasets_final.py
+!DATA/SputumCell/2split_dataset.py
+!DATA/SputumCell/3generate_classes_txt.py
+!DATA/SputumCell/4data_augmentation.py
+!DATA/SputumCell/scripts_data_convert/
+!DATA/SputumCell/scripts_data_convert/*.py
 *.ndpi
 *.jpeg
 *.jpg
