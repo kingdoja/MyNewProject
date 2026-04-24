@@ -188,7 +188,7 @@ DataSliceTools/
 
 # 模型文件（所有路径）
 *.pt
-*.pth
+
 *.onnx
 *.pdparams
 **/exported_models/
