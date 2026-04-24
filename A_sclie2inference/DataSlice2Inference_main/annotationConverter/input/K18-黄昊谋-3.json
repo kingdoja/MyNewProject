@@ -1,0 +1,512 @@
+[
+  {
+    "box": "[390.2464, 279.06375, 440.10562, 341.64474]",
+    "boxList": [
+      390.2464,
+      279.06375,
+      440.10562,
+      341.64474
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55217,
+    "cropImageName": "K18-黄昊谋-3_1.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/K18-黄昊谋-3_1.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 27,
+    "score": 0.6511240601539612
+  },
+  {
+    "box": "[264.44452, 193.41124, 283.89322, 211.80139]",
+    "boxList": [
+      264.44452,
+      193.41124,
+      283.89322,
+      211.80139
+    ],
+    "cellType": "L",
+    "coordinatesId": 55218,
+    "cropImageName": "K18-黄昊谋-3_2.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/K18-黄昊谋-3_2.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 27,
+    "score": 0.5401935577392578
+  },
+  {
+    "box": "[670.8837, 515.1024, 761.48224, 608.8457]",
+    "boxList": [
+      670.8837,
+      515.1024,
+      761.48224,
+      608.8457
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55219,
+    "cropImageName": "K18-黄昊谋-3_3.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/K18-黄昊谋-3_3.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 27,
+    "score": 0.5928152799606323
+  },
+  {
+    "box": "[731.89484, 100.24296, 841.7789, 204.42972]",
+    "boxList": [
+      731.89484,
+      100.24296,
+      841.7789,
+      204.42972
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55220,
+    "cropImageName": "K18-黄昊谋-3_4.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/K18-黄昊谋-3_4.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 27,
+    "score": 0.5728729367256165
+  },
+  {
+    "box": "[1084.5308, 319.78552, 1138.504, 366.36737]",
+    "boxList": [
+      1084.5308,
+      319.78552,
+      1138.504,
+      366.36737
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55221,
+    "cropImageName": "K18-黄昊谋-3_5.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/K18-黄昊谋-3_5.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 27,
+    "score": 0.5374663472175598
+  },
+  {
+    "box": "[640.7291, 0.5344105, 743.3009, 111.46321]",
+    "boxList": [
+      640.7291,
+      0.5344105,
+      743.3009,
+      111.46321
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55222,
+    "cropImageName": "K18-黄昊谋-3_6.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/K18-黄昊谋-3_6.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 27,
+    "score": 0.5298123359680176
+  },
+  {
+    "box": "[320.5161290322578, 87.3225806451612, 437.30875576036846, 229.331797235023]",
+    "boxList": [
+      320.5161290322578,
+      87.3225806451612,
+      437.30875576036846,
+      229.331797235023
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56547,
+    "cropImageName": "88aa9867-b7a6-447d-9ade-77c5595637b9.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/88aa9867-b7a6-447d-9ade-77c5595637b9.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[1.9907834101380484, 196.81566820276493, 93.56682027649747, 276.44700460829483]",
+    "boxList": [
+      1.9907834101380484,
+      196.81566820276493,
+      93.56682027649747,
+      276.44700460829483
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56548,
+    "cropImageName": "41fc365a-5b03-4986-bf23-dc3ddca2467c.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/41fc365a-5b03-4986-bf23-dc3ddca2467c.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[1.9907834101380484, 353.42396313364054, 94.23041474654356, 485.479262672811]",
+    "boxList": [
+      1.9907834101380484,
+      353.42396313364054,
+      94.23041474654356,
+      485.479262672811
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56549,
+    "cropImageName": "60e4e720-e773-433b-891e-20f4c2f71138.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/60e4e720-e773-433b-891e-20f4c2f71138.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[392.84792626728085, 341.47926267281105, 457.2165898617509, 447.65437788018426]",
+    "boxList": [
+      392.84792626728085,
+      341.47926267281105,
+      457.2165898617509,
+      447.65437788018426
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56550,
+    "cropImageName": "cff96b27-bf9d-4159-aed3-0388f26f9596.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/cff96b27-bf9d-4159-aed3-0388f26f9596.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[733.2718894009214, 218.05069124423957, 841.437788018433, 335.50691244239624]",
+    "boxList": [
+      733.2718894009214,
+      218.05069124423957,
+      841.437788018433,
+      335.50691244239624
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56551,
+    "cropImageName": "1c8c47c8-25e3-46f9-9c88-4463df926a58.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/1c8c47c8-25e3-46f9-9c88-4463df926a58.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[87.59447004608276, 723.0460829493088, 218.98617511520715, 787.4147465437787]",
+    "boxList": [
+      87.59447004608276,
+      723.0460829493088,
+      218.98617511520715,
+      787.4147465437787
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56552,
+    "cropImageName": "a8eb7928-2073-49b3-a9d9-6bee35c46156.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/a8eb7928-2073-49b3-a9d9-6bee35c46156.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[559.4101382488477, 429.73732718894007, 672.2211981566819, 500.74193548387086]",
+    "boxList": [
+      559.4101382488477,
+      429.73732718894007,
+      672.2211981566819,
+      500.74193548387086
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56553,
+    "cropImageName": "d73912e5-5ba6-4ce0-84d3-230f7e796882.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/d73912e5-5ba6-4ce0-84d3-230f7e796882.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[852.7188940092163, 149.03686635944692, 972.8294930875574, 265.16589861751146]",
+    "boxList": [
+      852.7188940092163,
+      149.03686635944692,
+      972.8294930875574,
+      265.16589861751146
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56554,
+    "cropImageName": "359f1eec-4f1a-4954-9b6b-20cd0600b514.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/359f1eec-4f1a-4954-9b6b-20cd0600b514.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[785.695852534562, 664.6497695852535, 879.9262672811058, 752.2442396313364]",
+    "boxList": [
+      785.695852534562,
+      664.6497695852535,
+      879.9262672811058,
+      752.2442396313364
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56555,
+    "cropImageName": "02e43ee2-f874-4159-b802-922dafe528a8.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/02e43ee2-f874-4159-b802-922dafe528a8.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[981.4562211981564, 592.9815668202764, 1064.4055299539168, 719.7281105990783]",
+    "boxList": [
+      981.4562211981564,
+      592.9815668202764,
+      1064.4055299539168,
+      719.7281105990783
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56556,
+    "cropImageName": "31261721-8537-42dc-b3e5-6e0a6bf9ca66.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/31261721-8537-42dc-b3e5-6e0a6bf9ca66.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[610.506912442396, 790.732718894009, 715.3548387096772, 875.0092165898618]",
+    "boxList": [
+      610.506912442396,
+      790.732718894009,
+      715.3548387096772,
+      875.0092165898618
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56557,
+    "cropImageName": "8152e2e6-537f-43de-accf-e759a55cb455.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/8152e2e6-537f-43de-accf-e759a55cb455.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[492.38709677419337, 474.8617511520737, 606.5253456221196, 604.926267281106]",
+    "boxList": [
+      492.38709677419337,
+      474.8617511520737,
+      606.5253456221196,
+      604.926267281106
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56558,
+    "cropImageName": "d21d6ee0-b567-42eb-b3cb-6c4d410b1749.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/d21d6ee0-b567-42eb-b3cb-6c4d410b1749.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[193.10599078340996, 768.8341013824884, 280.7004608294929, 886.9539170506912]",
+    "boxList": [
+      193.10599078340996,
+      768.8341013824884,
+      280.7004608294929,
+      886.9539170506912
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56559,
+    "cropImageName": "909b3dc6-d8a3-4f20-aa5b-cec2b3af3fe6.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/909b3dc6-d8a3-4f20-aa5b-cec2b3af3fe6.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[526.8940092165897, 277.7741935483871, 597.8986175115206, 354.7511520737326]",
+    "boxList": [
+      526.8940092165897,
+      277.7741935483871,
+      597.8986175115206,
+      354.7511520737326
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56560,
+    "cropImageName": "b27154c7-ea0d-4e36-84b3-4ba329b93f3b.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/b27154c7-ea0d-4e36-84b3-4ba329b93f3b.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[532.8663594470045, 359.39631336405523, 597.8986175115206, 435.70967741935476]",
+    "boxList": [
+      532.8663594470045,
+      359.39631336405523,
+      597.8986175115206,
+      435.70967741935476
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56561,
+    "cropImageName": "3a016c77-fa71-4df5-8deb-e41950dd5fe5.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/3a016c77-fa71-4df5-8deb-e41950dd5fe5.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[216.0650472073948, 320.49802028277605, 252.88322902557664, 358.67983846459424]",
+    "boxList": [
+      216.0650472073948,
+      320.49802028277605,
+      252.88322902557664,
+      358.67983846459424
+    ],
+    "cellType": "M",
+    "coordinatesId": 56562,
+    "cropImageName": "3387da23-fd5d-463e-9066-a1eb60b0067a.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/3387da23-fd5d-463e-9066-a1eb60b0067a.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[393.33777448012205, 280.49802028277605, 423.3377744801221, 315.49802028277605]",
+    "boxList": [
+      393.33777448012205,
+      280.49802028277605,
+      423.3377744801221,
+      315.49802028277605
+    ],
+    "cellType": "M",
+    "coordinatesId": 56563,
+    "cropImageName": "26e62e3d-de15-454a-a515-ff4bbed940a7.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/26e62e3d-de15-454a-a515-ff4bbed940a7.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[406.0650472073948, 309.1343839191397, 433.33777448012205, 341.86165664641237]",
+    "boxList": [
+      406.0650472073948,
+      309.1343839191397,
+      433.33777448012205,
+      341.86165664641237
+    ],
+    "cellType": "M",
+    "coordinatesId": 56564,
+    "cropImageName": "0fbb0f26-8796-4c5a-ad7a-07664416f9c8.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/0fbb0f26-8796-4c5a-ad7a-07664416f9c8.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[462.88322902557655, 322.31620210095787, 505.15595629830386, 360.04347482823056]",
+    "boxList": [
+      462.88322902557655,
+      322.31620210095787,
+      505.15595629830386,
+      360.04347482823056
+    ],
+    "cellType": "M",
+    "coordinatesId": 56565,
+    "cropImageName": "508f3002-bdbb-4aaa-8128-93f62c277e1f.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/508f3002-bdbb-4aaa-8128-93f62c277e1f.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[500.15595629830386, 312.7707475555033, 537.4286835710311, 352.31620210095787]",
+    "boxList": [
+      500.15595629830386,
+      312.7707475555033,
+      537.4286835710311,
+      352.31620210095787
+    ],
+    "cellType": "M",
+    "coordinatesId": 56566,
+    "cropImageName": "c37e96d7-8d14-4d54-ba1f-4a695cf3d5bd.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/c37e96d7-8d14-4d54-ba1f-4a695cf3d5bd.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[132.23215367169743, 151.15325047037183, 175.41397185351587, 196.15325047037174]",
+    "boxList": [
+      132.23215367169743,
+      151.15325047037183,
+      175.41397185351587,
+      196.15325047037174
+    ],
+    "cellType": "LC",
+    "coordinatesId": 56567,
+    "cropImageName": "446bd323-2a6c-4adb-ae5f-36bf57c7986a.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/446bd323-2a6c-4adb-ae5f-36bf57c7986a.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[1255.8685173080612, 410.24415956128075, 1294.0503354898792, 443.8805231976444]",
+    "boxList": [
+      1255.8685173080612,
+      410.24415956128075,
+      1294.0503354898792,
+      443.8805231976444
+    ],
+    "cellType": "LC",
+    "coordinatesId": 56568,
+    "cropImageName": "5410fa50-1fa4-4dc6-9038-32ccf65f705b.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/5410fa50-1fa4-4dc6-9038-32ccf65f705b.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[914.0503354898793, 436.6077959249171, 1103.595790035334, 512.9714322885534]",
+    "boxList": [
+      914.0503354898793,
+      436.6077959249171,
+      1103.595790035334,
+      512.9714322885534
+    ],
+    "cellType": "LC",
+    "coordinatesId": 56569,
+    "cropImageName": "b1b79d73-2ac0-4376-bf94-246b1db60722.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/b1b79d73-2ac0-4376-bf94-246b1db60722.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  },
+  {
+    "box": "[783.1412445807885, 393.42597774309894, 815.4139718535156, 445.69870501582614]",
+    "boxList": [
+      783.1412445807885,
+      393.42597774309894,
+      815.4139718535156,
+      445.69870501582614
+    ],
+    "cellType": "LC",
+    "coordinatesId": 56570,
+    "cropImageName": "90328cd6-66ad-4e8b-8be2-4922cc12e792.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-3/90328cd6-66ad-4e8b-8be2-4922cc12e792.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 27,
+    "score": 0
+  }
+]

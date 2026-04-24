@@ -7,7 +7,7 @@ __include__: [
 ]
 
 # 输出目录
-output_dir:  ./output/rtdetrv2_r50vd_cancer_detection_split_dataset_justnew_0109
+output_dir:  ./output/rtdetrv2_r50vd_cancer_detection_split_dataset_new_0305
 
 # 早停配置
 early_stopping_patience: 10
@@ -44,6 +44,11 @@ optimizer:
 lr_warmup_scheduler:
   type: LinearWarmup
   warmup_duration: 2000
+
+RTDETRCriterionv2:
+  class_weight_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_class_weights.json
+  class_weight_key: weight
+  class_weight_power: 1.0
 
 # 显存优化
 sync_bn: false

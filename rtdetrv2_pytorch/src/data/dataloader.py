@@ -56,6 +56,8 @@ class DataLoader(data.DataLoader):
         persistent_workers=False,
         pin_memory_device="",
     ):
+        if sampler is not None and hasattr(sampler, 'bind_dataset'):
+            sampler.bind_dataset(dataset)
         if sampler is not None and shuffle:
             warnings.warn("`shuffle` is ignored because a custom sampler is provided.", RuntimeWarning)
             shuffle = False
@@ -163,19 +165,55 @@ class CocoImageWeightedRandomSampler(data.Sampler):
 
     def __init__(
         self,
-        dataset,
         weights_file: str,
+        dataset=None,
         num_samples: int | None = None,
         replacement: bool = True,
         default_weight: float = 1.0,
     ) -> None:
-        if not hasattr(dataset, 'ids'):
-            raise AttributeError("Dataset must expose `ids` compatible with COCO image ids.")
-        mapping = self._load_weights(weights_file)
-        weights = self._build_weight_vector(dataset.ids, mapping, default_weight)
+        self.weights_file = weights_file
+        self.num_samples = num_samples
+        self.replacement = replacement
+        self.default_weight = default_weight
+        self._sampler = None
+        if dataset is not None:
+            self.bind_dataset(dataset)
+
+    def bind_dataset(self, dataset) -> None:
+        dataset_ids = self._extract_dataset_ids(dataset)
+        if dataset_ids is None:
+            raise AttributeError(
+                "Dataset must expose COCO image ids via `ids` or `coco` for weighted sampling."
+            )
+        mapping = self._load_weights(self.weights_file)
+        weights = self._build_weight_vector(dataset_ids, mapping, self.default_weight)
         tensor = torch.as_tensor(weights, dtype=torch.double)
-        self.num_samples = num_samples or len(weights)
-        self._sampler = data.WeightedRandomSampler(tensor, self.num_samples, replacement=replacement)
+        self.num_samples = self.num_samples or len(weights)
+        self._sampler = data.WeightedRandomSampler(tensor, self.num_samples, replacement=self.replacement)
+
+    @staticmethod
+    def _extract_dataset_ids(dataset):
+        # Common path: torchvision/faster_coco_eval datasets expose `ids`.
+        if hasattr(dataset, 'ids'):
+            return list(dataset.ids)
+
+        # Fallback for wrapped datasets that still hold a COCO api object.
+        coco = getattr(dataset, 'coco', None)
+        if coco is not None:
+            if hasattr(coco, 'getImgIds'):
+                return list(coco.getImgIds())
+            if hasattr(coco, 'imgs'):
+                return list(coco.imgs.keys())
+
+        # Fallback for torch.utils.data.Subset-like wrappers.
+        base = getattr(dataset, 'dataset', None)
+        indices = getattr(dataset, 'indices', None)
+        if base is not None and indices is not None:
+            base_ids = CocoImageWeightedRandomSampler._extract_dataset_ids(base)
+            if base_ids is not None:
+                return [base_ids[i] for i in indices]
+
+        return None
 
     @staticmethod
     def _load_weights(weights_file: str):
@@ -198,8 +236,12 @@ class CocoImageWeightedRandomSampler(data.Sampler):
         return weights
 
     def __iter__(self):
+        if self._sampler is None:
+            raise RuntimeError("CocoImageWeightedRandomSampler has not been bound to a dataset.")
         return iter(self._sampler)
 
     def __len__(self):
+        if self.num_samples is None:
+            raise RuntimeError("CocoImageWeightedRandomSampler has not been initialized.")
         return self.num_samples
 

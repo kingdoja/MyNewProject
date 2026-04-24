@@ -1,0 +1,70 @@
+__include__: [
+  '../dataset/cancer_detection1.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer.yml',
+  './include/rtdetrv2_r50vd.yml',
+]
+
+# 增量微调输出目录（避免覆盖旧实验）
+output_dir: ./output/rtdetrv2_r50vd_cancer_detection1_incremental_ft_oaug_0323
+
+# 早停配置（增量训练通常更快收敛）
+early_stopping_patience: 6
+early_stopping_min_delta: 0.0005
+
+PResNet:
+  depth: 50
+  freeze_at: 0
+  freeze_norm: False
+  pretrained: True
+
+HybridEncoder:
+  in_channels: [512, 1024, 2048]
+  hidden_dim: 256
+  expansion: 1.0
+
+RTDETRTransformerv2:
+  num_layers: 6
+
+# 缩短训练周期用于增量微调
+epoches: 30
+
+optimizer:
+  type: AdamW
+  params:
+    - params: '^(?=.*backbone)(?!.*norm).*$'
+      lr: 0.000005
+      weight_decay: 0.0001
+    - params: '^(?=.*(?:encoder|decoder))(?=.*(?:norm|bn)).*$'
+      weight_decay: 0.0
+  lr: 0.00005
+  betas: [0.9, 0.999]
+  weight_decay: 0.0001
+
+lr_warmup_scheduler:
+  type: LinearWarmup
+  warmup_duration: 1000
+
+RTDETRCriterionv2:
+  class_weight_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_class_weights.json
+  class_weight_key: weight
+  class_weight_power: 1.0
+
+# 覆盖dataset中原70轮的增强截止配置，和epoches对齐
+train_dataloader:
+  dataset:
+    transforms:
+      policy:
+        name: stop_epoch
+        epoch: 30
+        ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
+  collate_fn:
+    type: BatchImageCollateFuncion
+    scales: [512, 544, 576, 608, 640, 640, 640, 672, 704, 736]
+    stop_epoch: 30
+
+# 显存优化
+sync_bn: false
+amp: true
+

@@ -1,0 +1,5153 @@
+[
+  {
+    "box": "[10256.322, 13827.943, 10302.583, 13872.418]",
+    "boxList": [
+      10256.322,
+      13827.943,
+      10302.583,
+      13872.418
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55325,
+    "cropImageName": "ZSC2508051_1.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_1.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5265390276908875
+  },
+  {
+    "box": "[10241.58, 13869.912, 10273.201, 13909.568]",
+    "boxList": [
+      10241.58,
+      13869.912,
+      10273.201,
+      13909.568
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55326,
+    "cropImageName": "ZSC2508051_2.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_2.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5197086334228516
+  },
+  {
+    "box": "[11664.014, 13758.531, 11704.165, 13784.746]",
+    "boxList": [
+      11664.014,
+      13758.531,
+      11704.165,
+      13784.746
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55328,
+    "cropImageName": "ZSC2508051_4.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_4.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[14355.802, 13586.193, 14397.414, 13632.025]",
+    "boxList": [
+      14355.802,
+      13586.193,
+      14397.414,
+      13632.025
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55332,
+    "cropImageName": "ZSC2508051_8.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_8.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.587395966053009
+  },
+  {
+    "box": "[21882.484, 13445.359, 21926.924, 13483.526]",
+    "boxList": [
+      21882.484,
+      13445.359,
+      21926.924,
+      13483.526
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55342,
+    "cropImageName": "ZSC2508051_18.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_18.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6797021627426147
+  },
+  {
+    "box": "[12620.383, 14107.182, 12649.69, 14135.785]",
+    "boxList": [
+      12620.383,
+      14107.182,
+      12649.69,
+      14135.785
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55344,
+    "cropImageName": "ZSC2508051_20.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_20.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5229560732841492
+  },
+  {
+    "box": "[14366.552, 14591.218, 14406.488, 14630.37]",
+    "boxList": [
+      14366.552,
+      14591.218,
+      14406.488,
+      14630.37
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55347,
+    "cropImageName": "ZSC2508051_23.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_23.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.592110812664032
+  },
+  {
+    "box": "[15103.493, 14566.295, 15150.421, 14586.479]",
+    "boxList": [
+      15103.493,
+      14566.295,
+      15150.421,
+      14586.479
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55348,
+    "cropImageName": "ZSC2508051_24.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_24.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.53495854139328
+  },
+  {
+    "box": "[21485.02, 14081.109, 21549.326, 14113.377]",
+    "boxList": [
+      21485.02,
+      14081.109,
+      21549.326,
+      14113.377
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55355,
+    "cropImageName": "ZSC2508051_31.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_31.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5495733022689819
+  },
+  {
+    "box": "[13829.5205, 14771.877, 13869.324, 14815.1]",
+    "boxList": [
+      13829.5205,
+      14771.877,
+      13869.324,
+      14815.1
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55362,
+    "cropImageName": "ZSC2508051_38.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_38.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8190189003944397
+  },
+  {
+    "box": "[13359.311, 1542.5486, 13381.764, 1561.6039]",
+    "boxList": [
+      13359.311,
+      1542.5486,
+      13381.764,
+      1561.6039
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55370,
+    "cropImageName": "ZSC2508051_46.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_46.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5987430214881897
+  },
+  {
+    "box": "[13948.768, 1586.6146, 13999.727, 1618.6011]",
+    "boxList": [
+      13948.768,
+      1586.6146,
+      13999.727,
+      1618.6011
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55371,
+    "cropImageName": "ZSC2508051_47.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_47.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.608241081237793
+  },
+  {
+    "box": "[12098.402, 15517.346, 12142.28, 15565.3125]",
+    "boxList": [
+      12098.402,
+      15517.346,
+      12142.28,
+      15565.3125
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55372,
+    "cropImageName": "ZSC2508051_48.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_48.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8255382776260376
+  },
+  {
+    "box": "[12338.725, 15410.507, 12364.971, 15436.765]",
+    "boxList": [
+      12338.725,
+      15410.507,
+      12364.971,
+      15436.765
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55373,
+    "cropImageName": "ZSC2508051_49.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_49.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6104515790939331
+  },
+  {
+    "box": "[17529.947, 15637.964, 17562.807, 15685.196]",
+    "boxList": [
+      17529.947,
+      15637.964,
+      17562.807,
+      15685.196
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55377,
+    "cropImageName": "ZSC2508051_53.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_53.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6317943334579468
+  },
+  {
+    "box": "[19841.238, 15431.441, 19879.438, 15474.333]",
+    "boxList": [
+      19841.238,
+      15431.441,
+      19879.438,
+      15474.333
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55380,
+    "cropImageName": "ZSC2508051_56.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_56.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6186840534210205
+  },
+  {
+    "box": "[16660.3, 1298.1394, 16691.959, 1325.7175]",
+    "boxList": [
+      16660.3,
+      1298.1394,
+      16691.959,
+      1325.7175
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55387,
+    "cropImageName": "ZSC2508051_63.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_63.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.619223952293396
+  },
+  {
+    "box": "[14848.276, 16333.132, 14881.406, 16359.929]",
+    "boxList": [
+      14848.276,
+      16333.132,
+      14881.406,
+      16359.929
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55389,
+    "cropImageName": "ZSC2508051_65.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_65.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5772150754928589
+  },
+  {
+    "box": "[15293.805, 16070.811, 15348.739, 16109.189]",
+    "boxList": [
+      15293.805,
+      16070.811,
+      15348.739,
+      16109.189
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55390,
+    "cropImageName": "ZSC2508051_66.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_66.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5253459811210632
+  },
+  {
+    "box": "[17516.678, 16111.583, 17534.83, 16136.617]",
+    "boxList": [
+      17516.678,
+      16111.583,
+      17534.83,
+      16136.617
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55393,
+    "cropImageName": "ZSC2508051_69.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_69.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.515425443649292
+  },
+  {
+    "box": "[18490.535, 16097.3, 18510.607, 16128.136]",
+    "boxList": [
+      18490.535,
+      16097.3,
+      18510.607,
+      16128.136
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55394,
+    "cropImageName": "ZSC2508051_70.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_70.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.579995334148407
+  },
+  {
+    "box": "[18803.207, 16001.767, 18833.564, 16024.494]",
+    "boxList": [
+      18803.207,
+      16001.767,
+      18833.564,
+      16024.494
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55395,
+    "cropImageName": "ZSC2508051_71.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_71.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.615231990814209
+  },
+  {
+    "box": "[18596.564, 16098.155, 18629.557, 16119.396]",
+    "boxList": [
+      18596.564,
+      16098.155,
+      18629.557,
+      16119.396
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55396,
+    "cropImageName": "ZSC2508051_72.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_72.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5204581618309021
+  },
+  {
+    "box": "[18971.74, 1613.0898, 19019.88, 1660.7622]",
+    "boxList": [
+      18971.74,
+      1613.0898,
+      19019.88,
+      1660.7622
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55400,
+    "cropImageName": "ZSC2508051_76.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_76.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5474472045898438
+  },
+  {
+    "box": "[15640.963, 2168.316, 15684.968, 2211.086]",
+    "boxList": [
+      15640.963,
+      2168.316,
+      15684.968,
+      2211.086
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55404,
+    "cropImageName": "ZSC2508051_80.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_80.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5576647520065308
+  },
+  {
+    "box": "[17514.588, 1963.0273, 17571.625, 2023.8617]",
+    "boxList": [
+      17514.588,
+      1963.0273,
+      17571.625,
+      2023.8617
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55407,
+    "cropImageName": "ZSC2508051_83.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_83.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6530066132545471
+  },
+  {
+    "box": "[20039.53, 2503.3193, 20088.75, 2528.128]",
+    "boxList": [
+      20039.53,
+      2503.3193,
+      20088.75,
+      2528.128
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55408,
+    "cropImageName": "ZSC2508051_84.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_84.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7122797966003418
+  },
+  {
+    "box": "[20480.445, 2502.4773, 20503.201, 2547.4065]",
+    "boxList": [
+      20480.445,
+      2502.4773,
+      20503.201,
+      2547.4065
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55409,
+    "cropImageName": "ZSC2508051_85.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_85.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5528437495231628
+  },
+  {
+    "box": "[10561.216, 3123.5571, 10602.289, 3163.462]",
+    "boxList": [
+      10561.216,
+      3123.5571,
+      10602.289,
+      3163.462
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55410,
+    "cropImageName": "ZSC2508051_86.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_86.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8873146772384644
+  },
+  {
+    "box": "[11526.076, 3140.0579, 11570.128, 3183.5874]",
+    "boxList": [
+      11526.076,
+      3140.0579,
+      11570.128,
+      3183.5874
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55411,
+    "cropImageName": "ZSC2508051_87.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_87.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7290523648262024
+  },
+  {
+    "box": "[12250.672, 3132.732, 12304.464, 3183.5115]",
+    "boxList": [
+      12250.672,
+      3132.732,
+      12304.464,
+      3183.5115
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55412,
+    "cropImageName": "ZSC2508051_88.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_88.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6187782883644104
+  },
+  {
+    "box": "[12198.935, 2633.9138, 12242.384, 2673.8784]",
+    "boxList": [
+      12198.935,
+      2633.9138,
+      12242.384,
+      2673.8784
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55413,
+    "cropImageName": "ZSC2508051_89.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_89.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5629726648330688
+  },
+  {
+    "box": "[18357.07, 3138.62, 18389.809, 3176.3533]",
+    "boxList": [
+      18357.07,
+      3138.62,
+      18389.809,
+      3176.3533
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55419,
+    "cropImageName": "ZSC2508051_95.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_95.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.526473343372345
+  },
+  {
+    "box": "[20416.326, 2575.5503, 20448.352, 2601.5247]",
+    "boxList": [
+      20416.326,
+      2575.5503,
+      20448.352,
+      2601.5247
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55420,
+    "cropImageName": "ZSC2508051_96.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_96.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6245256066322327
+  },
+  {
+    "box": "[21054.62, 2977.6216, 21111.334, 3016.4143]",
+    "boxList": [
+      21054.62,
+      2977.6216,
+      21111.334,
+      3016.4143
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55421,
+    "cropImageName": "ZSC2508051_97.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_97.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6122230291366577
+  },
+  {
+    "box": "[10199.968, 3656.866, 10238.444, 3702.5771]",
+    "boxList": [
+      10199.968,
+      3656.866,
+      10238.444,
+      3702.5771
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55424,
+    "cropImageName": "ZSC2508051_100.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_100.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5444109439849854
+  },
+  {
+    "box": "[10063.559, 3638.7837, 10103.485, 3689.8955]",
+    "boxList": [
+      10063.559,
+      3638.7837,
+      10103.485,
+      3689.8955
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55425,
+    "cropImageName": "ZSC2508051_101.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_101.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.538100004196167
+  },
+  {
+    "box": "[11097.68, 3373.849, 11165.98, 3418.2327]",
+    "boxList": [
+      11097.68,
+      3373.849,
+      11165.98,
+      3418.2327
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55426,
+    "cropImageName": "ZSC2508051_102.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_102.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.9016709327697754
+  },
+  {
+    "box": "[11818.248, 3807.1812, 11875.4795, 3838.9219]",
+    "boxList": [
+      11818.248,
+      3807.1812,
+      11875.4795,
+      3838.9219
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55427,
+    "cropImageName": "ZSC2508051_103.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_103.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6978620290756226
+  },
+  {
+    "box": "[12605.619, 3293.2205, 12643.09, 3336.098]",
+    "boxList": [
+      12605.619,
+      3293.2205,
+      12643.09,
+      3336.098
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55428,
+    "cropImageName": "ZSC2508051_104.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_104.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6068849563598633
+  },
+  {
+    "box": "[13982.471, 3351.3242, 14019.598, 3392.055]",
+    "boxList": [
+      13982.471,
+      3351.3242,
+      14019.598,
+      3392.055
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55429,
+    "cropImageName": "ZSC2508051_105.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_105.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5631110668182373
+  },
+  {
+    "box": "[9828.749, 4100.1465, 9878.871, 4143.651]",
+    "boxList": [
+      9828.749,
+      4100.1465,
+      9878.871,
+      4143.651
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55436,
+    "cropImageName": "ZSC2508051_112.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_112.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6270871162414551
+  },
+  {
+    "box": "[12118.386, 3956.613, 12159.413, 4006.3833]",
+    "boxList": [
+      12118.386,
+      3956.613,
+      12159.413,
+      4006.3833
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55439,
+    "cropImageName": "ZSC2508051_115.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_115.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8105699419975281
+  },
+  {
+    "box": "[12593.238, 4287.165, 12647.835, 4335.9814]",
+    "boxList": [
+      12593.238,
+      4287.165,
+      12647.835,
+      4335.9814
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55440,
+    "cropImageName": "ZSC2508051_116.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_116.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5724208950996399
+  },
+  {
+    "box": "[12978.766, 3879.11, 13045.21, 3924.1592]",
+    "boxList": [
+      12978.766,
+      3879.11,
+      13045.21,
+      3924.1592
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55441,
+    "cropImageName": "ZSC2508051_117.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_117.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7491815090179443
+  },
+  {
+    "box": "[19513.197, 4450.5557, 19551.371, 4478.51]",
+    "boxList": [
+      19513.197,
+      4450.5557,
+      19551.371,
+      4478.51
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55445,
+    "cropImageName": "ZSC2508051_121.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_121.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7054451704025269
+  },
+  {
+    "box": "[19693.44, 4310.5483, 19739.307, 4348.068]",
+    "boxList": [
+      19693.44,
+      4310.5483,
+      19739.307,
+      4348.068
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55446,
+    "cropImageName": "ZSC2508051_122.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_122.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6033386588096619
+  },
+  {
+    "box": "[19977.205, 4367.0293, 20009.09, 4395.4805]",
+    "boxList": [
+      19977.205,
+      4367.0293,
+      20009.09,
+      4395.4805
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55447,
+    "cropImageName": "ZSC2508051_123.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_123.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5378473401069641
+  },
+  {
+    "box": "[21767.408, 4302.0166, 21812.799, 4345.0195]",
+    "boxList": [
+      21767.408,
+      4302.0166,
+      21812.799,
+      4345.0195
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55448,
+    "cropImageName": "ZSC2508051_124.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_124.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5545814037322998
+  },
+  {
+    "box": "[22404.54, 4351.606, 22451.965, 4394.3457]",
+    "boxList": [
+      22404.54,
+      4351.606,
+      22451.965,
+      4394.3457
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55449,
+    "cropImageName": "ZSC2508051_125.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_125.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7455682754516602
+  },
+  {
+    "box": "[9810.551, 4795.6104, 9861.287, 4842.84]",
+    "boxList": [
+      9810.551,
+      4795.6104,
+      9861.287,
+      4842.84
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55450,
+    "cropImageName": "ZSC2508051_126.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_126.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6936254501342773
+  },
+  {
+    "box": "[9896.587, 4549.5786, 9956.855, 4598.147]",
+    "boxList": [
+      9896.587,
+      4549.5786,
+      9956.855,
+      4598.147
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55451,
+    "cropImageName": "ZSC2508051_127.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_127.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.537057638168335
+  },
+  {
+    "box": "[10241.261, 4558.251, 10287.356, 4603.0215]",
+    "boxList": [
+      10241.261,
+      4558.251,
+      10287.356,
+      4603.0215
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55452,
+    "cropImageName": "ZSC2508051_128.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_128.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8705922961235046
+  },
+  {
+    "box": "[12032.529, 5029.18, 12072.709, 5074.6396]",
+    "boxList": [
+      12032.529,
+      5029.18,
+      12072.709,
+      5074.6396
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55453,
+    "cropImageName": "ZSC2508051_129.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_129.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7932731509208679
+  },
+  {
+    "box": "[12522.477, 4839.038, 12560.684, 4880.9375]",
+    "boxList": [
+      12522.477,
+      4839.038,
+      12560.684,
+      4880.9375
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55455,
+    "cropImageName": "ZSC2508051_131.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_131.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5412931442260742
+  },
+  {
+    "box": "[13450.776, 4923.2983, 13494.241, 4967.7153]",
+    "boxList": [
+      13450.776,
+      4923.2983,
+      13494.241,
+      4967.7153
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55457,
+    "cropImageName": "ZSC2508051_133.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_133.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5600112080574036
+  },
+  {
+    "box": "[16940.746, 4498.434, 16974.406, 4532.0303]",
+    "boxList": [
+      16940.746,
+      4498.434,
+      16974.406,
+      4532.0303
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55460,
+    "cropImageName": "ZSC2508051_136.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_136.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7198401093482971
+  },
+  {
+    "box": "[17483.025, 4648.0884, 17542.562, 4684.673]",
+    "boxList": [
+      17483.025,
+      4648.0884,
+      17542.562,
+      4684.673
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55461,
+    "cropImageName": "ZSC2508051_137.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_137.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5313369035720825
+  },
+  {
+    "box": "[19632.094, 4588.856, 19672.24, 4636.7627]",
+    "boxList": [
+      19632.094,
+      4588.856,
+      19672.24,
+      4636.7627
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55462,
+    "cropImageName": "ZSC2508051_138.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_138.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5067951679229736
+  },
+  {
+    "box": "[22609.102, 4880.664, 22656.309, 4938.1167]",
+    "boxList": [
+      22609.102,
+      4880.664,
+      22656.309,
+      4938.1167
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55465,
+    "cropImageName": "ZSC2508051_141.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_141.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5506626963615417
+  },
+  {
+    "box": "[8831.295, 5732.931, 8862.634, 5759.802]",
+    "boxList": [
+      8831.295,
+      5732.931,
+      8862.634,
+      5759.802
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55466,
+    "cropImageName": "ZSC2508051_142.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_142.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6436851620674133
+  },
+  {
+    "box": "[8743.846, 5642.5015, 8793.146, 5678.979]",
+    "boxList": [
+      8743.846,
+      5642.5015,
+      8793.146,
+      5678.979
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55467,
+    "cropImageName": "ZSC2508051_143.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_143.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5723515748977661
+  },
+  {
+    "box": "[9429.249, 5385.424, 9480.313, 5426.1675]",
+    "boxList": [
+      9429.249,
+      5385.424,
+      9480.313,
+      5426.1675
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55468,
+    "cropImageName": "ZSC2508051_144.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_144.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5640484094619751
+  },
+  {
+    "box": "[9382.676, 5430.3354, 9416.975, 5470.98]",
+    "boxList": [
+      9382.676,
+      5430.3354,
+      9416.975,
+      5470.98
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55469,
+    "cropImageName": "ZSC2508051_145.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_145.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.513751745223999
+  },
+  {
+    "box": "[10803.293, 5200.9507, 10839.607, 5241.2495]",
+    "boxList": [
+      10803.293,
+      5200.9507,
+      10839.607,
+      5241.2495
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55470,
+    "cropImageName": "ZSC2508051_146.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_146.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6935134530067444
+  },
+  {
+    "box": "[10774.736, 5253.37, 10822.03, 5298.1587]",
+    "boxList": [
+      10774.736,
+      5253.37,
+      10822.03,
+      5298.1587
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55471,
+    "cropImageName": "ZSC2508051_147.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_147.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5903519988059998
+  },
+  {
+    "box": "[11640.662, 5242.8115, 11687.337, 5294.992]",
+    "boxList": [
+      11640.662,
+      5242.8115,
+      11687.337,
+      5294.992
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55473,
+    "cropImageName": "ZSC2508051_149.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_149.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6115686297416687
+  },
+  {
+    "box": "[13215.483, 5482.8735, 13253.406, 5529.006]",
+    "boxList": [
+      13215.483,
+      5482.8735,
+      13253.406,
+      5529.006
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55475,
+    "cropImageName": "ZSC2508051_151.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_151.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5197845101356506
+  },
+  {
+    "box": "[13299.786, 5136.829, 13348.342, 5177.5806]",
+    "boxList": [
+      13299.786,
+      5136.829,
+      13348.342,
+      5177.5806
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55476,
+    "cropImageName": "ZSC2508051_152.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_152.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5197024941444397
+  },
+  {
+    "box": "[13936.044, 5235.3364, 13977.383, 5267.9736]",
+    "boxList": [
+      13936.044,
+      5235.3364,
+      13977.383,
+      5267.9736
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55477,
+    "cropImageName": "ZSC2508051_153.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_153.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.632474958896637
+  },
+  {
+    "box": "[18751.7, 5707.9443, 18784.916, 5736.6035]",
+    "boxList": [
+      18751.7,
+      5707.9443,
+      18784.916,
+      5736.6035
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55484,
+    "cropImageName": "ZSC2508051_160.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_160.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[18754.594, 5332.136, 18779.568, 5357.7993]",
+    "boxList": [
+      18754.594,
+      5332.136,
+      18779.568,
+      5357.7993
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55485,
+    "cropImageName": "ZSC2508051_161.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_161.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[23064.99, 5636.401, 23096.268, 5658.034]",
+    "boxList": [
+      23064.99,
+      5636.401,
+      23096.268,
+      5658.034
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55488,
+    "cropImageName": "ZSC2508051_164.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_164.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5010687112808228
+  },
+  {
+    "box": "[9455.013, 6044.761, 9502.471, 6084.6997]",
+    "boxList": [
+      9455.013,
+      6044.761,
+      9502.471,
+      6084.6997
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55490,
+    "cropImageName": "ZSC2508051_166.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_166.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7364705801010132
+  },
+  {
+    "box": "[9799.319, 5809.0522, 9856.694, 5845.237]",
+    "boxList": [
+      9799.319,
+      5809.0522,
+      9856.694,
+      5845.237
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55492,
+    "cropImageName": "ZSC2508051_168.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_168.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7185513973236084
+  },
+  {
+    "box": "[10720.173, 6275.5254, 10760.742, 6318.316]",
+    "boxList": [
+      10720.173,
+      6275.5254,
+      10760.742,
+      6318.316
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55493,
+    "cropImageName": "ZSC2508051_169.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_169.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8984468579292297
+  },
+  {
+    "box": "[11226.5, 5854.155, 11273.035, 5913.2915]",
+    "boxList": [
+      11226.5,
+      5854.155,
+      11273.035,
+      5913.2915
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55494,
+    "cropImageName": "ZSC2508051_170.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_170.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8072330355644226
+  },
+  {
+    "box": "[11881.814, 5771.4272, 11921.655, 5810.907]",
+    "boxList": [
+      11881.814,
+      5771.4272,
+      11921.655,
+      5810.907
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55495,
+    "cropImageName": "ZSC2508051_171.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_171.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6336838006973267
+  },
+  {
+    "box": "[11815.989, 5785.895, 11857.4375, 5824.3457]",
+    "boxList": [
+      11815.989,
+      5785.895,
+      11857.4375,
+      5824.3457
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55496,
+    "cropImageName": "ZSC2508051_172.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_172.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5494605302810669
+  },
+  {
+    "box": "[12504.229, 6159.6704, 12545.221, 6205.528]",
+    "boxList": [
+      12504.229,
+      6159.6704,
+      12545.221,
+      6205.528
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55497,
+    "cropImageName": "ZSC2508051_173.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_173.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6592428684234619
+  },
+  {
+    "box": "[12754.293, 6125.5176, 12798.253, 6163.16]",
+    "boxList": [
+      12754.293,
+      6125.5176,
+      12798.253,
+      6163.16
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55498,
+    "cropImageName": "ZSC2508051_174.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_174.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5864405035972595
+  },
+  {
+    "box": "[13442.135, 6334.539, 13472.619, 6362.6616]",
+    "boxList": [
+      13442.135,
+      6334.539,
+      13472.619,
+      6362.6616
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55500,
+    "cropImageName": "ZSC2508051_176.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_176.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5286807417869568
+  },
+  {
+    "box": "[14570.324, 6376.5464, 14601.217, 6400.6553]",
+    "boxList": [
+      14570.324,
+      6376.5464,
+      14601.217,
+      6400.6553
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55501,
+    "cropImageName": "ZSC2508051_177.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_177.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5462014675140381
+  },
+  {
+    "box": "[14902.797, 6305.916, 14929.247, 6335.323]",
+    "boxList": [
+      14902.797,
+      6305.916,
+      14929.247,
+      6335.323
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55502,
+    "cropImageName": "ZSC2508051_178.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_178.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[19288.887, 6318.25, 19333.426, 6370.9443]",
+    "boxList": [
+      19288.887,
+      6318.25,
+      19333.426,
+      6370.9443
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55505,
+    "cropImageName": "ZSC2508051_181.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_181.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7950113415718079
+  },
+  {
+    "box": "[19335.129, 6223.345, 19375.303, 6273.583]",
+    "boxList": [
+      19335.129,
+      6223.345,
+      19375.303,
+      6273.583
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55506,
+    "cropImageName": "ZSC2508051_182.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_182.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.502303957939148
+  },
+  {
+    "box": "[20421.182, 6240.8013, 20473.984, 6285.363]",
+    "boxList": [
+      20421.182,
+      6240.8013,
+      20473.984,
+      6285.363
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55507,
+    "cropImageName": "ZSC2508051_183.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_183.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7911762595176697
+  },
+  {
+    "box": "[19896.574, 5794.298, 19934.791, 5835.642]",
+    "boxList": [
+      19896.574,
+      5794.298,
+      19934.791,
+      5835.642
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55508,
+    "cropImageName": "ZSC2508051_184.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_184.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6723213195800781
+  },
+  {
+    "box": "[20582.654, 6207.761, 20630.36, 6264.7134]",
+    "boxList": [
+      20582.654,
+      6207.761,
+      20630.36,
+      6264.7134
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55509,
+    "cropImageName": "ZSC2508051_185.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_185.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5416858792304993
+  },
+  {
+    "box": "[21543.084, 5867.587, 21582.605, 5915.866]",
+    "boxList": [
+      21543.084,
+      5867.587,
+      21582.605,
+      5915.866
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55510,
+    "cropImageName": "ZSC2508051_186.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_186.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7210265398025513
+  },
+  {
+    "box": "[9214.727, 6405.492, 9270.193, 6448.733]",
+    "boxList": [
+      9214.727,
+      6405.492,
+      9270.193,
+      6448.733
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55512,
+    "cropImageName": "ZSC2508051_188.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_188.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8059976696968079
+  },
+  {
+    "box": "[9378.531, 6593.4604, 9417.066, 6634.0547]",
+    "boxList": [
+      9378.531,
+      6593.4604,
+      9417.066,
+      6634.0547
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55513,
+    "cropImageName": "ZSC2508051_189.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_189.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6494137048721313
+  },
+  {
+    "box": "[10003.039, 7001.6133, 10042.848, 7040.352]",
+    "boxList": [
+      10003.039,
+      7001.6133,
+      10042.848,
+      7040.352
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55514,
+    "cropImageName": "ZSC2508051_190.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_190.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7544717788696289
+  },
+  {
+    "box": "[9951.364, 6880.9077, 9987.143, 6919.9824]",
+    "boxList": [
+      9951.364,
+      6880.9077,
+      9987.143,
+      6919.9824
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55515,
+    "cropImageName": "ZSC2508051_191.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_191.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6622638702392578
+  },
+  {
+    "box": "[10734.906, 6403.6006, 10798.774, 6442.631]",
+    "boxList": [
+      10734.906,
+      6403.6006,
+      10798.774,
+      6442.631
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55516,
+    "cropImageName": "ZSC2508051_192.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_192.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.9033123254776001
+  },
+  {
+    "box": "[11447.335, 6950.158, 11487.681, 6988.869]",
+    "boxList": [
+      11447.335,
+      6950.158,
+      11487.681,
+      6988.869
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55517,
+    "cropImageName": "ZSC2508051_193.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_193.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7247404456138611
+  },
+  {
+    "box": "[11411.669, 6747.786, 11448.613, 6794.674]",
+    "boxList": [
+      11411.669,
+      6747.786,
+      11448.613,
+      6794.674
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55518,
+    "cropImageName": "ZSC2508051_194.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_194.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7090178728103638
+  },
+  {
+    "box": "[12059.721, 6857.498, 12103.775, 6895.016]",
+    "boxList": [
+      12059.721,
+      6857.498,
+      12103.775,
+      6895.016
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55519,
+    "cropImageName": "ZSC2508051_195.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_195.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7055231332778931
+  },
+  {
+    "box": "[11840.959, 6808.758, 11888.369, 6840.668]",
+    "boxList": [
+      11840.959,
+      6808.758,
+      11888.369,
+      6840.668
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55521,
+    "cropImageName": "ZSC2508051_197.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_197.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5002037286758423
+  },
+  {
+    "box": "[13022.569, 6437.4565, 13073.944, 6487.3223]",
+    "boxList": [
+      13022.569,
+      6437.4565,
+      13073.944,
+      6487.3223
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55523,
+    "cropImageName": "ZSC2508051_199.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_199.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5972445607185364
+  },
+  {
+    "box": "[13546.867, 6630.83, 13598.937, 6678.1787]",
+    "boxList": [
+      13546.867,
+      6630.83,
+      13598.937,
+      6678.1787
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55525,
+    "cropImageName": "ZSC2508051_201.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_201.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.546281635761261
+  },
+  {
+    "box": "[14122.528, 6463.819, 14161.295, 6508.1865]",
+    "boxList": [
+      14122.528,
+      6463.819,
+      14161.295,
+      6508.1865
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55528,
+    "cropImageName": "ZSC2508051_204.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_204.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6450209021568298
+  },
+  {
+    "box": "[15085.391, 7007.3164, 15127.852, 7039.694]",
+    "boxList": [
+      15085.391,
+      7007.3164,
+      15127.852,
+      7039.694
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55529,
+    "cropImageName": "ZSC2508051_205.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_205.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6652011275291443
+  },
+  {
+    "box": "[15576.327, 6767.483, 15614.729, 6812.1367]",
+    "boxList": [
+      15576.327,
+      6767.483,
+      15614.729,
+      6812.1367
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55530,
+    "cropImageName": "ZSC2508051_206.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_206.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5600878596305847
+  },
+  {
+    "box": "[16702.162, 7005.0234, 16744.066, 7039.6636]",
+    "boxList": [
+      16702.162,
+      7005.0234,
+      16744.066,
+      7039.6636
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55532,
+    "cropImageName": "ZSC2508051_208.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_208.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8351439237594604
+  },
+  {
+    "box": "[19176.42, 6465.9883, 19200.139, 6505.7925]",
+    "boxList": [
+      19176.42,
+      6465.9883,
+      19200.139,
+      6505.7925
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55534,
+    "cropImageName": "ZSC2508051_210.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_210.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5022432804107666
+  },
+  {
+    "box": "[19380.002, 6421.49, 19426.271, 6471.3457]",
+    "boxList": [
+      19380.002,
+      6421.49,
+      19426.271,
+      6471.3457
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55535,
+    "cropImageName": "ZSC2508051_211.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_211.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.815595269203186
+  },
+  {
+    "box": "[19354.654, 6488.34, 19385.559, 6519.1475]",
+    "boxList": [
+      19354.654,
+      6488.34,
+      19385.559,
+      6519.1475
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55536,
+    "cropImageName": "ZSC2508051_212.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_212.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5608351826667786
+  },
+  {
+    "box": "[19200.637, 6881.6484, 19250.215, 6923.035]",
+    "boxList": [
+      19200.637,
+      6881.6484,
+      19250.215,
+      6923.035
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55537,
+    "cropImageName": "ZSC2508051_213.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_213.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5318667888641357
+  },
+  {
+    "box": "[19840.23, 6945.946, 19871.053, 6996.438]",
+    "boxList": [
+      19840.23,
+      6945.946,
+      19871.053,
+      6996.438
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55538,
+    "cropImageName": "ZSC2508051_214.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_214.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.570448100566864
+  },
+  {
+    "box": "[20830.672, 7016.668, 20863.6, 7040.168]",
+    "boxList": [
+      20830.672,
+      7016.668,
+      20863.6,
+      7040.168
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55540,
+    "cropImageName": "ZSC2508051_216.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_216.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6312624216079712
+  },
+  {
+    "box": "[21078.832, 6696.5977, 21116.826, 6731.2324]",
+    "boxList": [
+      21078.832,
+      6696.5977,
+      21116.826,
+      6731.2324
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55542,
+    "cropImageName": "ZSC2508051_218.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_218.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5484331846237183
+  },
+  {
+    "box": "[21653.375, 6960.039, 21698.512, 6998.4736]",
+    "boxList": [
+      21653.375,
+      6960.039,
+      21698.512,
+      6998.4736
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55543,
+    "cropImageName": "ZSC2508051_219.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_219.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.805903434753418
+  },
+  {
+    "box": "[21565.004, 6432.606, 21621.04, 6471.3364]",
+    "boxList": [
+      21565.004,
+      6432.606,
+      21621.04,
+      6471.3364
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55545,
+    "cropImageName": "ZSC2508051_221.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_221.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5238873958587646
+  },
+  {
+    "box": "[8188.527, 7617.9414, 8235.8, 7663.1055]",
+    "boxList": [
+      8188.527,
+      7617.9414,
+      8235.8,
+      7663.1055
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55547,
+    "cropImageName": "ZSC2508051_223.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_223.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8429105877876282
+  },
+  {
+    "box": "[8696.079, 7183.9478, 8721.982, 7207.4927]",
+    "boxList": [
+      8696.079,
+      7183.9478,
+      8721.982,
+      7207.4927
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55548,
+    "cropImageName": "ZSC2508051_224.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_224.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5184679627418518
+  },
+  {
+    "box": "[9280.465, 7183.639, 9323.5, 7231.501]",
+    "boxList": [
+      9280.465,
+      7183.639,
+      9323.5,
+      7231.501
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55550,
+    "cropImageName": "ZSC2508051_226.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_226.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5815083384513855
+  },
+  {
+    "box": "[10152.559, 7097.546, 10192.554, 7131.4893]",
+    "boxList": [
+      10152.559,
+      7097.546,
+      10192.554,
+      7131.4893
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55551,
+    "cropImageName": "ZSC2508051_227.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_227.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7577946782112122
+  },
+  {
+    "box": "[10045.643, 7335.8633, 10099.484, 7372.8716]",
+    "boxList": [
+      10045.643,
+      7335.8633,
+      10099.484,
+      7372.8716
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55552,
+    "cropImageName": "ZSC2508051_228.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_228.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7121726870536804
+  },
+  {
+    "box": "[11585.296, 7171.1743, 11628.077, 7214.49]",
+    "boxList": [
+      11585.296,
+      7171.1743,
+      11628.077,
+      7214.49
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55555,
+    "cropImageName": "ZSC2508051_231.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_231.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6832605600357056
+  },
+  {
+    "box": "[11825.886, 7209.0264, 11868.446, 7257.05]",
+    "boxList": [
+      11825.886,
+      7209.0264,
+      11868.446,
+      7257.05
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55556,
+    "cropImageName": "ZSC2508051_232.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_232.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5440210700035095
+  },
+  {
+    "box": "[14088.946, 7221.3823, 14123.818, 7269.761]",
+    "boxList": [
+      14088.946,
+      7221.3823,
+      14123.818,
+      7269.761
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55558,
+    "cropImageName": "ZSC2508051_234.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_234.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6835963726043701
+  },
+  {
+    "box": "[17136.592, 7650.391, 17173.469, 7680.8193]",
+    "boxList": [
+      17136.592,
+      7650.391,
+      17173.469,
+      7680.8193
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55561,
+    "cropImageName": "ZSC2508051_237.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_237.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7189403176307678
+  },
+  {
+    "box": "[17569.873, 7043.33, 17609.404, 7074.5024]",
+    "boxList": [
+      17569.873,
+      7043.33,
+      17609.404,
+      7074.5024
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55564,
+    "cropImageName": "ZSC2508051_240.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_240.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[18145.006, 7169.4917, 18186.701, 7221.425]",
+    "boxList": [
+      18145.006,
+      7169.4917,
+      18186.701,
+      7221.425
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55565,
+    "cropImageName": "ZSC2508051_241.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_241.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5815469026565552
+  },
+  {
+    "box": "[21216.594, 7488.2866, 21259.027, 7541.748]",
+    "boxList": [
+      21216.594,
+      7488.2866,
+      21259.027,
+      7541.748
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55571,
+    "cropImageName": "ZSC2508051_247.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_247.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5937566161155701
+  },
+  {
+    "box": "[21152.941, 7182.719, 21198.078, 7229.084]",
+    "boxList": [
+      21152.941,
+      7182.719,
+      21198.078,
+      7229.084
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55572,
+    "cropImageName": "ZSC2508051_248.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_248.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5352883338928223
+  },
+  {
+    "box": "[22643.502, 7577.7275, 22683.408, 7619.52]",
+    "boxList": [
+      22643.502,
+      7577.7275,
+      22683.408,
+      7619.52
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55574,
+    "cropImageName": "ZSC2508051_250.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_250.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6560268998146057
+  },
+  {
+    "box": "[8256.846, 8079.797, 8278.925, 8105.725]",
+    "boxList": [
+      8256.846,
+      8079.797,
+      8278.925,
+      8105.725
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55576,
+    "cropImageName": "ZSC2508051_252.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_252.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6367377042770386
+  },
+  {
+    "box": "[8178.9707, 7784.17, 8217.595, 7816.2095]",
+    "boxList": [
+      8178.9707,
+      7784.17,
+      8217.595,
+      7816.2095
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55577,
+    "cropImageName": "ZSC2508051_253.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_253.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6003671884536743
+  },
+  {
+    "box": "[9329.975, 7749.08, 9380.823, 7791.6216]",
+    "boxList": [
+      9329.975,
+      7749.08,
+      9380.823,
+      7791.6216
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55578,
+    "cropImageName": "ZSC2508051_254.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_254.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7006843090057373
+  },
+  {
+    "box": "[9640.66, 8163.0205, 9683.145, 8200.771]",
+    "boxList": [
+      9640.66,
+      8163.0205,
+      9683.145,
+      8200.771
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55579,
+    "cropImageName": "ZSC2508051_255.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_255.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8645117878913879
+  },
+  {
+    "box": "[9653.998, 8024.3774, 9709.936, 8066.479]",
+    "boxList": [
+      9653.998,
+      8024.3774,
+      9709.936,
+      8066.479
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55580,
+    "cropImageName": "ZSC2508051_256.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_256.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6118428707122803
+  },
+  {
+    "box": "[11434.845, 7709.11, 11471.764, 7743.4067]",
+    "boxList": [
+      11434.845,
+      7709.11,
+      11471.764,
+      7743.4067
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55582,
+    "cropImageName": "ZSC2508051_258.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_258.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6143710613250732
+  },
+  {
+    "box": "[12304.889, 7864.233, 12349.7705, 7895.109]",
+    "boxList": [
+      12304.889,
+      7864.233,
+      12349.7705,
+      7895.109
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55584,
+    "cropImageName": "ZSC2508051_260.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_260.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5438240766525269
+  },
+  {
+    "box": "[13808.277, 7703.786, 13856.384, 7744.126]",
+    "boxList": [
+      13808.277,
+      7703.786,
+      13856.384,
+      7744.126
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55586,
+    "cropImageName": "ZSC2508051_262.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_262.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6372213959693909
+  },
+  {
+    "box": "[14487.849, 7898.226, 14525.235, 7931.7095]",
+    "boxList": [
+      14487.849,
+      7898.226,
+      14525.235,
+      7931.7095
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55588,
+    "cropImageName": "ZSC2508051_264.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_264.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6491902470588684
+  },
+  {
+    "box": "[14810.583, 8281.8125, 14863.142, 8318.854]",
+    "boxList": [
+      14810.583,
+      8281.8125,
+      14863.142,
+      8318.854
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55589,
+    "cropImageName": "ZSC2508051_265.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_265.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6756170392036438
+  },
+  {
+    "box": "[15328.194, 7731.3467, 15358.829, 7767.542]",
+    "boxList": [
+      15328.194,
+      7731.3467,
+      15358.829,
+      7767.542
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55590,
+    "cropImageName": "ZSC2508051_266.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_266.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5800037384033203
+  },
+  {
+    "box": "[18432.854, 7875.961, 18500.865, 7920.287]",
+    "boxList": [
+      18432.854,
+      7875.961,
+      18500.865,
+      7920.287
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55592,
+    "cropImageName": "ZSC2508051_268.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_268.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7522206902503967
+  },
+  {
+    "box": "[18968.469, 8150.6064, 19015.428, 8184.139]",
+    "boxList": [
+      18968.469,
+      8150.6064,
+      19015.428,
+      8184.139
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55594,
+    "cropImageName": "ZSC2508051_270.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_270.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5424264669418335
+  },
+  {
+    "box": "[19840.295, 7897.683, 19869.229, 7944.18]",
+    "boxList": [
+      19840.295,
+      7897.683,
+      19869.229,
+      7944.18
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55595,
+    "cropImageName": "ZSC2508051_271.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_271.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5917571783065796
+  },
+  {
+    "box": "[20200.383, 7715.0615, 20249.318, 7755.6777]",
+    "boxList": [
+      20200.383,
+      7715.0615,
+      20249.318,
+      7755.6777
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55596,
+    "cropImageName": "ZSC2508051_272.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_272.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5764535665512085
+  },
+  {
+    "box": "[20795.227, 7720.442, 20837.68, 7760.904]",
+    "boxList": [
+      20795.227,
+      7720.442,
+      20837.68,
+      7760.904
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55599,
+    "cropImageName": "ZSC2508051_275.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_275.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5113202333450317
+  },
+  {
+    "box": "[23706.705, 7716.1475, 23764.879, 7752.815]",
+    "boxList": [
+      23706.705,
+      7716.1475,
+      23764.879,
+      7752.815
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55601,
+    "cropImageName": "ZSC2508051_277.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_277.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5266931056976318
+  },
+  {
+    "box": "[9267.832, 8572.19, 9310.518, 8603.558]",
+    "boxList": [
+      9267.832,
+      8572.19,
+      9310.518,
+      8603.558
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55604,
+    "cropImageName": "ZSC2508051_280.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_280.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6783331036567688
+  },
+  {
+    "box": "[9120.182, 8467.92, 9177.304, 8517.604]",
+    "boxList": [
+      9120.182,
+      8467.92,
+      9177.304,
+      8517.604
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55605,
+    "cropImageName": "ZSC2508051_281.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_281.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5371770262718201
+  },
+  {
+    "box": "[9945.967, 8408.076, 9999.953, 8462.927]",
+    "boxList": [
+      9945.967,
+      8408.076,
+      9999.953,
+      8462.927
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55606,
+    "cropImageName": "ZSC2508051_282.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_282.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6423472762107849
+  },
+  {
+    "box": "[10043.333, 8366.703, 10087.139, 8406.913]",
+    "boxList": [
+      10043.333,
+      8366.703,
+      10087.139,
+      8406.913
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55607,
+    "cropImageName": "ZSC2508051_283.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_283.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5740934014320374
+  },
+  {
+    "box": "[9635.751, 8740.032, 9674.702, 8788.164]",
+    "boxList": [
+      9635.751,
+      8740.032,
+      9674.702,
+      8788.164
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55608,
+    "cropImageName": "ZSC2508051_284.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_284.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5425788164138794
+  },
+  {
+    "box": "[10527.286, 8429.026, 10564.75, 8470.194]",
+    "boxList": [
+      10527.286,
+      8429.026,
+      10564.75,
+      8470.194
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55609,
+    "cropImageName": "ZSC2508051_285.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_285.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5629518032073975
+  },
+  {
+    "box": "[11454.391, 8542.691, 11488.938, 8577.996]",
+    "boxList": [
+      11454.391,
+      8542.691,
+      11488.938,
+      8577.996
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55610,
+    "cropImageName": "ZSC2508051_286.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_286.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7344597578048706
+  },
+  {
+    "box": "[11694.496, 8320.993, 11727.901, 8347.879]",
+    "boxList": [
+      11694.496,
+      8320.993,
+      11727.901,
+      8347.879
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55611,
+    "cropImageName": "ZSC2508051_287.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_287.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7839841246604919
+  },
+  {
+    "box": "[12247.206, 8324.765, 12293.313, 8364.383]",
+    "boxList": [
+      12247.206,
+      8324.765,
+      12293.313,
+      8364.383
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55612,
+    "cropImageName": "ZSC2508051_288.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_288.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6991032958030701
+  },
+  {
+    "box": "[12160.736, 8357.39, 12198.721, 8403.532]",
+    "boxList": [
+      12160.736,
+      8357.39,
+      12198.721,
+      8403.532
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55613,
+    "cropImageName": "ZSC2508051_289.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_289.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6872345209121704
+  },
+  {
+    "box": "[12997.7295, 8549.744, 13046.802, 8602.027]",
+    "boxList": [
+      12997.7295,
+      8549.744,
+      13046.802,
+      8602.027
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55614,
+    "cropImageName": "ZSC2508051_290.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_290.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8327037692070007
+  },
+  {
+    "box": "[13340.702, 8388.249, 13390.808, 8427.624]",
+    "boxList": [
+      13340.702,
+      8388.249,
+      13390.808,
+      8427.624
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55615,
+    "cropImageName": "ZSC2508051_291.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_291.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.522944986820221
+  },
+  {
+    "box": "[13493.137, 8773.862, 13530.246, 8821.582]",
+    "boxList": [
+      13493.137,
+      8773.862,
+      13530.246,
+      8821.582
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55616,
+    "cropImageName": "ZSC2508051_292.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_292.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8316529393196106
+  },
+  {
+    "box": "[14472.755, 8327.521, 14515.978, 8375.604]",
+    "boxList": [
+      14472.755,
+      8327.521,
+      14515.978,
+      8375.604
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55617,
+    "cropImageName": "ZSC2508051_293.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_293.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7812845706939697
+  },
+  {
+    "box": "[14338.005, 8878.817, 14386.355, 8915.798]",
+    "boxList": [
+      14338.005,
+      8878.817,
+      14386.355,
+      8915.798
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55619,
+    "cropImageName": "ZSC2508051_295.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_295.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5024696588516235
+  },
+  {
+    "box": "[16508.88, 8647.8, 16549.277, 8685.42]",
+    "boxList": [
+      16508.88,
+      8647.8,
+      16549.277,
+      8685.42
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55621,
+    "cropImageName": "ZSC2508051_297.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_297.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7436429858207703
+  },
+  {
+    "box": "[17220.72, 8539.685, 17267.625, 8577.238]",
+    "boxList": [
+      17220.72,
+      8539.685,
+      17267.625,
+      8577.238
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55622,
+    "cropImageName": "ZSC2508051_298.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_298.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5004485845565796
+  },
+  {
+    "box": "[17873.63, 8621.726, 17918.875, 8662.063]",
+    "boxList": [
+      17873.63,
+      8621.726,
+      17918.875,
+      8662.063
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55623,
+    "cropImageName": "ZSC2508051_299.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_299.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7317251563072205
+  },
+  {
+    "box": "[18187.443, 8456.011, 18257.422, 8511.06]",
+    "boxList": [
+      18187.443,
+      8456.011,
+      18257.422,
+      8511.06
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55626,
+    "cropImageName": "ZSC2508051_302.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_302.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5337043404579163
+  },
+  {
+    "box": "[18441.098, 8631.574, 18481.156, 8673.16]",
+    "boxList": [
+      18441.098,
+      8631.574,
+      18481.156,
+      8673.16
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55627,
+    "cropImageName": "ZSC2508051_303.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_303.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5114816427230835
+  },
+  {
+    "box": "[19059.553, 8905.011, 19106.164, 8943.522]",
+    "boxList": [
+      19059.553,
+      8905.011,
+      19106.164,
+      8943.522
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55628,
+    "cropImageName": "ZSC2508051_304.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_304.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7252528667449951
+  },
+  {
+    "box": "[19572.45, 8831.952, 19627.412, 8872.894]",
+    "boxList": [
+      19572.45,
+      8831.952,
+      19627.412,
+      8872.894
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55629,
+    "cropImageName": "ZSC2508051_305.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_305.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6152602434158325
+  },
+  {
+    "box": "[19903.688, 8698.017, 19964.55, 8740.992]",
+    "boxList": [
+      19903.688,
+      8698.017,
+      19964.55,
+      8740.992
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55631,
+    "cropImageName": "ZSC2508051_307.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_307.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7053706645965576
+  },
+  {
+    "box": "[20106.633, 8515.946, 20152.53, 8562.372]",
+    "boxList": [
+      20106.633,
+      8515.946,
+      20152.53,
+      8562.372
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55632,
+    "cropImageName": "ZSC2508051_308.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_308.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6138923168182373
+  },
+  {
+    "box": "[19976.459, 8579.191, 20013.59, 8611.468]",
+    "boxList": [
+      19976.459,
+      8579.191,
+      20013.59,
+      8611.468
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55633,
+    "cropImageName": "ZSC2508051_309.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_309.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5614449381828308
+  },
+  {
+    "box": "[20750.762, 8457.475, 20792.395, 8492.771]",
+    "boxList": [
+      20750.762,
+      8457.475,
+      20792.395,
+      8492.771
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55635,
+    "cropImageName": "ZSC2508051_311.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_311.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5241044759750366
+  },
+  {
+    "box": "[23743.77, 8594.004, 23762.459, 8617.32]",
+    "boxList": [
+      23743.77,
+      8594.004,
+      23762.459,
+      8617.32
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55640,
+    "cropImageName": "ZSC2508051_316.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_316.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.57502681016922
+  },
+  {
+    "box": "[8243.7, 9356.296, 8279.782, 9381.488]",
+    "boxList": [
+      8243.7,
+      9356.296,
+      8279.782,
+      9381.488
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55641,
+    "cropImageName": "ZSC2508051_317.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_317.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5377053618431091
+  },
+  {
+    "box": "[8273.39, 9188.796, 8293.672, 9210.087]",
+    "boxList": [
+      8273.39,
+      9188.796,
+      8293.672,
+      9210.087
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55642,
+    "cropImageName": "ZSC2508051_318.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_318.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5369501113891602
+  },
+  {
+    "box": "[8387.884, 9543.517, 8420.269, 9569.431]",
+    "boxList": [
+      8387.884,
+      9543.517,
+      8420.269,
+      9569.431
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55643,
+    "cropImageName": "ZSC2508051_319.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_319.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5328938961029053
+  },
+  {
+    "box": "[10833.583, 9279.091, 10879.877, 9319.915]",
+    "boxList": [
+      10833.583,
+      9279.091,
+      10879.877,
+      9319.915
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55645,
+    "cropImageName": "ZSC2508051_321.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_321.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6374762058258057
+  },
+  {
+    "box": "[13881.442, 1175.908, 13926.827, 1238.2163]",
+    "boxList": [
+      13881.442,
+      1175.908,
+      13926.827,
+      1238.2163
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55647,
+    "cropImageName": "ZSC2508051_323.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_323.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8474463820457458
+  },
+  {
+    "box": "[12043.079, 8980.951, 12081.865, 9031.544]",
+    "boxList": [
+      12043.079,
+      8980.951,
+      12081.865,
+      9031.544
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55648,
+    "cropImageName": "ZSC2508051_324.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_324.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5728740692138672
+  },
+  {
+    "box": "[11850.533, 9294.092, 11884.44, 9339.21]",
+    "boxList": [
+      11850.533,
+      9294.092,
+      11884.44,
+      9339.21
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55649,
+    "cropImageName": "ZSC2508051_325.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_325.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5542949438095093
+  },
+  {
+    "box": "[12378.039, 9239.773, 12415.083, 9278.294]",
+    "boxList": [
+      12378.039,
+      9239.773,
+      12415.083,
+      9278.294
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55650,
+    "cropImageName": "ZSC2508051_326.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_326.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8716903924942017
+  },
+  {
+    "box": "[12694.505, 9084.243, 12727.393, 9129.02]",
+    "boxList": [
+      12694.505,
+      9084.243,
+      12727.393,
+      9129.02
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55651,
+    "cropImageName": "ZSC2508051_327.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_327.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.518671989440918
+  },
+  {
+    "box": "[13519.833, 9094.951, 13561.566, 9141.897]",
+    "boxList": [
+      13519.833,
+      9094.951,
+      13561.566,
+      9141.897
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55653,
+    "cropImageName": "ZSC2508051_329.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_329.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5159976482391357
+  },
+  {
+    "box": "[14442.472, 9550.141, 14477.909, 9591.998]",
+    "boxList": [
+      14442.472,
+      9550.141,
+      14477.909,
+      9591.998
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55654,
+    "cropImageName": "ZSC2508051_330.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_330.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7045455574989319
+  },
+  {
+    "box": "[14516.85, 9373.563, 14560.29, 9427.733]",
+    "boxList": [
+      14516.85,
+      9373.563,
+      14560.29,
+      9427.733
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55656,
+    "cropImageName": "ZSC2508051_332.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_332.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6527990102767944
+  },
+  {
+    "box": "[15207.248, 8960.584, 15256.274, 8994.698]",
+    "boxList": [
+      15207.248,
+      8960.584,
+      15256.274,
+      8994.698
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55658,
+    "cropImageName": "ZSC2508051_334.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_334.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.614331841468811
+  },
+  {
+    "box": "[15495.889, 9572.163, 15539.073, 9599.778]",
+    "boxList": [
+      15495.889,
+      9572.163,
+      15539.073,
+      9599.778
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55659,
+    "cropImageName": "ZSC2508051_335.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_335.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7955191731452942
+  },
+  {
+    "box": "[16216.326, 9037.405, 16259.707, 9083.106]",
+    "boxList": [
+      16216.326,
+      9037.405,
+      16259.707,
+      9083.106
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55660,
+    "cropImageName": "ZSC2508051_336.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_336.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7718825340270996
+  },
+  {
+    "box": "[16932.047, 9332.54, 16975.746, 9371.91]",
+    "boxList": [
+      16932.047,
+      9332.54,
+      16975.746,
+      9371.91
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55662,
+    "cropImageName": "ZSC2508051_338.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_338.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5707831382751465
+  },
+  {
+    "box": "[17728.35, 9490.123, 17764.605, 9540.797]",
+    "boxList": [
+      17728.35,
+      9490.123,
+      17764.605,
+      9540.797
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55663,
+    "cropImageName": "ZSC2508051_339.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_339.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6216158866882324
+  },
+  {
+    "box": "[17334.395, 9317.602, 17393.867, 9364.356]",
+    "boxList": [
+      17334.395,
+      9317.602,
+      17393.867,
+      9364.356
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55664,
+    "cropImageName": "ZSC2508051_340.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_340.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5319448113441467
+  },
+  {
+    "box": "[14342.974, 1173.9149, 14377.799, 1215.5286]",
+    "boxList": [
+      14342.974,
+      1173.9149,
+      14377.799,
+      1215.5286
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55666,
+    "cropImageName": "ZSC2508051_342.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_342.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7094860076904297
+  },
+  {
+    "box": "[18680.244, 9391.883, 18727.156, 9431.127]",
+    "boxList": [
+      18680.244,
+      9391.883,
+      18727.156,
+      9431.127
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55668,
+    "cropImageName": "ZSC2508051_344.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_344.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5462076663970947
+  },
+  {
+    "box": "[19897.773, 9348.272, 19953.557, 9391.679]",
+    "boxList": [
+      19897.773,
+      9348.272,
+      19953.557,
+      9391.679
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55670,
+    "cropImageName": "ZSC2508051_346.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_346.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7253618240356445
+  },
+  {
+    "box": "[21020.201, 8991.425, 21075.002, 9021.944]",
+    "boxList": [
+      21020.201,
+      8991.425,
+      21075.002,
+      9021.944
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55672,
+    "cropImageName": "ZSC2508051_348.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_348.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5664701461791992
+  },
+  {
+    "box": "[23685.172, 9544.531, 23714.615, 9574.967]",
+    "boxList": [
+      23685.172,
+      9544.531,
+      23714.615,
+      9574.967
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55675,
+    "cropImageName": "ZSC2508051_351.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_351.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6110890507698059
+  },
+  {
+    "box": "[23702.834, 9421.924, 23731.549, 9468.348]",
+    "boxList": [
+      23702.834,
+      9421.924,
+      23731.549,
+      9468.348
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55676,
+    "cropImageName": "ZSC2508051_352.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_352.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5931205153465271
+  },
+  {
+    "box": "[15309.891, 973.0465, 15355.478, 1020.01245]",
+    "boxList": [
+      15309.891,
+      973.0465,
+      15355.478,
+      1020.01245
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55677,
+    "cropImageName": "ZSC2508051_353.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_353.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5375505685806274
+  },
+  {
+    "box": "[15443.005, 937.5541, 15491.497, 976.0071]",
+    "boxList": [
+      15443.005,
+      937.5541,
+      15491.497,
+      976.0071
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55678,
+    "cropImageName": "ZSC2508051_354.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_354.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5983340740203857
+  },
+  {
+    "box": "[16277.175, 1020.9785, 16314.476, 1053.1257]",
+    "boxList": [
+      16277.175,
+      1020.9785,
+      16314.476,
+      1053.1257
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55680,
+    "cropImageName": "ZSC2508051_356.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_356.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5492094159126282
+  },
+  {
+    "box": "[8238.485, 9638.814, 8276.685, 9682.107]",
+    "boxList": [
+      8238.485,
+      9638.814,
+      8276.685,
+      9682.107
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55681,
+    "cropImageName": "ZSC2508051_357.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_357.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8500020503997803
+  },
+  {
+    "box": "[10725.792, 9844.923, 10774.296, 9899.686]",
+    "boxList": [
+      10725.792,
+      9844.923,
+      10774.296,
+      9899.686
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55685,
+    "cropImageName": "ZSC2508051_361.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_361.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5071052312850952
+  },
+  {
+    "box": "[10957.407, 9656.599, 11006.042, 9702.214]",
+    "boxList": [
+      10957.407,
+      9656.599,
+      11006.042,
+      9702.214
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55686,
+    "cropImageName": "ZSC2508051_362.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_362.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.588016927242279
+  },
+  {
+    "box": "[11642.97, 10131.117, 11698.509, 10174.937]",
+    "boxList": [
+      11642.97,
+      10131.117,
+      11698.509,
+      10174.937
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55687,
+    "cropImageName": "ZSC2508051_363.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_363.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7074300646781921
+  },
+  {
+    "box": "[12089.556, 9600.402, 12143.242, 9642.115]",
+    "boxList": [
+      12089.556,
+      9600.402,
+      12143.242,
+      9642.115
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55688,
+    "cropImageName": "ZSC2508051_364.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_364.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5929277539253235
+  },
+  {
+    "box": "[11712.901, 9664.039, 11757.873, 9706.004]",
+    "boxList": [
+      11712.901,
+      9664.039,
+      11757.873,
+      9706.004
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55689,
+    "cropImageName": "ZSC2508051_365.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_365.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5179235339164734
+  },
+  {
+    "box": "[12223.471, 10113.431, 12255.915, 10148.598]",
+    "boxList": [
+      12223.471,
+      10113.431,
+      12255.915,
+      10148.598
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55690,
+    "cropImageName": "ZSC2508051_366.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_366.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7254877090454102
+  },
+  {
+    "box": "[12852.215, 9880.602, 12906.65, 9928.372]",
+    "boxList": [
+      12852.215,
+      9880.602,
+      12906.65,
+      9928.372
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55691,
+    "cropImageName": "ZSC2508051_367.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_367.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8709200024604797
+  },
+  {
+    "box": "[15185.016, 9600.997, 15236.043, 9636.431]",
+    "boxList": [
+      15185.016,
+      9600.997,
+      15236.043,
+      9636.431
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55692,
+    "cropImageName": "ZSC2508051_368.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_368.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8263512253761292
+  },
+  {
+    "box": "[15971.27, 10203.994, 15998.584, 10239.909]",
+    "boxList": [
+      15971.27,
+      10203.994,
+      15998.584,
+      10239.909
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55694,
+    "cropImageName": "ZSC2508051_370.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_370.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5808200240135193
+  },
+  {
+    "box": "[15559.311, 9634.227, 15582.459, 9659.437]",
+    "boxList": [
+      15559.311,
+      9634.227,
+      15582.459,
+      9659.437
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55695,
+    "cropImageName": "ZSC2508051_371.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_371.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5633217096328735
+  },
+  {
+    "box": "[16065.6455, 9649.961, 16104.632, 9686.101]",
+    "boxList": [
+      16065.6455,
+      9649.961,
+      16104.632,
+      9686.101
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55696,
+    "cropImageName": "ZSC2508051_372.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_372.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7122516632080078
+  },
+  {
+    "box": "[16854.078, 9948.369, 16891.283, 9985.966]",
+    "boxList": [
+      16854.078,
+      9948.369,
+      16891.283,
+      9985.966
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55697,
+    "cropImageName": "ZSC2508051_373.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_373.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5326291918754578
+  },
+  {
+    "box": "[17607.604, 1255.2251, 17645.238, 1280.7026]",
+    "boxList": [
+      17607.604,
+      1255.2251,
+      17645.238,
+      1280.7026
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55699,
+    "cropImageName": "ZSC2508051_375.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_375.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5613858699798584
+  },
+  {
+    "box": "[19790.773, 9832.999, 19831.438, 9874.607]",
+    "boxList": [
+      19790.773,
+      9832.999,
+      19831.438,
+      9874.607
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55700,
+    "cropImageName": "ZSC2508051_376.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_376.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6476202011108398
+  },
+  {
+    "box": "[19636.336, 10149.238, 19683.133, 10190.602]",
+    "boxList": [
+      19636.336,
+      10149.238,
+      19683.133,
+      10190.602
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55701,
+    "cropImageName": "ZSC2508051_377.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_377.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.551581621170044
+  },
+  {
+    "box": "[19999.479, 9979.864, 20039.205, 10010.621]",
+    "boxList": [
+      19999.479,
+      9979.864,
+      20039.205,
+      10010.621
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55703,
+    "cropImageName": "ZSC2508051_379.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_379.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5145821571350098
+  },
+  {
+    "box": "[22975.965, 9812.854, 22998.57, 9838.843]",
+    "boxList": [
+      22975.965,
+      9812.854,
+      22998.57,
+      9838.843
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55706,
+    "cropImageName": "ZSC2508051_382.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_382.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6426862478256226
+  },
+  {
+    "box": "[23568.719, 9741.0205, 23604.197, 9770.22]",
+    "boxList": [
+      23568.719,
+      9741.0205,
+      23604.197,
+      9770.22
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55707,
+    "cropImageName": "ZSC2508051_383.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_383.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5235285758972168
+  },
+  {
+    "box": "[23681.846, 9713.445, 23714.328, 9758.522]",
+    "boxList": [
+      23681.846,
+      9713.445,
+      23714.328,
+      9758.522
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55708,
+    "cropImageName": "ZSC2508051_384.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_384.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6815668940544128
+  },
+  {
+    "box": "[17921.643, 1243.5563, 17949.287, 1278.6265]",
+    "boxList": [
+      17921.643,
+      1243.5563,
+      17949.287,
+      1278.6265
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55709,
+    "cropImageName": "ZSC2508051_385.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_385.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6402086019515991
+  },
+  {
+    "box": "[18034.918, 1254.7441, 18060.848, 1279.9587]",
+    "boxList": [
+      18034.918,
+      1254.7441,
+      18060.848,
+      1279.9587
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55710,
+    "cropImageName": "ZSC2508051_386.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_386.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6327090859413147
+  },
+  {
+    "box": "[9601.853, 10528.615, 9643.709, 10590.096]",
+    "boxList": [
+      9601.853,
+      10528.615,
+      9643.709,
+      10590.096
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55711,
+    "cropImageName": "ZSC2508051_387.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_387.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5058198571205139
+  },
+  {
+    "box": "[10397.029, 10307.232, 10451.1875, 10349.657]",
+    "boxList": [
+      10397.029,
+      10307.232,
+      10451.1875,
+      10349.657
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55712,
+    "cropImageName": "ZSC2508051_388.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_388.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.609980583190918
+  },
+  {
+    "box": "[11542.426, 10451.333, 11587.355, 10506.76]",
+    "boxList": [
+      11542.426,
+      10451.333,
+      11587.355,
+      10506.76
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55714,
+    "cropImageName": "ZSC2508051_390.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_390.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8533841967582703
+  },
+  {
+    "box": "[12033.716, 10301.568, 12077.885, 10347.77]",
+    "boxList": [
+      12033.716,
+      10301.568,
+      12077.885,
+      10347.77
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55715,
+    "cropImageName": "ZSC2508051_391.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_391.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6657369136810303
+  },
+  {
+    "box": "[12098.149, 10579.311, 12148.862, 10631.206]",
+    "boxList": [
+      12098.149,
+      10579.311,
+      12148.862,
+      10631.206
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55716,
+    "cropImageName": "ZSC2508051_392.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_392.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5707123279571533
+  },
+  {
+    "box": "[12423.939, 10373.254, 12463.637, 10412.056]",
+    "boxList": [
+      12423.939,
+      10373.254,
+      12463.637,
+      10412.056
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55717,
+    "cropImageName": "ZSC2508051_393.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_393.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8208412528038025
+  },
+  {
+    "box": "[12754.135, 10370.423, 12800.999, 10432.297]",
+    "boxList": [
+      12754.135,
+      10370.423,
+      12800.999,
+      10432.297
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55718,
+    "cropImageName": "ZSC2508051_394.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_394.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5664770603179932
+  },
+  {
+    "box": "[15047.283, 10278.003, 15083.666, 10324.631]",
+    "boxList": [
+      15047.283,
+      10278.003,
+      15083.666,
+      10324.631
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55719,
+    "cropImageName": "ZSC2508051_395.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_395.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7492086291313171
+  },
+  {
+    "box": "[15915.228, 10345.467, 15949.284, 10382.63]",
+    "boxList": [
+      15915.228,
+      10345.467,
+      15949.284,
+      10382.63
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55720,
+    "cropImageName": "ZSC2508051_396.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_396.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7374089360237122
+  },
+  {
+    "box": "[15449.848, 10325.532, 15489.141, 10366.417]",
+    "boxList": [
+      15449.848,
+      10325.532,
+      15489.141,
+      10366.417
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55721,
+    "cropImageName": "ZSC2508051_397.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_397.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5617980360984802
+  },
+  {
+    "box": "[16321.565, 10770.274, 16365.526, 10822.93]",
+    "boxList": [
+      16321.565,
+      10770.274,
+      16365.526,
+      10822.93
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55723,
+    "cropImageName": "ZSC2508051_399.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_399.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6947957277297974
+  },
+  {
+    "box": "[17310.145, 10752.803, 17351.895, 10808.201]",
+    "boxList": [
+      17310.145,
+      10752.803,
+      17351.895,
+      10808.201
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55724,
+    "cropImageName": "ZSC2508051_400.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_400.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5363039970397949
+  },
+  {
+    "box": "[17739.273, 10498.46, 17785.906, 10538.182]",
+    "boxList": [
+      17739.273,
+      10498.46,
+      17785.906,
+      10538.182
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55725,
+    "cropImageName": "ZSC2508051_401.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_401.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5101625919342041
+  },
+  {
+    "box": "[18705.578, 10314.912, 18740.115, 10346.23]",
+    "boxList": [
+      18705.578,
+      10314.912,
+      18740.115,
+      10346.23
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55727,
+    "cropImageName": "ZSC2508051_403.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_403.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5292278528213501
+  },
+  {
+    "box": "[20448.848, 10713.119, 20481.074, 10756.346]",
+    "boxList": [
+      20448.848,
+      10713.119,
+      20481.074,
+      10756.346
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55729,
+    "cropImageName": "ZSC2508051_405.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_405.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8019236326217651
+  },
+  {
+    "box": "[20287.469, 10334.571, 20330.225, 10366.715]",
+    "boxList": [
+      20287.469,
+      10334.571,
+      20330.225,
+      10366.715
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55730,
+    "cropImageName": "ZSC2508051_406.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_406.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5510043501853943
+  },
+  {
+    "box": "[20983.531, 10687.123, 21016.436, 10722.368]",
+    "boxList": [
+      20983.531,
+      10687.123,
+      21016.436,
+      10722.368
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55731,
+    "cropImageName": "ZSC2508051_407.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_407.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6011993288993835
+  },
+  {
+    "box": "[21007.225, 10436.461, 21054.0, 10485.247]",
+    "boxList": [
+      21007.225,
+      10436.461,
+      21054,
+      10485.247
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55732,
+    "cropImageName": "ZSC2508051_408.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_408.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.526732325553894
+  },
+  {
+    "box": "[21221.248, 10479.683, 21253.965, 10517.106]",
+    "boxList": [
+      21221.248,
+      10479.683,
+      21253.965,
+      10517.106
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55733,
+    "cropImageName": "ZSC2508051_409.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_409.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7056827545166016
+  },
+  {
+    "box": "[22093.771, 10850.67, 22133.133, 10877.457]",
+    "boxList": [
+      22093.771,
+      10850.67,
+      22133.133,
+      10877.457
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55734,
+    "cropImageName": "ZSC2508051_410.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_410.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.616459846496582
+  },
+  {
+    "box": "[11723.341, 11398.3, 11761.718, 11449.791]",
+    "boxList": [
+      11723.341,
+      11398.3,
+      11761.718,
+      11449.791
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55740,
+    "cropImageName": "ZSC2508051_416.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_416.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.715509295463562
+  },
+  {
+    "box": "[11957.872, 10912.506, 12003.403, 10954.821]",
+    "boxList": [
+      11957.872,
+      10912.506,
+      12003.403,
+      10954.821
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55741,
+    "cropImageName": "ZSC2508051_417.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_417.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.696392834186554
+  },
+  {
+    "box": "[11551.516, 11245.628, 11598.921, 11276.261]",
+    "boxList": [
+      11551.516,
+      11245.628,
+      11598.921,
+      11276.261
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55742,
+    "cropImageName": "ZSC2508051_418.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_418.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5338079333305359
+  },
+  {
+    "box": "[11561.255, 10982.733, 11607.014, 11017.778]",
+    "boxList": [
+      11561.255,
+      10982.733,
+      11607.014,
+      11017.778
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55743,
+    "cropImageName": "ZSC2508051_419.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_419.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5306804180145264
+  },
+  {
+    "box": "[15284.018, 11078.5625, 15332.649, 11129.298]",
+    "boxList": [
+      15284.018,
+      11078.5625,
+      15332.649,
+      11129.298
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55744,
+    "cropImageName": "ZSC2508051_420.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_420.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.9038197994232178
+  },
+  {
+    "box": "[15096.707, 11435.914, 15140.923, 11476.647]",
+    "boxList": [
+      15096.707,
+      11435.914,
+      15140.923,
+      11476.647
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55745,
+    "cropImageName": "ZSC2508051_421.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_421.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6158961653709412
+  },
+  {
+    "box": "[15812.624, 10880.736, 15860.474, 10915.04]",
+    "boxList": [
+      15812.624,
+      10880.736,
+      15860.474,
+      10915.04
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55746,
+    "cropImageName": "ZSC2508051_422.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_422.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7600229978561401
+  },
+  {
+    "box": "[16265.136, 11490.933, 16306.664, 11521.331]",
+    "boxList": [
+      16265.136,
+      11490.933,
+      16306.664,
+      11521.331
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55748,
+    "cropImageName": "ZSC2508051_424.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_424.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6001495718955994
+  },
+  {
+    "box": "[16894.973, 11257.231, 16949.115, 11310.112]",
+    "boxList": [
+      16894.973,
+      11257.231,
+      16949.115,
+      11310.112
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55749,
+    "cropImageName": "ZSC2508051_425.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_425.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.9203616976737976
+  },
+  {
+    "box": "[17308.398, 11402.437, 17348.234, 11436.279]",
+    "boxList": [
+      17308.398,
+      11402.437,
+      17348.234,
+      11436.279
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55750,
+    "cropImageName": "ZSC2508051_426.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_426.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7131505012512207
+  },
+  {
+    "box": "[18845.184, 10903.565, 18883.752, 10949.184]",
+    "boxList": [
+      18845.184,
+      10903.565,
+      18883.752,
+      10949.184
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55753,
+    "cropImageName": "ZSC2508051_429.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_429.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5270413756370544
+  },
+  {
+    "box": "[19633.115, 11029.317, 19675.924, 11073.032]",
+    "boxList": [
+      19633.115,
+      11029.317,
+      19675.924,
+      11073.032
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55754,
+    "cropImageName": "ZSC2508051_430.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_430.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8043023943901062
+  },
+  {
+    "box": "[19391.344, 11261.651, 19430.816, 11315.186]",
+    "boxList": [
+      19391.344,
+      11261.651,
+      19430.816,
+      11315.186
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55755,
+    "cropImageName": "ZSC2508051_431.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_431.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6227160692214966
+  },
+  {
+    "box": "[20214.11, 11206.701, 20259.375, 11256.576]",
+    "boxList": [
+      20214.11,
+      11206.701,
+      20259.375,
+      11256.576
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55756,
+    "cropImageName": "ZSC2508051_432.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_432.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7898180484771729
+  },
+  {
+    "box": "[20893.787, 11062.641, 20935.318, 11104.928]",
+    "boxList": [
+      20893.787,
+      11062.641,
+      20935.318,
+      11104.928
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55757,
+    "cropImageName": "ZSC2508051_433.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_433.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5557830929756165
+  },
+  {
+    "box": "[20734.717, 11212.272, 20780.564, 11245.284]",
+    "boxList": [
+      20734.717,
+      11212.272,
+      20780.564,
+      11245.284
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55758,
+    "cropImageName": "ZSC2508051_434.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_434.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5075377225875854
+  },
+  {
+    "box": "[21545.111, 11121.123, 21598.6, 11166.238]",
+    "boxList": [
+      21545.111,
+      11121.123,
+      21598.6,
+      11166.238
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55759,
+    "cropImageName": "ZSC2508051_435.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_435.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5885117053985596
+  },
+  {
+    "box": "[8862.003, 11793.101, 8884.785, 11816.73]",
+    "boxList": [
+      8862.003,
+      11793.101,
+      8884.785,
+      11816.73
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55761,
+    "cropImageName": "ZSC2508051_437.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_437.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5980280637741089
+  },
+  {
+    "box": "[9310.551, 11661.286, 9366.428, 11695.28]",
+    "boxList": [
+      9310.551,
+      11661.286,
+      9366.428,
+      11695.28
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55762,
+    "cropImageName": "ZSC2508051_438.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_438.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5254397988319397
+  },
+  {
+    "box": "[11234.305, 11572.016, 11290.921, 11621.773]",
+    "boxList": [
+      11234.305,
+      11572.016,
+      11290.921,
+      11621.773
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55765,
+    "cropImageName": "ZSC2508051_441.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_441.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8222922086715698
+  },
+  {
+    "box": "[11372.783, 11549.515, 11421.939, 11596.005]",
+    "boxList": [
+      11372.783,
+      11549.515,
+      11421.939,
+      11596.005
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55766,
+    "cropImageName": "ZSC2508051_442.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_442.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5543556213378906
+  },
+  {
+    "box": "[12003.77, 11654.24, 12056.464, 11697.943]",
+    "boxList": [
+      12003.77,
+      11654.24,
+      12056.464,
+      11697.943
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55767,
+    "cropImageName": "ZSC2508051_443.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_443.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7163459658622742
+  },
+  {
+    "box": "[11519.602, 12019.291, 11560.894, 12051.88]",
+    "boxList": [
+      11519.602,
+      12019.291,
+      11560.894,
+      12051.88
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55768,
+    "cropImageName": "ZSC2508051_444.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_444.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6973602771759033
+  },
+  {
+    "box": "[11924.082, 12045.671, 11966.286, 12087.285]",
+    "boxList": [
+      11924.082,
+      12045.671,
+      11966.286,
+      12087.285
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55769,
+    "cropImageName": "ZSC2508051_445.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_445.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6655297875404358
+  },
+  {
+    "box": "[12160.583, 12075.611, 12191.042, 12124.381]",
+    "boxList": [
+      12160.583,
+      12075.611,
+      12191.042,
+      12124.381
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55770,
+    "cropImageName": "ZSC2508051_446.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_446.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8342656493186951
+  },
+  {
+    "box": "[12167.392, 11975.583, 12204.485, 12007.728]",
+    "boxList": [
+      12167.392,
+      11975.583,
+      12204.485,
+      12007.728
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55771,
+    "cropImageName": "ZSC2508051_447.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_447.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5304594039916992
+  },
+  {
+    "box": "[13479.783, 11862.361, 13519.036, 11899.034]",
+    "boxList": [
+      13479.783,
+      11862.361,
+      13519.036,
+      11899.034
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55772,
+    "cropImageName": "ZSC2508051_448.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_448.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6496686935424805
+  },
+  {
+    "box": "[13764.282, 12101.116, 13801.919, 12140.689]",
+    "boxList": [
+      13764.282,
+      12101.116,
+      13801.919,
+      12140.689
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55773,
+    "cropImageName": "ZSC2508051_449.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_449.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5366677045822144
+  },
+  {
+    "box": "[14514.33, 11821.601, 14555.882, 11851.402]",
+    "boxList": [
+      14514.33,
+      11821.601,
+      14555.882,
+      11851.402
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55774,
+    "cropImageName": "ZSC2508051_450.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_450.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7930919528007507
+  },
+  {
+    "box": "[14237.679, 12017.844, 14275.428, 12059.217]",
+    "boxList": [
+      14237.679,
+      12017.844,
+      14275.428,
+      12059.217
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55775,
+    "cropImageName": "ZSC2508051_451.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_451.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5516834259033203
+  },
+  {
+    "box": "[14985.24, 11522.844, 15025.499, 11581.808]",
+    "boxList": [
+      14985.24,
+      11522.844,
+      15025.499,
+      11581.808
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55776,
+    "cropImageName": "ZSC2508051_452.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_452.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8232983350753784
+  },
+  {
+    "box": "[15431.668, 12031.373, 15475.098, 12095.521]",
+    "boxList": [
+      15431.668,
+      12031.373,
+      15475.098,
+      12095.521
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55778,
+    "cropImageName": "ZSC2508051_454.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_454.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5843924283981323
+  },
+  {
+    "box": "[16567.238, 11983.883, 16601.877, 12026.749]",
+    "boxList": [
+      16567.238,
+      11983.883,
+      16601.877,
+      12026.749
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55779,
+    "cropImageName": "ZSC2508051_455.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_455.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6954559087753296
+  },
+  {
+    "box": "[16005.043, 11955.543, 16055.931, 12009.777]",
+    "boxList": [
+      16005.043,
+      11955.543,
+      16055.931,
+      12009.777
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55780,
+    "cropImageName": "ZSC2508051_456.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_456.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5741666555404663
+  },
+  {
+    "box": "[17204.46, 11534.312, 17250.076, 11583.326]",
+    "boxList": [
+      17204.46,
+      11534.312,
+      17250.076,
+      11583.326
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55781,
+    "cropImageName": "ZSC2508051_457.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_457.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.71738201379776
+  },
+  {
+    "box": "[17793.87, 11593.989, 17846.076, 11639.365]",
+    "boxList": [
+      17793.87,
+      11593.989,
+      17846.076,
+      11639.365
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55782,
+    "cropImageName": "ZSC2508051_458.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_458.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7423734664916992
+  },
+  {
+    "box": "[17281.514, 11836.669, 17313.432, 11885.348]",
+    "boxList": [
+      17281.514,
+      11836.669,
+      17313.432,
+      11885.348
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55783,
+    "cropImageName": "ZSC2508051_459.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_459.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5913090109825134
+  },
+  {
+    "box": "[19642.707, 11911.422, 19699.852, 11946.47]",
+    "boxList": [
+      19642.707,
+      11911.422,
+      19699.852,
+      11946.47
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55785,
+    "cropImageName": "ZSC2508051_461.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_461.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6359626650810242
+  },
+  {
+    "box": "[19367.355, 11960.792, 19416.361, 11995.184]",
+    "boxList": [
+      19367.355,
+      11960.792,
+      19416.361,
+      11995.184
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55787,
+    "cropImageName": "ZSC2508051_463.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_463.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5063221454620361
+  },
+  {
+    "box": "[20960.645, 11524.961, 21008.854, 11564.103]",
+    "boxList": [
+      20960.645,
+      11524.961,
+      21008.854,
+      11564.103
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55789,
+    "cropImageName": "ZSC2508051_465.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_465.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7533248066902161
+  },
+  {
+    "box": "[21024.354, 11659.854, 21062.484, 11705.877]",
+    "boxList": [
+      21024.354,
+      11659.854,
+      21062.484,
+      11705.877
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55790,
+    "cropImageName": "ZSC2508051_466.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_466.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5117111206054688
+  },
+  {
+    "box": "[22007.83, 11520.214, 22054.574, 11562.083]",
+    "boxList": [
+      22007.83,
+      11520.214,
+      22054.574,
+      11562.083
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55792,
+    "cropImageName": "ZSC2508051_468.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_468.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5301267504692078
+  },
+  {
+    "box": "[9658.929, 12176.574, 9717.32, 12220.725]",
+    "boxList": [
+      9658.929,
+      12176.574,
+      9717.32,
+      12220.725
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55794,
+    "cropImageName": "ZSC2508051_470.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_470.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5217963457107544
+  },
+  {
+    "box": "[12299.9375, 12398.959, 12343.244, 12440.357]",
+    "boxList": [
+      12299.9375,
+      12398.959,
+      12343.244,
+      12440.357
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55796,
+    "cropImageName": "ZSC2508051_472.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_472.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8154782056808472
+  },
+  {
+    "box": "[13149.111, 12320.86, 13199.499, 12359.246]",
+    "boxList": [
+      13149.111,
+      12320.86,
+      13199.499,
+      12359.246
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55797,
+    "cropImageName": "ZSC2508051_473.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_473.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8509089946746826
+  },
+  {
+    "box": "[13758.157, 12210.417, 13804.572, 12249.363]",
+    "boxList": [
+      13758.157,
+      12210.417,
+      13804.572,
+      12249.363
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55799,
+    "cropImageName": "ZSC2508051_475.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_475.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6607983708381653
+  },
+  {
+    "box": "[13914.532, 12162.369, 13968.562, 12210.452]",
+    "boxList": [
+      13914.532,
+      12162.369,
+      13968.562,
+      12210.452
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55800,
+    "cropImageName": "ZSC2508051_476.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_476.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5833527445793152
+  },
+  {
+    "box": "[14981.596, 12685.943, 15015.7295, 12730.917]",
+    "boxList": [
+      14981.596,
+      12685.943,
+      15015.7295,
+      12730.917
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55801,
+    "cropImageName": "ZSC2508051_477.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_477.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6409134268760681
+  },
+  {
+    "box": "[17198.982, 12199.557, 17240.26, 12235.498]",
+    "boxList": [
+      17198.982,
+      12199.557,
+      17240.26,
+      12235.498
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55802,
+    "cropImageName": "ZSC2508051_478.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_478.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7397754192352295
+  },
+  {
+    "box": "[17207.56, 12626.545, 17241.807, 12681.037]",
+    "boxList": [
+      17207.56,
+      12626.545,
+      17241.807,
+      12681.037
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55803,
+    "cropImageName": "ZSC2508051_479.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_479.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6125710010528564
+  },
+  {
+    "box": "[18100.61, 12166.028, 18140.393, 12207.521]",
+    "boxList": [
+      18100.61,
+      12166.028,
+      18140.393,
+      12207.521
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55805,
+    "cropImageName": "ZSC2508051_481.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_481.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8312854766845703
+  },
+  {
+    "box": "[18676.463, 12646.248, 18746.027, 12694.328]",
+    "boxList": [
+      18676.463,
+      12646.248,
+      18746.027,
+      12694.328
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55806,
+    "cropImageName": "ZSC2508051_482.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_482.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.8587838411331177
+  },
+  {
+    "box": "[22720.627, 12376.115, 22753.594, 12413.559]",
+    "boxList": [
+      22720.627,
+      12376.115,
+      22753.594,
+      12413.559
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55811,
+    "cropImageName": "ZSC2508051_487.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_487.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5161235928535461
+  },
+  {
+    "box": "[9339.177, 12803.419, 9367.569, 12828.54]",
+    "boxList": [
+      9339.177,
+      12803.419,
+      9367.569,
+      12828.54
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55812,
+    "cropImageName": "ZSC2508051_488.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_488.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5181689262390137
+  },
+  {
+    "box": "[10939.627, 13047.547, 10984.974, 13085.716]",
+    "boxList": [
+      10939.627,
+      13047.547,
+      10984.974,
+      13085.716
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55813,
+    "cropImageName": "ZSC2508051_489.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_489.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6142716407775879
+  },
+  {
+    "box": "[13733.623, 13072.688, 13782.188, 13119.333]",
+    "boxList": [
+      13733.623,
+      13072.688,
+      13782.188,
+      13119.333
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55818,
+    "cropImageName": "ZSC2508051_494.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_494.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6194372177124023
+  },
+  {
+    "box": "[14200.306, 13131.414, 14236.865, 13198.189]",
+    "boxList": [
+      14200.306,
+      13131.414,
+      14236.865,
+      13198.189
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55819,
+    "cropImageName": "ZSC2508051_495.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_495.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.6386119723320007
+  },
+  {
+    "box": "[17335.48, 12827.904, 17373.236, 12868.224]",
+    "boxList": [
+      17335.48,
+      12827.904,
+      17373.236,
+      12868.224
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55822,
+    "cropImageName": "ZSC2508051_498.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_498.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5473769903182983
+  },
+  {
+    "box": "[18037.611, 13016.414, 18073.252, 13062.799]",
+    "boxList": [
+      18037.611,
+      13016.414,
+      18073.252,
+      13062.799
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55823,
+    "cropImageName": "ZSC2508051_499.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_499.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[20663.887, 13304.612, 20697.768, 13340.266]",
+    "boxList": [
+      20663.887,
+      13304.612,
+      20697.768,
+      13340.266
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55827,
+    "cropImageName": "ZSC2508051_503.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_503.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0
+  },
+  {
+    "box": "[21451.418, 13401.052, 21495.285, 13437.013]",
+    "boxList": [
+      21451.418,
+      13401.052,
+      21495.285,
+      13437.013
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55828,
+    "cropImageName": "ZSC2508051_504.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_504.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.5874258279800415
+  },
+  {
+    "box": "[22488.598, 12801.866, 22524.873, 12846.93]",
+    "boxList": [
+      22488.598,
+      12801.866,
+      22524.873,
+      12846.93
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55829,
+    "cropImageName": "ZSC2508051_505.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/ZSC2508051/ZSC2508051_505.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 48,
+    "score": 0.7586720585823059
+  }
+]

@@ -33,13 +33,21 @@ python convert_global_to_patch.py \
 
 ### 示例
 
+单文件：
 ```bash
 python convert_global_to_patch.py \
-    --annotation-file /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/test_big_conv_small/标记.json \
-    --patch-dir /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataPatches/cj_20260106_155902 \
+    --annotation-file /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/annotationConverter/input/7-qiuxunbing.json \
+    --patch-dir  /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataPatches/7-邱训宾_20260304_175758\
     --output-dir /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/annotationConverter/output \
-    --wsi-image /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataWSI/cj.jpeg
+    --no-visualization
+    # --wsi-image /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataWSI/7-邱训宾.jpeg
 ```
+批量：
+python3 /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/annotationConverter/convert_global_to_patch.py \
+  --batch \
+  --output-dir /home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/annotationConverter/output \
+  --no-visualization \
+
 
 ## 输入格式
 

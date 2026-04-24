@@ -1,0 +1,138 @@
+[
+  {
+    "box": "[321.27344, 76.83475, 386.6494, 138.56963]",
+    "boxList": [
+      321.27344,
+      76.83475,
+      386.6494,
+      138.56963
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55314,
+    "cropImageName": "K24-胡计忠-7-40X_1.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/K24-胡计忠-7-40X_1.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 45,
+    "score": 0.7403576374053955
+  },
+  {
+    "box": "[349.58215, 145.31055, 485.568, 282.9868]",
+    "boxList": [
+      349.58215,
+      145.31055,
+      485.568,
+      282.9868
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55315,
+    "cropImageName": "K24-胡计忠-7-40X_2.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/K24-胡计忠-7-40X_2.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 45,
+    "score": 0.5547313690185547
+  },
+  {
+    "box": "[730.97845, 363.8452, 864.2886, 510.3698]",
+    "boxList": [
+      730.97845,
+      363.8452,
+      864.2886,
+      510.3698
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55316,
+    "cropImageName": "K24-胡计忠-7-40X_3.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/K24-胡计忠-7-40X_3.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 45,
+    "score": 0.7923110127449036
+  },
+  {
+    "box": "[878.9276, 22.340988, 934.8969, 80.21355]",
+    "boxList": [
+      878.9276,
+      22.340988,
+      934.8969,
+      80.21355
+    ],
+    "cellType": "BC",
+    "coordinatesId": 55317,
+    "cropImageName": "K24-胡计忠-7-40X_4.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/K24-胡计忠-7-40X_4.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 45,
+    "score": 0
+  },
+  {
+    "box": "[904.4792626728106, 653.3686635944701, 1086.9677419354832, 780.1152073732718]",
+    "boxList": [
+      904.4792626728106,
+      653.3686635944701,
+      1086.9677419354832,
+      780.1152073732718
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56687,
+    "cropImageName": "4cf3a036-c0e7-47cc-8b99-87eb6c8dc969.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/4cf3a036-c0e7-47cc-8b99-87eb6c8dc969.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 45,
+    "score": 0
+  },
+  {
+    "box": "[278.04608294930824, 603.599078341014, 402.13824884792575, 671.9493087557605]",
+    "boxList": [
+      278.04608294930824,
+      603.599078341014,
+      402.13824884792575,
+      671.9493087557605
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56688,
+    "cropImageName": "20222a99-69aa-4775-b065-40641f508c25.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/20222a99-69aa-4775-b065-40641f508c25.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 45,
+    "score": 0
+  },
+  {
+    "box": "[1298.5439630679589, 723.8721354289019, 1436.424147399756, 890.5080801293627]",
+    "boxList": [
+      1298.5439630679589,
+      723.8721354289019,
+      1436.424147399756,
+      890.5080801293627
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56689,
+    "cropImageName": "28bc2af1-6f98-4b95-aaa2-3eaaa16ef086.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/28bc2af1-6f98-4b95-aaa2-3eaaa16ef086.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 45,
+    "score": 0
+  },
+  {
+    "box": "[84.40626432585373, 368.63181581232027, 159.4062643258537, 421.81363399413846]",
+    "boxList": [
+      84.40626432585373,
+      368.63181581232027,
+      159.4062643258537,
+      421.81363399413846
+    ],
+    "cellType": "BC",
+    "coordinatesId": 56690,
+    "cropImageName": "e09e2237-cf48-4327-afe4-6c60570a4f7a.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-7-40X/e09e2237-cf48-4327-afe4-6c60570a4f7a.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 45,
+    "score": 0
+  }
+]

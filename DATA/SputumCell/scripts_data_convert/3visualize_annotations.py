@@ -201,20 +201,20 @@ def main():
     parser.add_argument(
         "--json",
         type=str,
-        default="../new37/coco_format.json",
-        help="COCO 格式 JSON 文件路径（默认: ../new37/coco_format.json）"
+        default="../new-21/coco_format.json",
+        help="COCO 格式 JSON 文件路径（默认: ../new-21/coco_format.json）"
     )
     parser.add_argument(
         "--images_dir",
         type=str,
-        default="../new37/images",
-        help="图像文件目录（默认: ../new37/images）"
+        default="../new-21/images",
+        help="图像文件目录（默认: ../new-21/images）"
     )
     parser.add_argument(
         "--output_dir",
         type=str,
-        default="../new37/visualizations",
-        help="输出可视化结果目录（默认: ../new37/visualizations）"
+        default="../new-21/visualizations",
+        help="输出可视化结果目录（默认: ../new-21/visualizations）"
     )
     parser.add_argument(
         "--max_images",

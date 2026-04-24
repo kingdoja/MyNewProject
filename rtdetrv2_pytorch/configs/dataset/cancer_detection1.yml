@@ -35,13 +35,13 @@ train_dataloader:
         name: stop_epoch
         epoch: 70
         ops: ['RandomPhotometricDistort', 'RandomZoomOut', 'RandomIoUCrop']
-  # sampler:
-  #   type: CocoImageWeightedRandomSampler
-  #   weights_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_image_weights.json
-  #   replacement: True
-  #   default_weight: 1.0
+  sampler:
+    type: CocoImageWeightedRandomSampler
+    weights_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_image_weights.json
+    replacement: True
+    default_weight: 1.0
   shuffle: True
-  total_batch_size: 8  # 降低批次大小至8，避免显存不足（OOM）
+  total_batch_size: 16  # 降低批次大小至8，避免显存不足（OOM）
   num_workers: 4  # 增加数据加载线程数以提高效率
   drop_last: True 
   collate_fn:
@@ -62,7 +62,7 @@ val_dataloader:
         - {type: Resize, size: [640, 640]}
         - {type: ConvertPILImage, dtype: 'float32', scale: True}   
   shuffle: False
-  total_batch_size: 8  # 与训练批次大小保持一致
+  total_batch_size: 16  # 与训练批次大小保持一致
   num_workers: 4  # 增加数据加载线程数
   drop_last: False
   collate_fn:

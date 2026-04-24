@@ -1,4 +1,16 @@
 """Copyright(c) 2023 lyuwenyu. All Rights Reserved.
+
+
+
+cd /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch
+
+python3 tools/train.py \
+  -c /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r50vd_cancer_detection1_incremental_ft.yml \
+  -t /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection_split_dataset_0105/best.pth \
+  --device cuda:0
+
+监控：
+  tensorboard --logdir /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/inc_ft_0305/summary --host 0.0.0.0 --port 6006
 """
 
 import os 

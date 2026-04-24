@@ -1,22 +1,39 @@
 #!/usr/bin/env python3
 """
-利用 Albumentations 对痰液细胞 COCO 数据集进行检测增强。
-- 默认会克隆 `split_dataset` 到 `split_dataset_aug`
-- 支持按 split 自动计算目标倍数（默认为 train 适度放大）
-- 同时允许设置单图最少的固定增强数量，保证增广充足但不过分激进
+利用 Albumentations 对痰液细胞 COCO 数据集进行“弱类定向增强”。
+- 默认只增强包含弱类的图像（BC/M/TC1）
+- 可按类别配置增强倍数，优先补齐少数类
+- 增强完成后自动输出重采样与类别权重文件，可直接用于训练
 
 使用示例：
  cd /home/ubuntu/lsn/project_new/RT-DETR-main
- python DATA/SputumCell/4data_augmentation.py \
+python DATA/SputumCell/4data_augmentation.py \
           --source-root DATA/SputumCell/split_dataset \
      --target-root DATA/SputumCell/split_dataset_aug \
-     --train-target-multiplier 8.5
+     --weak-class-multipliers 1:3 5:6 9:3
 
-cd /home/ubuntu/lsn/project_new/RT-DETR-main
- python DATA/SputumCell/4data_augmentation.py \
-     --source-root DATA/SputumCell/split45 \
-     --target-root DATA/SputumCell/split45_aug \
-     --train-target-multiplier 8.5
+
+#定向增强
+ cd /home/ubuntu/lsn/project_new/RT-DETR-main
+     python DATA/SputumCell/4data_augmentation.py \
+  --source-root DATA/SputumCell/split_dataset \
+  --target-root DATA/SputumCell/split_dataset_aug \
+  --category-filter 1 5 9 \
+  --weak-class-multipliers 1:3 5:6 9:3 \
+  --train-factor 1   
+
+  cd /home/ubuntu/lsn/project_new/RT-DETR-main
+python DATA/SputumCell/4data_augmentation.py \
+  --source-root DATA/SputumCell/split_dataset \
+  --target-root DATA/SputumCell/split_dataset_aug \
+  --category-filter 1 5 9 \
+  --weak-class-multipliers 6:16 7:16 5:13 1:9 4:2 \
+  --train-factor 1 \
+  --train-target-multiplier 1.0 \
+  --max-retries 12 \
+  --min-area 20 \
+  --min-visibility 0.12 \
+  --seed 42
 """
 
 from __future__ import annotations
@@ -25,6 +42,7 @@ import argparse
 import json
 import random
 import shutil
+from collections import Counter, defaultdict
 from copy import deepcopy
 from math import ceil
 from pathlib import Path
@@ -43,23 +61,23 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--source-root",
         type=Path,
-        default=Path("DATA/SputumCell/split4"),
+        default=Path("DATA/SputumCell/split_dataset"),
         help="原始 COCO 数据根目录（包含 train/val/test）",
     )
     parser.add_argument(
         "--target-root",
         type=Path,
-        default=Path("DATA/SputumCell/split4_aug"),
+        default=Path("DATA/SputumCell/split_dataset_aug"),
         help="增强后数据输出目录",
     )
-    # 只对 train 做主动增强，val/test 默认不增强（保持评估干净）
-    parser.add_argument("--train-factor", type=int, default=2, help="train 每张图最少新增样本数")
+    # 定向增强默认只处理弱类图像，避免对头部类别继续放大。
+    parser.add_argument("--train-factor", type=int, default=0, help="train 基础每图最少新增样本数")
     parser.add_argument("--val-factor", type=int, default=0, help="val 每张图最少新增样本数")
     parser.add_argument("--test-factor", type=int, default=0, help="test 每张图最少新增样本数")
     parser.add_argument(
         "--train-target-multiplier",
         type=float,
-        default=3.0,
+        default=1.0,
         help="train 目标整体增广倍数（含原图），至少满足该倍数",
     )
     parser.add_argument(
@@ -97,14 +115,26 @@ def parse_args() -> argparse.Namespace:
         "--category-filter",
         type=int,
         nargs="+",
-        default=None,
-        help="只增强包含这些类别 ID 的图像，默认处理全部图像",
+        default=[1, 5, 9],
+        help="只增强包含这些类别 ID 的图像（默认 BC/M/TC1）",
+    )
+    parser.add_argument(
+        "--weak-class-multipliers",
+        type=str,
+        nargs="+",
+        default=["1:3", "5:6", "9:3"],
+        help="弱类增强倍数，格式为 '类别ID:倍数'（示例: 1:3 5:6 9:3）",
     )
     parser.add_argument(
         "--plan-file",
         type=Path,
         default=None,
         help="class_balance_plan.json，启用后自动根据 suggested_multiplier 定向增强",
+    )
+    parser.add_argument(
+        "--skip-balance-files",
+        action="store_true",
+        help="跳过生成 class_balance_class_weights.json 与 class_balance_image_weights.json",
     )
     return parser.parse_args()
 
@@ -236,6 +266,22 @@ def build_annotation_index(annotations: List[Dict]) -> Dict[int, List[Dict]]:
     for ann in annotations:
         index.setdefault(ann["image_id"], []).append(ann)
     return index
+
+
+def parse_class_multiplier_specs(specs: List[str] | None) -> Dict[int, int]:
+    if not specs:
+        return {}
+    parsed: Dict[int, int] = {}
+    for item in specs:
+        if ":" not in item:
+            raise ValueError(f"weak class multiplier 格式错误: {item}，应为 类别ID:倍数")
+        cat_str, mul_str = item.split(":", 1)
+        cat_id = int(cat_str.strip())
+        multiplier = int(mul_str.strip())
+        if multiplier < 1:
+            raise ValueError(f"类别 {cat_id} 的倍数必须 >=1，当前为 {multiplier}")
+        parsed[cat_id] = multiplier
+    return parsed
 
 
 def ensure_valid_boxes(
@@ -420,13 +466,108 @@ def load_minority_plan(plan_path: Path) -> Tuple[str, Set[int], Dict[int, int]]:
     plan_entries = data.get("plan", {})
     filter_set: Set[int] = set()
     multiplier: Dict[int, int] = {}
-    for cat_id, info in plan_entries.items():
-        cat_int = int(cat_id)
-        mult = int(info.get("suggested_multiplier", 1))
-        multiplier[cat_int] = max(1, mult)
-        if mult > 1:
-            filter_set.add(cat_int)
+
+    # 兼容两类计划文件格式：
+    # 1) class_balance_plan: {"plan": {"1": {"suggested_multiplier": 3}, ...}}
+    # 2) count_distribution plan: {"plan": [{"id": 1, "recommended_multiplier": 3}, ...]}
+    if isinstance(plan_entries, dict):
+        for cat_id, info in plan_entries.items():
+            cat_int = int(cat_id)
+            mult = int(info.get("suggested_multiplier", info.get("recommended_multiplier", 1)))
+            multiplier[cat_int] = max(1, mult)
+            if mult > 1:
+                filter_set.add(cat_int)
+    elif isinstance(plan_entries, list):
+        for item in plan_entries:
+            if not isinstance(item, dict):
+                continue
+            if "id" not in item:
+                continue
+            cat_int = int(item["id"])
+            mult = int(item.get("recommended_multiplier", item.get("suggested_multiplier", 1)))
+            multiplier[cat_int] = max(1, mult)
+            if mult > 1:
+                filter_set.add(cat_int)
+    else:
+        raise ValueError("plan 文件格式错误：'plan' 必须是 dict 或 list")
     return plan_split, filter_set, multiplier
+
+
+def generate_balance_files(dataset_root: Path, split: str = "train", smoothing: float = 1.0) -> None:
+    ann_path = dataset_root / split / "annotations" / f"instances_{split}.json"
+    if not ann_path.exists():
+        print(f"[WARN] 跳过平衡文件导出：{ann_path} 不存在")
+        return
+
+    with ann_path.open("r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    images = data.get("images", [])
+    annotations = data.get("annotations", [])
+    category_names = {cat["id"]: cat["name"] for cat in data.get("categories", [])}
+
+    class_counter: Counter = Counter()
+    image_to_cats: Dict[int, List[int]] = defaultdict(list)
+    for ann in annotations:
+        cat_id = ann["category_id"]
+        image_id = ann["image_id"]
+        class_counter[cat_id] += 1
+        image_to_cats[image_id].append(cat_id)
+
+    total = sum(class_counter.values())
+    if total == 0:
+        print("[WARN] 标注为空，无法生成平衡文件。")
+        return
+
+    raw_weights = {
+        cat_id: total / (count + smoothing)
+        for cat_id, count in class_counter.items()
+    }
+    max_weight = max(raw_weights.values())
+    class_weights = {cat_id: value / max_weight for cat_id, value in raw_weights.items()}
+
+    image_weights: Dict[str, Dict[str, float]] = {}
+    for img in images:
+        img_id = img["id"]
+        cats = image_to_cats.get(img_id)
+        if not cats:
+            continue
+        img_weight = max(class_weights.get(cat_id, 1.0) for cat_id in cats)
+        image_weights[str(img_id)] = {
+            "file_name": img["file_name"],
+            "weight": round(float(img_weight), 6),
+        }
+
+    output_dir = dataset_root / "analysis"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    class_out = output_dir / "class_balance_class_weights.json"
+    image_out = output_dir / "class_balance_image_weights.json"
+
+    with class_out.open("w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "split": split,
+                "total_annotations": total,
+                "weights": {
+                    str(cat_id): {
+                        "name": category_names.get(cat_id, str(cat_id)),
+                        "count": class_counter[cat_id],
+                        "ratio": class_counter[cat_id] / total,
+                        "weight": class_weights[cat_id],
+                    }
+                    for cat_id in sorted(class_weights.keys())
+                },
+            },
+            f,
+            indent=2,
+            ensure_ascii=False,
+        )
+
+    with image_out.open("w", encoding="utf-8") as f:
+        json.dump({"split": split, "image_weights": image_weights}, f, indent=2, ensure_ascii=False)
+
+    print(f"[INFO] 类别权重文件写入: {class_out}")
+    print(f"[INFO] 图像重采样权重写入: {image_out}")
 
 
 def main() -> None:
@@ -439,6 +580,7 @@ def main() -> None:
     np.random.seed(args.seed)
 
     transforms = build_transforms(args.min_visibility)
+    weak_class_multipliers = parse_class_multiplier_specs(args.weak_class_multipliers)
     factors = {
         "train": args.train_factor,
         "val": args.val_factor,
@@ -468,7 +610,7 @@ def main() -> None:
     summary = {}
     for split in factors.keys():
         active_filter = user_filter
-        active_multiplier = None
+        active_multiplier = weak_class_multipliers if split == "train" else None
         if plan_multiplier and (plan_split is None or plan_split == split):
             active_multiplier = plan_multiplier
             if not active_filter:
@@ -490,6 +632,9 @@ def main() -> None:
             f"增强 {stats['augmented_images']} 张 | "
             f"新增框 {stats['augmented_boxes']}"
         )
+
+    if not args.skip_balance_files:
+        generate_balance_files(args.target_root, split="train", smoothing=1.0)
 
 
 if __name__ == "__main__":

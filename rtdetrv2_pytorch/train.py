@@ -13,15 +13,6 @@ import torch; torch.cuda.empty_cache() if torch.cuda.is_available() else None
 
 # 直接运行训练工具
 if __name__ == "__main__":
-    # 设置命令行参数
-    sys.argv = [
-        "train.py",
-        "-c", "configs/rtdetrv2/rtdetrv2_r18vd_cancer_detection.yml",
-        "--use-amp",  # 自动混合精度训练
-        "--seed=42",
-        "-d", "cuda:0"  # 明确指定使用GPU
-    ]
-    
     # 导入并运行训练工具
     from tools.train import main
     import argparse

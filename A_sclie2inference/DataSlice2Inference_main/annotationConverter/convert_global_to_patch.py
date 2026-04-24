@@ -22,12 +22,20 @@ import argparse
 import json
 import os
 import csv
+import io
+import re
+from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 from collections import defaultdict
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 from tqdm import tqdm
+
+try:
+    from pypinyin import lazy_pinyin  # type: ignore[import-not-found]
+except ImportError:
+    lazy_pinyin = None
 
 
 # 类别名称到ID的映射（与COCO格式中的categories对应）
@@ -71,13 +79,13 @@ def parse_args():
     parser.add_argument(
         "--annotation-file",
         type=str,
-        required=True,
+        default=None,
         help="输入的标注文件路径(标记.json格式)",
     )
     parser.add_argument(
         "--patch-dir",
         type=str,
-        required=True,
+        default=None,
         help="patch图像所在目录",
     )
     parser.add_argument(
@@ -115,8 +123,95 @@ def parse_args():
         action="store_true",
         help="不生成可视化图片",
     )
+    parser.add_argument(
+        "--batch",
+        action="store_true",
+        help="批量处理模式：自动处理input目录下所有json文件",
+    )
+    parser.add_argument(
+        "--input-annotation-dir",
+        type=str,
+        default="/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/annotationConverter/input",
+        help="批量模式下annotation json目录",
+    )
+    parser.add_argument(
+        "--patch-root-dir",
+        type=str,
+        default="/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataPatches",
+        help="批量模式下patch根目录（其下每个子目录对应一个样本）",
+    )
     
     return parser.parse_args()
+
+
+def normalize_key(value: str) -> str:
+    """将字符串规范化为便于匹配的key。"""
+    return re.sub(r"[^a-z0-9]", "", value.lower())
+
+
+def to_pinyin_text(value: str) -> str:
+    """将中文转换为不带声调拼音；非中文字符保留。"""
+    if lazy_pinyin is None:
+        return value
+    return "".join(lazy_pinyin(value))
+
+
+def parse_patch_identity(patch_dir_name: str) -> Tuple[str, str]:
+    """解析patch目录标识和编号前缀。
+    
+    目录名示例：7-邱训宾_20260304_175758
+    - identity_raw: 7-邱训宾
+    - id_prefix: 7
+    """
+    identity_raw = patch_dir_name.split("_")[0]
+    id_prefix = identity_raw.split("-")[0].strip().lower()
+    return identity_raw, id_prefix
+
+
+def resolve_patch_dir_for_json(json_stem: str, patch_dir_entries: List[dict]) -> Optional[dict]:
+    """根据json名匹配patch目录。
+    
+    优先级：
+    1) identity原文精确匹配
+    2) identity拼音精确匹配
+    3) 编号前缀匹配（如7-xxx -> 7）
+    """
+    json_key = normalize_key(json_stem)
+
+    # 1) 原文/拼音精确匹配
+    exact_candidates = []
+    for entry in patch_dir_entries:
+        if json_key == entry["identity_raw_key"] or json_key == entry["identity_pinyin_key"]:
+            exact_candidates.append(entry)
+    if len(exact_candidates) == 1:
+        return exact_candidates[0]
+    if len(exact_candidates) > 1:
+        # 多个精确候选时按相似度取最高
+        best = max(
+            exact_candidates,
+            key=lambda x: max(
+                SequenceMatcher(None, json_key, x["identity_raw_key"]).ratio(),
+                SequenceMatcher(None, json_key, x["identity_pinyin_key"]).ratio(),
+            ),
+        )
+        return best
+
+    # 2) 编号前缀匹配
+    json_id_prefix = json_stem.split("-")[0].strip().lower()
+    id_candidates = [x for x in patch_dir_entries if x["id_prefix"] == json_id_prefix]
+    if len(id_candidates) == 1:
+        return id_candidates[0]
+    if len(id_candidates) > 1:
+        best = max(
+            id_candidates,
+            key=lambda x: max(
+                SequenceMatcher(None, json_key, x["identity_raw_key"]).ratio(),
+                SequenceMatcher(None, json_key, x["identity_pinyin_key"]).ratio(),
+            ),
+        )
+        return best
+
+    return None
 
 
 def load_annotations(annotation_file: str) -> List[dict]:
@@ -135,22 +230,43 @@ def load_annotations(annotation_file: str) -> List[dict]:
     return annotations
 
 
-def load_patch_coordinates(csv_path: str) -> Dict[str, Tuple[int, int, int, int]]:
+def load_patch_coordinates(csv_path: str) -> Tuple[Dict[str, Tuple[int, int, int, int]], float]:
     """加载patch坐标信息
     
     Args:
         csv_path: CSV文件路径
         
     Returns:
-        {filename: (x_start, y_start, x_end, y_end)} 字典
+        (coordinates, scale_factor):
+            - coordinates: {filename: (x_start, y_start, x_end, y_end)} 字典
+            - scale_factor: 图像缩放系数（从注释行提取，默认1.0）
     """
     coordinates = {}
+    scale_factor = 1.0  # 默认无缩放
     
     if not os.path.exists(csv_path):
         raise FileNotFoundError(f"坐标CSV文件不存在: {csv_path}")
     
     with open(csv_path, 'r', encoding='utf-8', newline='') as f:
-        reader = csv.DictReader(f)
+        # 读取所有行，提取scale_factor并过滤注释行
+        lines = []
+        for line in f:
+            stripped = line.strip()
+            if stripped.startswith('# Scale factor:'):
+                # 提取缩放系数: "# Scale factor: 2.0x" -> 2.0
+                try:
+                    scale_str = stripped.split(':')[1].strip().rstrip('x')
+                    scale_factor = float(scale_str)
+                    print(f"✓ 检测到图像缩放系数: {scale_factor}x")
+                except (IndexError, ValueError) as e:
+                    print(f"⚠️ 无法解析缩放系数: {stripped}, 使用默认值1.0")
+            elif not stripped.startswith('#'):
+                lines.append(line)
+        
+        # 使用过滤后的行创建 DictReader
+        csv_content = io.StringIO(''.join(lines))
+        reader = csv.DictReader(csv_content)
+        
         for row in reader:
             filename = row['filename']
             x_start = int(row['x_start'])
@@ -160,7 +276,9 @@ def load_patch_coordinates(csv_path: str) -> Dict[str, Tuple[int, int, int, int]
             coordinates[filename] = (x_start, y_start, x_end, y_end)
     
     print(f"✓ 已加载 {len(coordinates)} 个patch的坐标信息")
-    return coordinates
+    if scale_factor != 1.0:
+        print(f"✓ CSV坐标已映射到原图（缩放系数: {scale_factor}x）")
+    return coordinates, scale_factor
 
 
 def parse_box(box_str: str) -> Tuple[float, float, float, float]:
@@ -250,24 +368,48 @@ def calculate_overlap_ratio(box: Tuple[float, float, float, float],
 
 def convert_to_patch_coordinates(
     global_box: Tuple[float, float, float, float],
-    patch_offset: Tuple[int, int]
+    patch_offset: Tuple[int, int],
+    scale_factor: float = 1.0
 ) -> Tuple[float, float, float, float]:
     """将全图坐标转换为patch内的相对坐标
     
     Args:
-        global_box: 全图坐标 (x1, y1, x2, y2)
-        patch_offset: patch在全图中的偏移量 (x_start, y_start)
+        global_box: 全图坐标 (x1, y1, x2, y2) - 原图坐标系
+        patch_offset: patch在全图中的偏移量 (x_start, y_start) - 原图坐标系
+        scale_factor: 图像缩放系数，用于将原图坐标映射到patch图像尺度
         
     Returns:
-        patch内的相对坐标 (x1, y1, x2, y2)
+        patch内的相对坐标 (x1, y1, x2, y2) - 相对于640x640的patch图像
+        
+    说明：
+        当图像经过缩放时（如从100000x80000缩放到50000x40000，scale_factor=2.0），
+        patch是在缩放后的图像上切的640x640，但CSV中的patch_offset已经映射回原图。
+        因此需要：
+        1. 先计算原图坐标差值：(global_box - patch_offset)
+        2. 再除以scale_factor，映射到640x640的patch图像尺度
+        
+        例如：
+        - 原图100000x80000，缩放为50000x40000（scale_factor=2.0）
+        - patch在原图: (1280, 0, 2560, 1280) - CSV保存
+        - patch图像: 640x640（在缩放图上切的）
+        - 标注框在原图: (1480, 300, 1680, 500)
+        - 步骤1: (1480-1280, 300-0, 1680-1280, 500-0) = (200, 300, 400, 500) - 原图尺度
+        - 步骤2: (200/2, 300/2, 400/2, 500/2) = (100, 150, 200, 250) - patch图像尺度 ✅
     """
     x1_g, y1_g, x2_g, y2_g = global_box
     x_offset, y_offset = patch_offset
     
-    x1_p = x1_g - x_offset
-    y1_p = y1_g - y_offset
-    x2_p = x2_g - x_offset
-    y2_p = y2_g - y_offset
+    # 步骤1：计算原图坐标差值
+    x1_diff = x1_g - x_offset
+    y1_diff = y1_g - y_offset
+    x2_diff = x2_g - x_offset
+    y2_diff = y2_g - y_offset
+    
+    # 步骤2：除以scale_factor，映射到patch图像尺度（640x640）
+    x1_p = x1_diff / scale_factor
+    y1_p = y1_diff / scale_factor
+    x2_p = x2_diff / scale_factor
+    y2_p = y2_diff / scale_factor
     
     return (x1_p, y1_p, x2_p, y2_p)
 
@@ -323,15 +465,17 @@ def assign_annotations_to_patches(
     annotations: List[dict],
     patch_coordinates: Dict[str, Tuple[int, int, int, int]],
     patch_size: int,
-    min_overlap_ratio: float
+    min_overlap_ratio: float,
+    scale_factor: float = 1.0
 ) -> Dict[str, List[dict]]:
     """将标注框分配到对应的patch
     
     Args:
         annotations: 标注列表
-        patch_coordinates: patch坐标字典
-        patch_size: patch尺寸
+        patch_coordinates: patch坐标字典（原图坐标系）
+        patch_size: patch尺寸（实际图像尺寸，如640）
         min_overlap_ratio: 最小重叠比例阈值
+        scale_factor: 图像缩放系数
         
     Returns:
         {patch_filename: [annotation_dict, ...]} 字典
@@ -340,6 +484,8 @@ def assign_annotations_to_patches(
     
     print(f"\n开始分配标注框到patch...")
     print(f"最小重叠比例阈值: {min_overlap_ratio}")
+    if scale_factor != 1.0:
+        print(f"缩放系数: {scale_factor}x（标注框坐标将除以{scale_factor}映射到patch图像）")
     
     for ann_idx, ann in enumerate(tqdm(annotations, desc="处理标注框")):
         # 解析标注框坐标
@@ -366,9 +512,9 @@ def assign_annotations_to_patches(
             overlap_ratio = calculate_overlap_ratio(box_global, patch_box)
             
             if overlap_ratio >= min_overlap_ratio:
-                # 转换为patch内的相对坐标
+                # 转换为patch内的相对坐标（考虑scale_factor）
                 patch_offset = (px1, py1)
-                box_patch = convert_to_patch_coordinates(box_global, patch_offset)
+                box_patch = convert_to_patch_coordinates(box_global, patch_offset, scale_factor)
                 
                 # 裁剪到patch范围内
                 box_patch_clipped = clip_box_to_patch(box_patch, patch_size)
@@ -573,60 +719,185 @@ def visualize_annotations(
     print(f"✓ 可视化图片已保存到: {vis_dir}")
 
 
-def main():
-    args = parse_args()
-    
-    # 创建输出目录
-    output_dir = Path(args.output_dir)
-    output_dir.mkdir(parents=True, exist_ok=True)
-    
+def process_single_annotation(
+    annotation_file: str,
+    patch_dir: str,
+    output_dir: str,
+    patch_size: int,
+    min_overlap_ratio: float,
+    no_visualization: bool,
+    coordinates_csv: Optional[str] = None,
+) -> dict:
+    """处理单个annotation json并输出COCO结果。"""
+    output_dir_path = Path(output_dir)
+    output_dir_path.mkdir(parents=True, exist_ok=True)
+
     # 确定坐标CSV文件路径
-    if args.coordinates_csv:
-        csv_path = args.coordinates_csv
+    if coordinates_csv:
+        csv_path = coordinates_csv
     else:
-        csv_path = os.path.join(args.patch_dir, "patch_coordinates.csv")
-    
+        csv_path = os.path.join(patch_dir, "patch_coordinates.csv")
+
     # 加载数据
     print("=" * 70)
-    print("开始转换标注框坐标")
+    print(f"开始转换标注框坐标: {annotation_file}")
+    print(f"对应patch目录: {patch_dir}")
     print("=" * 70)
-    
-    annotations = load_annotations(args.annotation_file)
-    patch_coordinates = load_patch_coordinates(csv_path)
-    
+
+    annotations = load_annotations(annotation_file)
+    patch_coordinates, scale_factor = load_patch_coordinates(csv_path)
+
     # 分配标注框到patch
     patch_annotations = assign_annotations_to_patches(
         annotations,
         patch_coordinates,
-        args.patch_size,
-        args.min_overlap_ratio
+        patch_size,
+        min_overlap_ratio,
+        scale_factor
     )
-    
+
     # 生成COCO格式
     print(f"\n生成COCO格式JSON...")
-    coco_data = generate_coco_format(patch_annotations, args.patch_dir, args.patch_size)
-    
+    coco_data = generate_coco_format(patch_annotations, patch_dir, patch_size)
+
     # 保存COCO格式JSON
-    output_json_path = output_dir / "coco_format.json"
+    output_json_path = output_dir_path / "coco_format.json"
     with open(output_json_path, 'w', encoding='utf-8') as f:
         json.dump(coco_data, f, ensure_ascii=False, indent=2)
-    
+
     print(f"✓ COCO格式JSON已保存到: {output_json_path}")
     print(f"  - Images数量: {len(coco_data['images'])}")
     print(f"  - Annotations数量: {len(coco_data['annotations'])}")
-    
+
     # 生成可视化
-    if not args.no_visualization:
+    if not no_visualization:
         visualize_annotations(
             patch_annotations,
-            args.patch_dir,
-            str(output_dir),
-            args.patch_size
+            patch_dir,
+            str(output_dir_path),
+            patch_size
         )
-    
+
     print("\n" + "=" * 70)
     print("转换完成！")
     print("=" * 70)
+
+    return {
+        "output_json": str(output_json_path),
+        "images_count": len(coco_data["images"]),
+        "annotations_count": len(coco_data["annotations"]),
+    }
+
+
+def run_batch_mode(args):
+    """批量处理input目录下全部json。"""
+    input_annotation_dir = Path(args.input_annotation_dir)
+    patch_root_dir = Path(args.patch_root_dir)
+    output_root_dir = Path(args.output_dir)
+    output_root_dir.mkdir(parents=True, exist_ok=True)
+
+    if not input_annotation_dir.exists():
+        raise FileNotFoundError(f"annotation输入目录不存在: {input_annotation_dir}")
+    if not patch_root_dir.exists():
+        raise FileNotFoundError(f"patch根目录不存在: {patch_root_dir}")
+
+    json_files = sorted(input_annotation_dir.glob("*.json"))
+    if not json_files:
+        print(f"⚠️ 在目录中未找到json文件: {input_annotation_dir}")
+        return
+
+    patch_dirs = [p for p in patch_root_dir.iterdir() if p.is_dir()]
+    patch_dir_entries = []
+    for patch_dir in patch_dirs:
+        identity_raw, id_prefix = parse_patch_identity(patch_dir.name)
+        identity_pinyin = to_pinyin_text(identity_raw)
+        patch_dir_entries.append(
+            {
+                "patch_dir": str(patch_dir),
+                "patch_dir_name": patch_dir.name,
+                "id_prefix": id_prefix,
+                "identity_raw": identity_raw,
+                "identity_pinyin": identity_pinyin,
+                "identity_raw_key": normalize_key(identity_raw),
+                "identity_pinyin_key": normalize_key(identity_pinyin),
+            }
+        )
+
+    print("=" * 70)
+    print("批量处理模式")
+    print(f"annotation目录: {input_annotation_dir}")
+    print(f"patch根目录: {patch_root_dir}")
+    print(f"输出根目录: {output_root_dir}")
+    print(f"待处理json数量: {len(json_files)}")
+    print(f"可匹配patch目录数量: {len(patch_dir_entries)}")
+    if lazy_pinyin is None:
+        print("⚠️ 未安装pypinyin，将跳过中文转拼音，仅使用原文/编号匹配。")
+    print("=" * 70)
+
+    success_count = 0
+    failed_count = 0
+    skipped_count = 0
+
+    for json_file in json_files:
+        json_stem = json_file.stem
+        print(f"\n处理: {json_file.name}")
+
+        matched_entry = resolve_patch_dir_for_json(json_stem, patch_dir_entries)
+        if matched_entry is None:
+            print(f"⚠️ 未找到对应patch目录，跳过: {json_file.name}")
+            skipped_count += 1
+            continue
+
+        patch_dir = matched_entry["patch_dir"]
+        print(f"✓ 匹配到patch目录: {matched_entry['patch_dir_name']}")
+        output_subdir = output_root_dir / json_stem
+
+        try:
+            process_single_annotation(
+                annotation_file=str(json_file),
+                patch_dir=patch_dir,
+                output_dir=str(output_subdir),
+                patch_size=args.patch_size,
+                min_overlap_ratio=args.min_overlap_ratio,
+                no_visualization=args.no_visualization,
+                coordinates_csv=None,
+            )
+            success_count += 1
+        except Exception as e:
+            print(f"❌ 处理失败: {json_file.name}, 错误: {e}")
+            failed_count += 1
+
+    print("\n" + "=" * 70)
+    print("批量处理完成")
+    print(f"成功: {success_count}")
+    print(f"失败: {failed_count}")
+    print(f"跳过(未匹配): {skipped_count}")
+    print("=" * 70)
+
+
+def main():
+    args = parse_args()
+
+    # 创建输出目录
+    output_dir = Path(args.output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    if args.batch:
+        run_batch_mode(args)
+        return
+
+    if not args.annotation_file or not args.patch_dir:
+        raise ValueError("非批量模式下，必须提供 --annotation-file 和 --patch-dir")
+
+    process_single_annotation(
+        annotation_file=args.annotation_file,
+        patch_dir=args.patch_dir,
+        output_dir=str(output_dir),
+        patch_size=args.patch_size,
+        min_overlap_ratio=args.min_overlap_ratio,
+        no_visualization=args.no_visualization,
+        coordinates_csv=args.coordinates_csv,
+    )
 
 
 if __name__ == "__main__":

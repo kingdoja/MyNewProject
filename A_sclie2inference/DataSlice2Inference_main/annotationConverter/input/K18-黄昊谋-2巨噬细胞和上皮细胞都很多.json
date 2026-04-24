@@ -1,0 +1,308 @@
+[
+  {
+    "box": "[159.26267281105993, 47.50691244239631, 240.22119815668196, 137.75576036866354]",
+    "boxList": [
+      159.26267281105993,
+      47.50691244239631,
+      240.22119815668196,
+      137.75576036866354
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56412,
+    "cropImageName": "0988a85c-2e98-4f45-87d7-015096481c3f.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/0988a85c-2e98-4f45-87d7-015096481c3f.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[246.85714285714286, 14.990783410138242, 342.41474654377885, 108.55760368663591]",
+    "boxList": [
+      246.85714285714286,
+      14.990783410138242,
+      342.41474654377885,
+      108.55760368663591
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56413,
+    "cropImageName": "7b932203-1344-43f2-9a89-8aec0244401e.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/7b932203-1344-43f2-9a89-8aec0244401e.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[543.483870967742, 33.571428571428534, 633.0691244239631, 122.49308755760364]",
+    "boxList": [
+      543.483870967742,
+      33.571428571428534,
+      633.0691244239631,
+      122.49308755760364
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56414,
+    "cropImageName": "02d8768a-c378-4d00-9886-75d1b9a903dd.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/02d8768a-c378-4d00-9886-75d1b9a903dd.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[752.516129032258, 94.62211981566817, 884.5714285714287, 207.43317972350226]",
+    "boxList": [
+      752.516129032258,
+      94.62211981566817,
+      884.5714285714287,
+      207.43317972350226
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56415,
+    "cropImageName": "dc836089-adfb-4658-80e7-6e894918ef4f.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/dc836089-adfb-4658-80e7-6e894918ef4f.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[630.4147465437788, 222.0322580645161, 747.8709677419356, 303.65437788018426]",
+    "boxList": [
+      630.4147465437788,
+      222.0322580645161,
+      747.8709677419356,
+      303.65437788018426
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56416,
+    "cropImageName": "9580acfc-f8a2-424c-bdf4-57db668fed6c.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/9580acfc-f8a2-424c-bdf4-57db668fed6c.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[261.45622119815675, 193.49769585253452, 329.1428571428571, 312.94470046082944]",
+    "boxList": [
+      261.45622119815675,
+      193.49769585253452,
+      329.1428571428571,
+      312.94470046082944
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56417,
+    "cropImageName": "a2123243-7f83-4279-8830-b96df9f7a816.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/a2123243-7f83-4279-8830-b96df9f7a816.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[503.6682027649769, 325.55299539170505, 591.2626728110599, 460.26267281105993]",
+    "boxList": [
+      503.6682027649769,
+      325.55299539170505,
+      591.2626728110599,
+      460.26267281105993
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56418,
+    "cropImageName": "60098e47-c1f6-4f8e-a80c-602fdc961be3.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/60098e47-c1f6-4f8e-a80c-602fdc961be3.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[398.1566820276498, 456.2811059907833, 487.7419354838709, 574.4009216589861]",
+    "boxList": [
+      398.1566820276498,
+      456.2811059907833,
+      487.7419354838709,
+      574.4009216589861
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56419,
+    "cropImageName": "ff2d497a-1329-46be-930d-ecc182642a9b.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/ff2d497a-1329-46be-930d-ecc182642a9b.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[290.6543778801843, 581.700460829493, 400.147465437788, 697.8294930875575]",
+    "boxList": [
+      290.6543778801843,
+      581.700460829493,
+      400.147465437788,
+      697.8294930875575
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56420,
+    "cropImageName": "faa47d09-60b8-4e87-bef8-4556eea48c43.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/faa47d09-60b8-4e87-bef8-4556eea48c43.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[440.62672811059906, 555.1566820276497, 530.2119815668203, 653.36866359447]",
+    "boxList": [
+      440.62672811059906,
+      555.1566820276497,
+      530.2119815668203,
+      653.36866359447
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56421,
+    "cropImageName": "c00612da-ac13-48f1-af2d-5dcbd1fdccf5.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/c00612da-ac13-48f1-af2d-5dcbd1fdccf5.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[1315.9078341013824, 112.5391705069124, 1430.0460829493088, 210.75115207373267]",
+    "boxList": [
+      1315.9078341013824,
+      112.5391705069124,
+      1430.0460829493088,
+      210.75115207373267
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56422,
+    "cropImageName": "d772da92-1e75-44f3-b1f2-254df89d8f66.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/d772da92-1e75-44f3-b1f2-254df89d8f66.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[806.9308755760368, 496.76036866359436, 897.1797235023041, 573.7373271889401]",
+    "boxList": [
+      806.9308755760368,
+      496.76036866359436,
+      897.1797235023041,
+      573.7373271889401
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56423,
+    "cropImageName": "5e54cd1e-d748-45be-a248-110ee7d8998c.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/5e54cd1e-d748-45be-a248-110ee7d8998c.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[1195.1336405529953, 570.4193548387096, 1306.6175115207373, 658.0138248847925]",
+    "boxList": [
+      1195.1336405529953,
+      570.4193548387096,
+      1306.6175115207373,
+      658.0138248847925
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56424,
+    "cropImageName": "d68430cb-e605-436a-8d1f-dcfbb80f6029.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/d68430cb-e605-436a-8d1f-dcfbb80f6029.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[1.9907834101382882, 585.6820276497695, 71.66820276497694, 675.9308755760368]",
+    "boxList": [
+      1.9907834101382882,
+      585.6820276497695,
+      71.66820276497694,
+      675.9308755760368
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56425,
+    "cropImageName": "59f0bd55-844b-414b-88cd-469dea34633b.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/59f0bd55-844b-414b-88cd-469dea34633b.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[909.6941286712065, 33.436288390375964, 942.8738521735107, 73.25195659314096]",
+    "boxList": [
+      909.6941286712065,
+      33.436288390375964,
+      942.8738521735107,
+      73.25195659314096
+    ],
+    "cellType": "M",
+    "coordinatesId": 56426,
+    "cropImageName": "23136621-2774-40ee-a76b-427b34074588.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/23136621-2774-40ee-a76b-427b34074588.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[9.417630975354188, 364.49619622447733, 42.59735447765835, 403.57453723830224]",
+    "boxList": [
+      9.417630975354188,
+      364.49619622447733,
+      42.59735447765835,
+      403.57453723830224
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56427,
+    "cropImageName": "314e57df-4fe7-4a32-b7fd-1391b9ad4e2e.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/314e57df-4fe7-4a32-b7fd-1391b9ad4e2e.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[251.26094894770435, 138.87407640880917, 290.33928996152923, 177.21509023369393]",
+    "boxList": [
+      251.26094894770435,
+      138.87407640880917,
+      290.33928996152923,
+      177.21509023369393
+    ],
+    "cellType": "M",
+    "coordinatesId": 56428,
+    "cropImageName": "2a47897c-99d0-4132-9e29-56cc6d6e6eaa.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/2a47897c-99d0-4132-9e29-56cc6d6e6eaa.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  },
+  {
+    "box": "[605.9153268278887, 29.749652445675533, 675.2240825882573, 157.30725613231147]",
+    "boxList": [
+      605.9153268278887,
+      29.749652445675533,
+      675.2240825882573,
+      157.30725613231147
+    ],
+    "cellType": "BC",
+    "coordinatesId": 56429,
+    "cropImageName": "26ea3cf1-7c42-4af0-adf9-9ded3bcacfbc.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K18-黄昊谋-2巨噬细胞和上皮细胞都很多/26ea3cf1-7c42-4af0-adf9-9ded3bcacfbc.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 26,
+    "score": 0
+  }
+]

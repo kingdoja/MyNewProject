@@ -3,6 +3,20 @@ import json
 import shutil
 from pathlib import Path
 
+def discover_new_datasets(source_base_path):
+    """自动发现 source_base_path 下所有以 new 开头的数据集目录。"""
+    base_path = Path(source_base_path)
+    if not base_path.exists():
+        print(f"Warning: Source path not found: {source_base_path}")
+        return []
+
+    datasets = [
+        item.name
+        for item in sorted(base_path.iterdir(), key=lambda x: x.name)
+        if item.is_dir() and item.name.startswith("new")
+    ]
+    return datasets
+
 def merge_datasets(dataset_names, source_base_path, target_base_path):
     """
     合并多个数据集及其标注文件
@@ -40,13 +54,17 @@ def merge_datasets(dataset_names, source_base_path, target_base_path):
     
     # 遍历所有数据集
     dataset_json_candidates = {
-        "patches3": ["coco_format.json"],
-        "patches4": ["coco_format.json"],
-        "patches182": ["coco_format.json"],
-        "patches212": ["coco_format.json"],
-        "patchesK265": ["coco_format.json"],
-        "new45": ["coco_format.json"],
-        "new44": ["coco_format.json"],
+         "new44": ["coco_format.json"],
+        "new109": ["coco_format.json"],
+        "new128": ["coco_format.json"],
+        "new141": ["coco_format.json"],
+        # "patches3": ["coco_format.json"],
+        # "patches4": ["coco_format.json"],
+        # "patches182": ["coco_format.json"],
+        # "patches212": ["coco_format.json"],
+        # "patchesK265": ["coco_format.json"],
+        # "new45": ["coco_format.json"],
+        # "new44": ["coco_format.json"],
         # "merged_dataset1": ["result.json"]
     }
     
@@ -270,13 +288,17 @@ def merge_datasets(dataset_names, source_base_path, target_base_path):
     print(f"Total categories: {len(merged_data['categories'])}")
 
 if __name__ == "__main__":
-    # 定义要合并的数据集
-    # datasets_to_merge = ["patches3", "patches4", "patches182", "patches212", "patchesK265", "new45", "new44", "new37"]
-    datasets_to_merge = ["new45", "new44", "new37"]
-    
     # 设置源路径和目标路径
     source_path = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell"  # 修改为实际源数据集路径
     target_path = "/home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/merged_dataset"  # 合并后数据集的目标路径
-    
+
+    # 自动发现并合并所有以 new 开头的数据集目录
+    datasets_to_merge = discover_new_datasets(source_path)
+    print(f"Auto discovered {len(datasets_to_merge)} datasets starting with 'new'")
+    if datasets_to_merge:
+        print("Datasets to merge:", ", ".join(datasets_to_merge))
+    else:
+        print("No datasets found with prefix 'new'.")
+
     # 执行合并操作
     merge_datasets(datasets_to_merge, source_path, target_path)

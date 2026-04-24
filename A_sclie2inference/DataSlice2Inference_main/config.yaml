@@ -4,7 +4,7 @@
 paths:
   watch_dir: "${WATCH_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataWSI}"
   output_dir: "${OUTPUT_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataPatchesInference}"
-  model_path: "${MODEL_PATH:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/models/best_torchscript_cuda_newAll.pt}"
+  model_path: "${MODEL_PATH:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/models/best_torchscript_cuda_newAll_v2.pt}"
   log_dir: "${LOG_DIR:/home/ubuntu/lsn/project_new/RT-DETR-main/A_sclie2inference/DataSlice2Inference_main/logs}"
 
 # 处理参数
@@ -87,7 +87,7 @@ monitoring:
   
 # MinIO 上传配置
 minio:
-  enabled: true  # 启用后自动上传JSON与全图
+  enabled: false  # 启用后自动上传JSON与全图
   endpoint: "${MINIO_ENDPOINT:192.168.150.157:9000}"  # MinIO 服务地址 (ping不上？？？)
   access_key: "${MINIO_ACCESS_KEY:minioadmin}"   # 访问密钥
   secret_key: "${MINIO_SECRET_KEY:minioadmin}"   # 密钥

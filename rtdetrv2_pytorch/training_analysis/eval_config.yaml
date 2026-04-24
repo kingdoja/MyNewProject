@@ -1,0 +1,10 @@
+config: /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/configs/rtdetrv2/rtdetrv2_r50vd_cancer_detection1.yml
+model: /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection1_incremental_ft_oaug_0323/best.pth
+log: /home/ubuntu/lsn/project_new/RT-DETR-main/rtdetrv2_pytorch/output/rtdetrv2_r50vd_cancer_detection1_incremental_ft_oaug_0323/log.txt
+data_root: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug
+output_name: eval_full_pipeline_0323
+device: auto #推理设备：auto/cpu/cuda/cuda:0 等
+conf_thresh: 0.5 #可视化预测置信度阈值
+iou_thresh: 0.3 #IoU匹配阈值
+python_bin: /home/ubuntu/miniconda3/envs/detr/bin/python #执行子脚本使用的 Python 解释器
+skip_test: false #是否跳过测试集

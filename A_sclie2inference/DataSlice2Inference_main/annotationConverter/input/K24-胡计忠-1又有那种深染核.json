@@ -1,0 +1,291 @@
+[
+  {
+    "box": "[201.03426, 431.63177, 278.45837, 518.6102]",
+    "boxList": [
+      201.03426,
+      431.63177,
+      278.45837,
+      518.6102
+    ],
+    "cellType": "BC",
+    "coordinatesId": 55287,
+    "cropImageName": "K24-胡计忠-1又有那种深染核_1.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/K24-胡计忠-1又有那种深染核_1.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 39,
+    "score": 0.5909181237220764
+  },
+  {
+    "box": "[405.9169, 596.54816, 420.45007, 611.5626]",
+    "boxList": [
+      405.9169,
+      596.54816,
+      420.45007,
+      611.5626
+    ],
+    "cellType": "L",
+    "coordinatesId": 55288,
+    "cropImageName": "K24-胡计忠-1又有那种深染核_2.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/K24-胡计忠-1又有那种深染核_2.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 39,
+    "score": 0.5060257315635681
+  },
+  {
+    "box": "[1203.5453, 80.37193, 1264.8662, 118.45549]",
+    "boxList": [
+      1203.5453,
+      80.37193,
+      1264.8662,
+      118.45549
+    ],
+    "cellType": "LC",
+    "coordinatesId": 55289,
+    "cropImageName": "K24-胡计忠-1又有那种深染核_3.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/K24-胡计忠-1又有那种深染核_3.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 39,
+    "score": 0.672021210193634
+  },
+  {
+    "box": "[856.42346, 265.56555, 873.95184, 282.0413]",
+    "boxList": [
+      856.42346,
+      265.56555,
+      873.95184,
+      282.0413
+    ],
+    "cellType": "L",
+    "coordinatesId": 55290,
+    "cropImageName": "K24-胡计忠-1又有那种深染核_4.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/K24-胡计忠-1又有那种深染核_4.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 39,
+    "score": 0.5858548879623413
+  },
+  {
+    "box": "[871.5377, 384.9408, 912.1521, 422.21725]",
+    "boxList": [
+      871.5377,
+      384.9408,
+      912.1521,
+      422.21725
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 55291,
+    "cropImageName": "K24-胡计忠-1又有那种深染核_5.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/K24-胡计忠-1又有那种深染核_5.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 39,
+    "score": 0.5283487439155579
+  },
+  {
+    "box": "[889.2165898617511, 184.87096774193552, 946.9493087557604, 283.08294930875576]",
+    "boxList": [
+      889.2165898617511,
+      184.87096774193552,
+      946.9493087557604,
+      283.08294930875576
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56675,
+    "cropImageName": "f5ff0689-c074-435c-9e19-6fcaab4a9e94.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/f5ff0689-c074-435c-9e19-6fcaab4a9e94.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[559.4101382488479, 452.299539170507, 656.2949308755761, 541.2211981566821]",
+    "boxList": [
+      559.4101382488479,
+      452.299539170507,
+      656.2949308755761,
+      541.2211981566821
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56676,
+    "cropImageName": "4daaa7c0-c8af-44d6-98ce-4f549b8dee26.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/4daaa7c0-c8af-44d6-98ce-4f549b8dee26.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[884.5714285714287, 407.83870967741944, 980.7926267281108, 482.8248847926268]",
+    "boxList": [
+      884.5714285714287,
+      407.83870967741944,
+      980.7926267281108,
+      482.8248847926268
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56677,
+    "cropImageName": "a29817dc-6f7d-40cf-97d3-8d3e67c86fd2.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/a29817dc-6f7d-40cf-97d3-8d3e67c86fd2.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[879.2626728110598, 492.11520737327197, 964.8663594470045, 638.1059907834102]",
+    "boxList": [
+      879.2626728110598,
+      492.11520737327197,
+      964.8663594470045,
+      638.1059907834102
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56678,
+    "cropImageName": "0abf7492-83b1-4404-9eaf-54778ca0d5d9.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/0abf7492-83b1-4404-9eaf-54778ca0d5d9.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[1255.5207373271892, 564.447004608295, 1357.0506912442397, 640.0967741935485]",
+    "boxList": [
+      1255.5207373271892,
+      564.447004608295,
+      1357.0506912442397,
+      640.0967741935485
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56679,
+    "cropImageName": "a04f020e-3bd1-4071-8716-4fa7bda79b3f.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/a04f020e-3bd1-4071-8716-4fa7bda79b3f.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[156.60829493087564, 227.34101382488484, 228.94009216589868, 302.99078341013836]",
+    "boxList": [
+      156.60829493087564,
+      227.34101382488484,
+      228.94009216589868,
+      302.99078341013836
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56680,
+    "cropImageName": "be990a2e-d1fe-4524-8def-13fadccbb09a.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/be990a2e-d1fe-4524-8def-13fadccbb09a.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[465.17972350230417, 677.2580645161291, 536.8479262672812, 742.2903225806451]",
+    "boxList": [
+      465.17972350230417,
+      677.2580645161291,
+      536.8479262672812,
+      742.2903225806451
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56681,
+    "cropImageName": "1d8eb56d-d0cf-4ca7-83ef-a6a5733a0242.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/1d8eb56d-d0cf-4ca7-83ef-a6a5733a0242.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[157.93548387096743, 740.963133640553, 255.48387096774164, 815.2857142857144]",
+    "boxList": [
+      157.93548387096743,
+      740.963133640553,
+      255.48387096774164,
+      815.2857142857144
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56682,
+    "cropImageName": "ec49f58f-cdd4-4a39-8ee3-11613786ec96.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/ec49f58f-cdd4-4a39-8ee3-11613786ec96.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[461.8181818181813, 203.44965116487893, 540.9090909090904, 267.0860148012425]",
+    "boxList": [
+      461.8181818181813,
+      203.44965116487893,
+      540.9090909090904,
+      267.0860148012425
+    ],
+    "cellType": "LC",
+    "coordinatesId": 56683,
+    "cropImageName": "e6bb2c8f-aad2-4ed7-aa96-e1efb94b9617.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/e6bb2c8f-aad2-4ed7-aa96-e1efb94b9617.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[988.092165898617, 263.83870967742, 1146.0276497695847, 387.9308755760375]",
+    "boxList": [
+      988.092165898617,
+      263.83870967742,
+      1146.0276497695847,
+      387.9308755760375
+    ],
+    "cellType": "BC",
+    "coordinatesId": 56684,
+    "cropImageName": "caf922a0-e1ef-42b8-8303-8d78991a2edd.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/caf922a0-e1ef-42b8-8303-8d78991a2edd.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[1366.4970763461044, 735.2276992347541, 1425.4832514613117, 833.2922153637865]",
+    "boxList": [
+      1366.4970763461044,
+      735.2276992347541,
+      1425.4832514613117,
+      833.2922153637865
+    ],
+    "cellType": "BC",
+    "coordinatesId": 56685,
+    "cropImageName": "d1f32aff-2631-4273-8fe5-0b10952c30f1.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/d1f32aff-2631-4273-8fe5-0b10952c30f1.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  },
+  {
+    "box": "[811.289703074215, 744.0756255020353, 851.8426984659201, 792.7392199720814]",
+    "boxList": [
+      811.289703074215,
+      744.0756255020353,
+      851.8426984659201,
+      792.7392199720814
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 56686,
+    "cropImageName": "180f17d0-3749-4ef5-b681-cc904450c9e6.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K24-胡计忠-1又有那种深染核/180f17d0-3749-4ef5-b681-cc904450c9e6.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 39,
+    "score": 0
+  }
+]

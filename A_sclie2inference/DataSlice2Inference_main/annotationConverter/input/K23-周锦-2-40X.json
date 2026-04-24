@@ -1,0 +1,104 @@
+[
+  {
+    "box": "[247.84058, 279.22382, 311.11652, 363.18265]",
+    "boxList": [
+      247.84058,
+      279.22382,
+      311.11652,
+      363.18265
+    ],
+    "cellType": "BC",
+    "coordinatesId": 55268,
+    "cropImageName": "K23-周锦-2-40X_1.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K23-周锦-2-40X/K23-周锦-2-40X_1.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 35,
+    "score": 0
+  },
+  {
+    "box": "[1121.1199, 163.47333, 1276.8066, 400.58597]",
+    "boxList": [
+      1121.1199,
+      163.47333,
+      1276.8066,
+      400.58597
+    ],
+    "cellType": "EC",
+    "coordinatesId": 55269,
+    "cropImageName": "K23-周锦-2-40X_2.jpg",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K23-周锦-2-40X/K23-周锦-2-40X_2.jpg",
+    "imageType": "1",
+    "params": {},
+    "sampleId": 35,
+    "score": 0.8186118602752686
+  },
+  {
+    "box": "[587.2811059907834, 410.49308755760364, 718.6728110599078, 543.2119815668202]",
+    "boxList": [
+      587.2811059907834,
+      410.49308755760364,
+      718.6728110599078,
+      543.2119815668202
+    ],
+    "cellType": "TC1",
+    "coordinatesId": 56571,
+    "cropImageName": "89047580-4be8-420d-80ce-30a3c19e41b8.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K23-周锦-2-40X/89047580-4be8-420d-80ce-30a3c19e41b8.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 35,
+    "score": 0
+  },
+  {
+    "box": "[471.1520737327189, 18.97235023041466, 667.5760368663595, 194.1612903225806]",
+    "boxList": [
+      471.1520737327189,
+      18.97235023041466,
+      667.5760368663595,
+      194.1612903225806
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56572,
+    "cropImageName": "745e5668-1210-438c-8261-1c211c1aa40d.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K23-周锦-2-40X/745e5668-1210-438c-8261-1c211c1aa40d.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 35,
+    "score": 0
+  },
+  {
+    "box": "[183.81566820276493, 31.580645161290324, 368.29493087557603, 217.3870967741935]",
+    "boxList": [
+      183.81566820276493,
+      31.580645161290324,
+      368.29493087557603,
+      217.3870967741935
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56573,
+    "cropImageName": "753eaacd-3ddf-4309-8fba-6a360dbe5d6d.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K23-周锦-2-40X/753eaacd-3ddf-4309-8fba-6a360dbe5d6d.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 35,
+    "score": 0
+  },
+  {
+    "box": "[878.5990783410138, 497.4239631336405, 1068.3870967741937, 742.2903225806451]",
+    "boxList": [
+      878.5990783410138,
+      497.4239631336405,
+      1068.3870967741937,
+      742.2903225806451
+    ],
+    "cellType": "EC",
+    "coordinatesId": 56574,
+    "cropImageName": "1fdcd386-4f42-4267-969f-457c8788c236.png",
+    "cropPreviewUrl": "http://58.34.174.107:35796/minio/heathycare/crop/K23-周锦-2-40X/1fdcd386-4f42-4267-969f-457c8788c236.png",
+    "imageType": "2",
+    "params": {},
+    "sampleId": 35,
+    "score": 0
+  }
+]

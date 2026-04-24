@@ -50,7 +50,7 @@ python train.py
 
 ### 4. 在验证/测试集上导出预测
 
-- 使用你自己的推理脚本，或参考项目中的 `inference.py` / `training_analysis/visualize_validation.py`，在验证/测试集上批量推理；  
+- 使用你自己的推理脚本，或参考项目中的 `inference.py` / `training_analysis/scripts/visualize_validation.py`，在验证/测试集上批量推理；  
 - 将预测结果以 COCO detection JSON 格式保存到 `training_analysis/output/<exp_name>/val_detections.json` 或 `test_detections.json`。
 
 典型可视化+导出预测的方式（示例）：
@@ -102,7 +102,7 @@ rtdetrv2_pytorch/                      # RT-DETRv2 PyTorch 实现根目录
 ├── predict_single_image.py            # 单张图片预测与可视化脚本
 ├── visualize_results.py               # 对预测结果进行可视化的工具脚本
 ├── visualize_test.py                  # 针对测试集结果的可视化脚本
-├── visualize_validation.py            # 针对验证集结果的可视化脚本
+├── training_analysis/scripts/visualize_validation.py # 针对验证集结果的可视化脚本
 ├── check_coco_info.py                 # 检查 COCO 标注文件（类别、图像数等）的小工具
 ├── check_gpu.py                       # 检查 GPU/显存是否可用的脚本
 ├── check_validation.py                # 检查验证集配置与路径的小脚本
@@ -258,22 +258,26 @@ rtdetrv2_pytorch/                      # RT-DETRv2 PyTorch 实现根目录
 │   ├── confusion_matrix.py           # 生成并绘制分类混淆矩阵
 │   ├── extract_best_results.py       # 从多次实验结果中提取最佳指标
 │   ├── plot_training_curves.py       # 绘制 loss/mAP/学习率 等训练曲线
-│   ├── visualize_validation.py       # 批量可视化验证集推理结果
+│   ├── scripts/visualize_validation.py # 批量可视化验证集推理结果
 │   ├── output/                       # 保存各类评估/可视化输出
 │   │   ├── best_results_*.txt        # 不同实验汇总的最佳指标
 │   │   ├── validation_visualization_*/ # 多组验证集预测 JSON（val/test）
 │   │   │   ├── val_detections.json   # 验证集检测结果（COCO 格式）
 │   │   │   └── test_detections.json  # 测试集检测结果（COCO 格式）
-│   └── ablation_study_virtual/       # 消融实验相关代码与结果
-│       ├── __init__.py
-│       ├── data/                     # 消融实验数据（csv/json）
-│       ├── extract_ablation_data.py  # 从实验结果中抽取消融数据
-│       ├── generate_ablation_report.py # 生成消融实验报告
-│       ├── generate_ablation_table.py  # 生成消融表格（md/tex）
-│       ├── visualize_ablation.py     # 消融结果可视化
-│       ├── run_ablation_study.py     # 一键运行虚拟消融实验
-│       ├── report/                   # 输出的 markdown 报告
-│       └── tables/                   # 输出的 TeX/markdown 表格
+│   └── 消融实验/                       # 消融实验目录（下沉一层）
+│       ├── ablation_study/           # 消融实验脚本（基础）
+│       │   ├── README.md
+│       │   └── extract_ablation_data.py
+│       └── ablation_study_virtual/   # 消融实验相关代码与结果（虚拟实验）
+│           ├── __init__.py
+│           ├── data/                 # 消融实验数据（csv/json）
+│           ├── extract_ablation_data.py
+│           ├── generate_ablation_report.py
+│           ├── generate_ablation_table.py
+│           ├── visualize_ablation.py
+│           ├── run_ablation_study.py # 一键运行虚拟消融实验
+│           ├── report/               # 输出的 markdown 报告
+│           └── tables/               # 输出的 TeX/markdown 表格
 ├── optimization_tools/               # 训练问题诊断与快速优化
 │   ├── diagnose_dataset.py           # 检查数据集质量（类别分布/标注异常等）
 │   ├── monitor_training.py           # 监控训练过程（loss/mAP 等）

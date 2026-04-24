@@ -838,6 +838,19 @@ def main():
 
     # 保存JSON结果
     json_path = output_dir / args.json_name
+    
+    # 生成 global_image_url：格式为 source/图片名称.jpeg
+    if args.global_image_url:
+        # 从 global_image_url 提取文件名（去掉路径和扩展名）
+        global_image_path = Path(args.global_image_url)
+        image_name = global_image_path.stem  # 获取不带扩展名的文件名
+    else:
+        # 如果未提供 global_image_url，从 JSON 文件名推断
+        image_name = Path(args.json_name).stem  # 去掉 .json 扩展名
+    
+    # 生成新格式的路径：source/图片名称.jpeg
+    global_image_url = f"source/{image_name}.jpeg"
+    
     json_data = {
         "info": {
             "description": "RT-DETR v2 TorchScript 批量推理结果",
@@ -849,7 +862,7 @@ def main():
             "batch_size": BATCH_SIZE,
             "device": str(device),
             "use_fp16": use_fp16,
-            "global_image_url": args.global_image_url,
+            "global_image_url": global_image_url,
         },
         "statistics": {
             "total_patches": len(patch_files),

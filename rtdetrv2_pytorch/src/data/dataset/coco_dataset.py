@@ -26,26 +26,17 @@ class CocoDetection(FasterCocoDetection, DetDataset):
     __share__ = ['remap_mscoco_category']
     
     def __init__(self, img_folder, ann_file, transforms, return_masks=False, remap_mscoco_category=False):
-        super(FasterCocoDetection, self).__init__(img_folder, ann_file)
+        # Use standard MRO call so FasterCocoDetection initializes `coco` and `ids`.
+        super().__init__(img_folder, ann_file)
         self._transforms = transforms
         self.prepare = ConvertCocoPolysToMask(return_masks)
         self.img_folder = img_folder
         self.ann_file = ann_file
         self.remap_mscoco_category = remap_mscoco_category
-        # Explicitly expose ids for sampler compatibility
-        # Parent FasterCocoDetection sets self.ids in its __init__, 
-        # but we need to ensure it's accessible for hasattr() checks
-        # After parent __init__, ids should be available - verify and expose
-        if not hasattr(self, 'ids'):
-            # If somehow ids wasn't set, try to get it from parent
-            try:
-                self.ids = getattr(super(FasterCocoDetection, self), 'ids')
-            except AttributeError:
-                # This shouldn't happen, but if it does, raise a clear error
-                raise AttributeError(
-                    "Failed to access 'ids' from parent FasterCocoDetection. "
-                    "This may indicate an issue with the dataset initialization."
-                )
+        if not hasattr(self, 'ids') or not hasattr(self, 'coco'):
+            raise AttributeError(
+                "CocoDetection init failed: missing `ids` or `coco` from FasterCocoDetection."
+            )
 
     def __getitem__(self, idx):
         img, target = self.load_item(idx)
@@ -54,7 +45,7 @@ class CocoDetection(FasterCocoDetection, DetDataset):
         return img, target
 
     def load_item(self, idx):
-        image, target = super(FasterCocoDetection, self).__getitem__(idx)
+        image, target = super().__getitem__(idx)
         image_id = self.ids[idx]
         target = {'image_id': image_id, 'annotations': target}
 

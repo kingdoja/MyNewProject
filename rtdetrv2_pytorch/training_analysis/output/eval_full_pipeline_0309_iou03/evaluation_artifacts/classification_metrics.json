@@ -1,0 +1,80 @@
+{
+  "per_class_metrics": {
+    "AD": {
+      "class_id": 0,
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    },
+    "BC": {
+      "class_id": 1,
+      "correct": 68,
+      "total": 85,
+      "accuracy": 0.8
+    },
+    "EC": {
+      "class_id": 2,
+      "correct": 1584,
+      "total": 1615,
+      "accuracy": 0.9808049535603716
+    },
+    "L": {
+      "class_id": 3,
+      "correct": 908,
+      "total": 932,
+      "accuracy": 0.9742489270386266
+    },
+    "LC": {
+      "class_id": 4,
+      "correct": 251,
+      "total": 287,
+      "accuracy": 0.8745644599303136
+    },
+    "M": {
+      "class_id": 5,
+      "correct": 8,
+      "total": 13,
+      "accuracy": 0.6153846153846154
+    },
+    "NT": {
+      "class_id": 6,
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    },
+    "SM": {
+      "class_id": 7,
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    },
+    "SQ": {
+      "class_id": 8,
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    },
+    "TC1": {
+      "class_id": 9,
+      "correct": 214,
+      "total": 273,
+      "accuracy": 0.7838827838827839
+    },
+    "TC2": {
+      "class_id": 10,
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    },
+    "TC3": {
+      "class_id": 11,
+      "correct": 0,
+      "total": 0,
+      "accuracy": 0.0
+    }
+  },
+  "overall_accuracy": 0.9463338533541341,
+  "mean_class_accuracy": 0.8381476232994518,
+  "total_correct": 3033,
+  "total_instances": 3205
+}

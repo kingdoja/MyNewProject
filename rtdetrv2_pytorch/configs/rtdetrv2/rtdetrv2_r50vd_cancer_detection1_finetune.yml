@@ -1,0 +1,56 @@
+__include__: [
+  '../dataset/cancer_detection1.yml',
+  '../runtime.yml',
+  './include/dataloader.yml',
+  './include/optimizer.yml',
+  './include/rtdetrv2_r50vd.yml',
+]
+
+# 输出目录
+output_dir:  ./output/rtdetrv2_r50vd_cancer_detection_finetune_0205
+
+# 早停配置
+early_stopping_patience: 10
+early_stopping_min_delta: 0.001
+
+PResNet:
+  depth: 50
+  freeze_at: 0
+  freeze_norm: False
+  pretrained: True
+
+HybridEncoder:
+  in_channels: [512, 1024, 2048]
+  hidden_dim: 256
+  expansion: 1.0
+
+RTDETRTransformerv2:
+  num_layers: 6
+
+epoches: 70
+
+# 微调模式：降低学习率（更保守的微调策略）
+optimizer:
+  type: AdamW
+  params:
+    - params: '^(?=.*backbone)(?!.*norm).*$'
+      lr: 0.000005  # 降低到原来的一半，更保守
+      weight_decay: 0.0001
+    - params: '^(?=.*(?:encoder|decoder))(?=.*(?:norm|bn)).*$'
+      weight_decay: 0.0
+  lr: 0.00005  # 降低到原来的一半，更保守
+  betas: [0.9, 0.999]
+  weight_decay: 0.0001
+
+lr_warmup_scheduler:
+  type: LinearWarmup
+  warmup_duration: 2000
+
+RTDETRCriterionv2:
+  class_weight_file: /home/ubuntu/lsn/project_new/RT-DETR-main/DATA/SputumCell/split_dataset_aug/analysis/class_balance_class_weights.json
+  class_weight_key: weight
+  class_weight_power: 1.0
+
+# 显存优化
+sync_bn: false
+amp: true
