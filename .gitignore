@@ -188,7 +188,7 @@ DataSliceTools/
 
 # 模型文件（所有路径）
 *.pt
-
+*.pth
 *.onnx
 *.pdparams
 **/exported_models/
@@ -198,7 +198,7 @@ DataSliceTools/
 DataSlice2Inference/models/*.pt
 DataSlice2Inference/models/*.onnx
 DataSlice2Inference/models/*.pth
-Z_export_model/
+
 Z_save_experiments/
 
 # TensorBoard 日志文件
